@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Site de commande en ligne de repas gastronomique à Paris",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klodita/ohmyfood.git"
+  },
+  "author": "Emboulé Claudia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klodita/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/klodita/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
