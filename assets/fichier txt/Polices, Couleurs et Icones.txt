@@ -15,9 +15,15 @@ Praimaire (violette) : #9356DC
 
 Secondaire (Rose) : #FF79DA
 
-Tertiaire (Vert) : #99E2DO 
+Tertiaire (Vert) : #99E2D0 
 
+complément : 
+Couleur Box-shadow sous le "logo" ohmyfood : #D5D5D5
 Couleur fond (BELLEVILLE) : #EAEAEA
+Couleur Hover (fonctionnement) : #F5EDFF
+couleur de fond : #F6F6F6
+couleur texte (nouveau): #008766
+couleur footer : #353535
 
 
 **********************************************************************************

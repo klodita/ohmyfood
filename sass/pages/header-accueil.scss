@@ -1,3 +1,5 @@
+@use "../utils/variables.scss";
+
 header
 {
     width:100%;
@@ -6,19 +8,33 @@ header
     align-items: center;
     justify-content: center;
     
+    h1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid variables.$shadow-color;
+        box-shadow: 0 5px 5px 0 variables.$shadow-color;
+        z-index: 1;
+    }
     .localisation{
         width:100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin:0;
-        padding-top:5px;
-        padding-bottom:5px;
-        background-color: #EAEAEA;
-        border-top: 1px solid none;
-        
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color: variables.$belleville-color;
+    }
+    & i{
+        margin-right:10px;
     }
     p:first-child{
-       font-size:85%;
+        font-size:25px;
+        font-weight: bold;
+        
     }
 }
