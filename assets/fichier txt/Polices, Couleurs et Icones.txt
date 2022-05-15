@@ -1,0 +1,86 @@
+
+
+Les polices à utiliser sont Shrikhands et Roboto
+
+Voici le lien à inséré dans le css avec @import
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900 &famille=Shrikhand & display=swap');
+
+
+**********************************************************************************
+
+Les Couleurs à utiliser :
+
+Praimaire (violette) : #9356DC
+
+Secondaire (Rose) : #FF79DA
+
+Tertiaire (Vert) : #99E2DO 
+
+
+**********************************************************************************
+
+Le script à inséré dans le head pour faire fonctionner les icones. 
+si il y a un souci au niveau de w3c lors de la validation du site en html 
+il faudra mettre
+ce lien tout en bas dans le body avant la fermeture de la balise body !
+
+<script src="https://kit.fontawesome.com/73a134f2ff.js" crossorigin="anonymous"></script>
+
+
+
+les liens présents ci-dessous concernent le projet Oh my food !
+
+
+Icone du Header 
+
+localisation (pour belleville)
+<i class="fa-solid fa-location-dot"></i>
+
+
+
+Icone de Fonctionnement
+
+Mobile
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+Liste
+<i class="fa-solid fa-list"></i>
+
+Shop
+<i class="fa-solid fa-store"></i>
+
+coeur colorié (car le normal est payant)
+<i class="fa-solid fa-heart"></i>
+
+
+
+Icone des Menu
+
+check en vert
+<i class="fa-solid fa-circle-check »></i>
+
+
+
+Icone du Footer
+
+Ustensils (Proposer un restaurant)
+<i class="fa-solid fa-ustensiles »></i>
+
+Main (Devenir partenaire)
+<i class="fa-solid fa-handshake-angle"></i>
+
+
+********************************************************************
+
+Icone pour animation ?
+
+Bouteille de vin 
+<i class="fa-solid fa-wine-bottle"></i>
+
+Verre vide
+<i class="fa-solid fa-wine-glass-empty"></i>
+
+Verre plein
+<i class="fa-solid fa-wine-glass"></i>
+
