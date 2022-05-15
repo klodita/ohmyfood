@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+h2, p {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .localisation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #EAEAEA;
+  border-top: 1px solid none;
+}
+header p:first-child {
+  font-size: 85%;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .restaurants {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .resto_photo {
+  width: 95%;
+  height: 300px;
+  object-fit: cover;
+}
+section .resto_fond {
+  width: 95%;
+  height: 100px;
+  margin-bottom: 50px;
+  background-color: aqua;
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=style.css.map */
