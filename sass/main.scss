@@ -1,7 +1,6 @@
-@use "./base/fondation.scss";
-@use "./utils/variables.scss";
-@use "./utils/mixin.scss";
-@use "./pages/header-accueil.scss";
-@use "./pages/fonctionnement.scss";
-@use "./pages/restaurants.scss";
-@use "./utils/media.scss";
+@use "./base/fondation";
+@use "./utils/variables";
+@use "./utils/mixin-accueil";
+@use "./pages/header-accueil";
+@use "./pages/fonctionnement";
+@use "./pages/restaurants";

@@ -1,0 +1,97 @@
+@use "../utils/variables";
+@use "../utils/mixin-accueil";
+@use "../composant/bouton";
+
+
+header
+{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid variables.$shadow-color;
+        box-shadow: 0 5px 5px 0 variables.$shadow-color;
+        z-index: 1;
+    }
+    .localisation{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:0;
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color: variables.$belleville-color;
+    }
+   
+    p:first-child, i {
+        font-size:110%;
+        font-weight: bold; 
+    }
+    .fond-colo{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        padding-top:30px;
+        padding-bottom:50px;
+        background-color:variables.$fond-color;
+
+            & h2{
+                
+               @include mixin-accueil.texth2-accueil;
+               
+               @include mixin-accueil.h2-accueil ($h2:0)
+               {
+                   font-size:18px;
+               }
+               @include mixin-accueil.h2-accueil ($h2:386px)
+               {
+                   font-size:22px;
+               }
+               @include mixin-accueil.h2-accueil ($h2:471px)
+               {
+                   font-size:26px;
+               }
+               @include mixin-accueil.h2-accueil ($h2:557px)
+               {
+                   font-size:30px;
+               }
+               @include mixin-accueil.h2-accueil ($h2:642px)
+               {
+                   font-size:34px;
+               }
+               @include mixin-accueil.h2-accueil ($h2:728px)
+               {
+                   font-size:38px;
+               }
+            }
+            & p{
+                width:100%;
+                text-align: center; 
+            }
+            & button{
+                align-self: center;
+                @include bouton.bouton-rose;
+                // @include mixin-accueil.mob320 { 
+                //     width:65%;
+                //     font-size:15px;
+                    
+                // }
+                // @include mixin-accueil.mob425 { 
+                //     width:70%;
+                    
+                // }
+            }
+    }
+}  
+
+   

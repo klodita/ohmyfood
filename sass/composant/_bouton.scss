@@ -1,0 +1,19 @@
+@use "../utils/variables";
+
+
+@mixin bouton-rose {
+    width:60%;
+    height:55px;
+    padding:10px;
+    color: white;
+    font-size:18px;
+    font-weight:bold;
+    background-image: linear-gradient(variables.$secondary-color, 
+    variables.$primary-color);
+    transform: scale (1.02);
+    transition:200ms;
+    opacity:0.9;
+    border:none;
+    border-radius:30px;
+    box-shadow: 5px 5px 5px variables.$shadow-color ;
+}
