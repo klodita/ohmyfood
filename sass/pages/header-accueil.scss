@@ -1,4 +1,5 @@
 @use "../utils/variables.scss";
+@use "../utils/media.scss";
 
 header
 {
@@ -29,12 +30,35 @@ header
         padding-bottom:10px;
         background-color: variables.$belleville-color;
     }
-    & i{
-        margin-right:10px;
+   
+    p:first-child, i {
+        font-size:110%;
+        font-weight: bold; 
     }
-    p:first-child{
-        font-size:25px;
-        font-weight: bold;
-        
+    .fond-colo{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        padding-top:30px;
+        padding-bottom:50px;
+        background-color:variables.$fond-color;
+
+            & h2{
+                width:100%;
+                font-size:30px;
+                font-weight:bolder;
+                text-align:center;
+            }
+            & p{
+                width:100%;
+                text-align: center; 
+            }
+            & button{
+                
+                align-self: center;
+                border:1px solid red;
+            }
     }
-}
+}  
+
+   
