@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../utils/mixin-accueil";
+@use "../utils/breakpoint-mob";
 @use "../composant/bouton";
 
 
@@ -12,7 +13,8 @@ header
     justify-content: center;
     
     h1{
-        width: 100%;
+        width:100%;
+        font-size:10vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,11 +33,18 @@ header
         padding-top:10px;
         padding-bottom:10px;
         background-color: variables.$belleville-color;
+        
     }
    
     p:first-child, i {
-        font-size:110%;
+        font-size:5vw;
         font-weight: bold; 
+        position: relative;
+        right:10px;
+        
+        & i{
+            padding-right: 10px;
+        }
     }
     .fond-colo{
         width: 100%;
@@ -48,50 +57,22 @@ header
             & h2{
                 
                @include mixin-accueil.texth2-accueil;
-               
-               @include mixin-accueil.h2-accueil ($h2:0)
-               {
-                   font-size:18px;
-               }
-               @include mixin-accueil.h2-accueil ($h2:386px)
-               {
-                   font-size:22px;
-               }
-               @include mixin-accueil.h2-accueil ($h2:471px)
-               {
-                   font-size:26px;
-               }
-               @include mixin-accueil.h2-accueil ($h2:557px)
-               {
-                   font-size:30px;
-               }
-               @include mixin-accueil.h2-accueil ($h2:642px)
-               {
-                   font-size:34px;
-               }
-               @include mixin-accueil.h2-accueil ($h2:728px)
-               {
-                   font-size:38px;
-               }
+            }
+
             }
             & p{
                 width:100%;
+                font-size:5vw;
                 text-align: center; 
             }
-            & button{
-                align-self: center;
-                @include bouton.bouton-rose;
-                // @include mixin-accueil.mob320 { 
-                //     width:65%;
-                //     font-size:15px;
-                    
-                // }
-                // @include mixin-accueil.mob425 { 
-                //     width:70%;
-                    
-                // }
             }
-    }
-}  
+    
 
-   
+    button{
+        align-self: center;
+         @include bouton.bouton-rose;
+         
+
+    }
+
+    

@@ -1,3 +1,12 @@
+@use "../utils/mixin-accueil";
+
+#tuto h2
+{
+    @include mixin-accueil.mainh2-accueil;
+}
+
+
+
 .fonctionnement
 {
     display: flex;

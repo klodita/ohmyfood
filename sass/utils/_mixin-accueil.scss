@@ -1,24 +1,89 @@
+@use "../utils/variables";
 
-@mixin h2-accueil ($h2:0) {
-    @media screen and (min-width:$h2) {
-        @content;
-        
-    }
-    
-}
+//concerne le h2 de la page d'accueil.
 
 @mixin texth2-accueil 
 {   width:100%;
-    font-size:20px;
+    font-size:5vw;
     font-weight:bolder;
     text-align:center;
     padding-left:20%;
     padding-right:20%;
+}
+
+@mixin mainh2-accueil {
+       width:80%;
+       font-size:5vw;
+       font-weight: bolder;
+       text-align: initial;
+       padding-top:10%;
+       position: relative;
+       left:30px;
     
+    
+}
+
+//concerne la tailles des cartes de restaurants avec leurs fond.
+@mixin taillecarte-resto
+{
+    width:85vw;
+    height:220px;
+    margin:0;
+   
+    object-fit:cover;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    z-index:2;
+    
+}
+
+@mixin taillefond-resto {
+  
+    width:85vw;
+    height:95px;
+    font-size:5vw;
+    margin:0;
+    margin-bottom:50px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    bottom:21px;
+    background-color: white;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+    box-shadow:5px 5px 5px variables.$shadow-color;
+    z-index:1;
+    
+}
+
+@mixin heart1 {
+    width:8vw;
+    font-size:8vw;
+    position: relative;
+    left:260px;
+    bottom:120px;
+    
+}
+
+@mixin heart2 {
+    width:8vw;
+    font-size:8vw;
+    position: relative;
+    left:260px;
+    bottom:150px;
+    color:transparent;
+    background-image:linear-gradient(variables.$secondary-color,variables.$primary-color);
+    background-clip:text;
+    -webkit-background-clip:text;
 }
 
 
 
-
+@mixin presentation-resto {
+    color: black;
+   font-size:5vw;
+   padding: 10px;
+    
+}
 
 

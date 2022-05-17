@@ -1,0 +1,34 @@
+$breakpoint:(
+"mob0":0, 
+"mobx":412px,
+"mob1":414px,
+"mob2":425px,
+"mob3":480px,
+"mob4":540px,
+"mob5":568px,
+"mob6":600px,
+"mob7":640px,
+"mob8":667px,
+"mob9":736px,
+);
+
+@mixin mob0 
+{
+    @media screen and (min-width:map-get($breakpoint,"mob0")) {
+        @content;
+    }
+}
+
+@mixin mob1 
+{
+    @media screen and (min-width:map-get($breakpoint,"mob1")) {
+        @content;
+    }
+}
+
+@mixin mob2 
+{
+    @media screen and (min-width:map-get($breakpoint,"mob2")) {
+        @content;
+    }
+}
