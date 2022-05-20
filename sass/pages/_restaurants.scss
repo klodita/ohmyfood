@@ -1,3 +1,4 @@
+@use "../utils/breakpoint-mob";
 @use "../utils/variables";
 @use "../utils/mixin-accueil";
 
@@ -5,24 +6,22 @@
 #resto 
 
 {
-    
-    width: 100%;
-    margin-top: 50px;
+    width:100%;
+    margin-top:50px;
     background-color:variables.$fond-color;
     & h2 {
         @include mixin-accueil.mainh2-accueil;
-        
     } 
-    
 }
 
    .restaurants {
     display: flex;
-    width:100vw;
+    width:100%;
     margin:0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding:5px;
 }
 
 
@@ -34,35 +33,59 @@
     @include mixin-accueil.taillefond-resto;
 }
 
-.chat {
-    @include mixin-accueil.heart1;
-   color: black;
-   font-weight:lighter;
-}
-
-.souris{
-   
-    color:transparent;
-}
-
-:hover .souris {
-    @include mixin-accueil.heart2;
-    position: relative;
-
-}
-
 
 h3, p{
-    @include mixin-accueil.presentation-resto;
+    @include mixin-accueil.text-resto;
+    
 }
 
 h3{
-    font-weight: bolder;  
+    font-weight: bolder; 
+    padding-top: 10px;
+    padding-bottom:10px;
     }
     
 .lieu
 {
-    position: relative;
-    bottom:6.5vh;
+  opacity:(0.80);  
+   
 }
 
+
+// positionnement de l'icone heart
+
+
+.resto1, .resto2, .resto3, .resto4
+{
+    @include mixin-accueil.divresto;
+
+}
+
+div .coeur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size:1.2rem;
+    margin:0;
+    padding:0;
+    width:2.9rem;
+    height:2.9rem;
+    position: relative;
+    left:280px;
+    bottom:125px;
+
+.fa-2x {
+
+    .fa-heart{
+        @include mixin-accueil.heart1;
+        transition:2s;
+        
+    }
+}
+.fa-heart:hover {
+@include mixin-accueil.heart2;
+transition:2s;
+
+}
+}

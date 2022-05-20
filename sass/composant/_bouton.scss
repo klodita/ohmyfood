@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/breakpoint-mob";
 
 @mixin bouton-rose {
     width:60vw;
@@ -7,14 +8,19 @@
     color:white;
     font-size:4.2vw;
     font-weight:bold;
-    background-image: linear-gradient(variables.$secondary-color, 
+    background-image: linear-gradient(to right bottom,variables.$secondary-color, 
     variables.$primary-color);
     border:none;
     border-radius:30px;
-    box-shadow: 5px 5px 5px variables.$shadow-color ;
+    box-shadow: 5px 5px 5px variables.$shadow-color;
     
     &:hover {
         opacity:0.9;
+    }
+    @include breakpoint-mob.mobxs
+    {
+        width:70vw;
+        font-size:4.5vw;
     }
         
     

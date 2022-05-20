@@ -1,16 +1,22 @@
-
+@use "../utils/breakpoint-mob";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*, ::before, ::after
+*, *::before, ::after
 {
-    box-sizing: border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    width: 100%;
+  
+    
 }
 
 body
-{
-    width: 100%;
-    margin:0;
+{ 
+    width:100%;
+ 
+
 }
 
 h1 
@@ -26,7 +32,10 @@ h2, p
 a{
     text-decoration: none;
     display: flex;
+    color: black;
     flex-direction: column;
     align-items: center;
     justify-content:baseline;
+    margin:0;
+    padding:0;
 }

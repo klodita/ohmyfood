@@ -5,15 +5,25 @@ résolution de tailles d'écran de smarthphone.
 L'utilisation pourra se faire en format paysage ou portrait.
 
 
-$breackpoints:(
-"mob":320px,
-"mob2":425px,
-"mob3":480px,
-"mob4:568px,
-"mob5":600px,
-"mob6":640px,
-"mob7":667px,
-"mob8":736px,
+$breakpoints:(
+"mob":240px,
+"mob1":280px,
+"mob2":320px,
+"mob3: 353px,
+"mob4":360px,
+"mob5":384px,
+"mob6":390px,
+"mob7":393px,
+"mob8":411px,
+"mob9":425px,
+"mob10":480px,
+"mob11":540px,
+"mob12":568px,
+"mob13":600px,
+"mob14":640px,
+"mob15":667px,
+"mob16":712px,
+"mob17":736px,
 );
 
 
