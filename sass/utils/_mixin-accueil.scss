@@ -88,12 +88,12 @@
        width: 90vw;
        height:289px;
     }
-    @include breakpoint-mob.mobxm
-    {
-       width: 90vw;
-       height:326px;
-       border:1px solid red;
-    }
+    // @include breakpoint-mob.mobxm
+    // {
+    //    width: 90vw;
+    //    height:326px;
+    //    border:1px solid red;
+    // }
 }
 
 @mixin heart
@@ -118,15 +118,14 @@
         font-size:0.8rem;
         position: relative;
         left:220px;
-        
     }
-    @include breakpoint-mob.mobxm
-    {
-        font-size:1rem;
-        position: relative;
-        left:105px;
-        bottom:130px;
-    }
+    @include breakpoint-mob.breakpoint(240px)
+        {
+            position: relative;
+            left:75%;
+           
+        }
+      
 }
 
 @mixin heart1 
