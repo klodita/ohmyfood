@@ -1,5 +1,13 @@
 
 @mixin mobxs  {
+    @media screen and (max-width:354px) {
+    width:100vw;
+    @content;
+    }
+    
+}
+
+@mixin mobxm  {
     @media screen and (max-width:374px) {
     width:100vw;
     @content;

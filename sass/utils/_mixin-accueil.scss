@@ -87,7 +87,12 @@
     {
        width: 90vw;
        height:289px;
-
+    }
+    @include breakpoint-mob.mobxm
+    {
+       width: 90vw;
+       height:326px;
+       border:1px solid red;
     }
 }
 
@@ -114,6 +119,13 @@
         position: relative;
         left:220px;
         
+    }
+    @include breakpoint-mob.mobxm
+    {
+        font-size:1rem;
+        position: relative;
+        left:105px;
+        bottom:130px;
     }
 }
 
