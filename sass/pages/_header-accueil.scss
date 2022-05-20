@@ -26,9 +26,6 @@ header
         border-bottom: 1px solid variables.$shadow-color;
         box-shadow: 0 5px 5px 0 variables.$shadow-color;
         z-index: 1;
-        @include breakpoint-mob.mobxs;
-        
-       
     }
     .localisation{
         width:100%;
@@ -79,6 +76,7 @@ header
                 width:100%;
                 font-size:5vw;
                 text-align: center; 
+                padding: 10px;
                 padding-top: 5%;
                 padding-bottom:5%;
                 opacity:(0.75);
@@ -89,11 +87,6 @@ header
     button{
         align-self: center;
          @include bouton.bouton-rose;
-        
-        
-
-         
-
     }
 
     

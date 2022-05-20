@@ -1,29 +1,7 @@
-//  $breakpoint:(
-// "mob0":240px,
-// "mob1":280px,
-// "mob2":320px,
-// "mob3":350px,
-// "mob4":360px,
-// "mob5":384px,
-// "mob6":390px,
-// "mob7":393px,
-// "mob8":411px,
-// "mob9":425px,
-// "mob10":480px,
-// "mob11":540px,
-// "mob12":568px,
-// "mob13":600px,
-// "mob14":640px,
-// "mob15":667px,
-// "mob16":712px,
-// "mob17":730px,
-//  );
-
 
 @mixin mobxs  {
     @media screen and (max-width:374px) {
     width:100vw;
-    background-color: red;
     @content;
     }
     
@@ -49,33 +27,6 @@
 }
 
 
-
-
-// @mixin mob15 
-// {
-//     @media screen and (min-width:map-get($breakpoint,"mob15")) {
-//         @content;
-//         background-color: pink;
-//     }
-// }
-
-
-// @mixin mob16 
-// {
-//     @media screen and (min-width:map-get($breakpoint,"mob16")) {
-//         @content;
-//         background-color: red;
-//     }
-// }
-
-
-// @mixin mob17 
-// {
-//     @media screen and (min-width:map-get($breakpoint,"mob17")) {
-//         @content;
-//         background-color:gold;
-//     }
-// }
 
 
 

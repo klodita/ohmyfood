@@ -31,6 +31,7 @@
 }
    .resto_fond {
     @include mixin-accueil.taillefond-resto;
+    
 }
 
 
@@ -58,34 +59,20 @@ h3{
 .resto1, .resto2, .resto3, .resto4
 {
     @include mixin-accueil.divresto;
-
+  
+   
 }
 
 div .coeur{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size:1.2rem;
-    margin:0;
-    padding:0;
-    width:2.9rem;
-    height:2.9rem;
-    position: relative;
-    left:280px;
-    bottom:125px;
+    @include mixin-accueil.heart;
 
 .fa-2x {
 
     .fa-heart{
         @include mixin-accueil.heart1;
-        transition:2s;
-        
     }
 }
 .fa-heart:hover {
 @include mixin-accueil.heart2;
-transition:2s;
-
 }
 }
