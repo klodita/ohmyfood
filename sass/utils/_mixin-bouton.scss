@@ -1,0 +1,27 @@
+@use "../utils/variables";
+@use "../composant/box-shadow";
+@use "../utils/breakpoint-mob";
+
+@mixin bouton-rose {
+    width:58vw;
+    height:40%;
+    padding:15px;
+    color:white;
+    font-size:3.5vw;
+    font-weight:bold;
+    background-image: linear-gradient(to right bottom,variables.$secondary-color, 
+    variables.$primary-color);
+    border:none;
+    border-radius:30px;
+    cursor: pointer;
+    @include box-shadow.shadow;
+    @content;
+}
+
+@mixin hover-bouton
+{
+    opacity:(0.9);
+    transform:scale(1.02);
+    transition:1s;
+    @include box-shadow.ombre; 
+} 

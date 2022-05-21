@@ -1,6 +1,21 @@
 @use "../utils/variables";
 @use "../utils/breakpoint-mob";
 
+
+@mixin mainh2-accueil {
+    width:90%;
+    font-size:5vw;
+    font-weight: bolder;
+    text-align: initial;
+    padding-top:10%;
+    position: relative;
+    left:30px;
+    @include breakpoint-mob.mobxs
+    {
+        width:80%;
+    }
+}
+
 //concerne le h2 de la page d'accueil.
 
 @mixin texth2-accueil 
@@ -11,20 +26,6 @@
     padding-left:20%;
     padding-right:20%;
    
-}
-
-@mixin mainh2-accueil {
-       width:90%;
-       font-size:5vw;
-       font-weight: bolder;
-       text-align: initial;
-       padding-top:10%;
-       position: relative;
-       left:30px;
-       @include breakpoint-mob.mobxs
-       {
-           width:80%;
-       }
 }
 
 
@@ -43,8 +44,6 @@
         width:88vw;
         height:210px;
     }
-  
-    
 }
 
 
@@ -52,8 +51,7 @@
     font-size:5vw;
     padding-left:25px;
     z-index:1;
-     
- }
+    }
 
 
 @mixin taillefond-resto {
@@ -78,6 +76,7 @@
     } 
 }
 
+
 @mixin divresto {
     
     height:320px;
@@ -88,73 +87,5 @@
        width: 90vw;
        height:289px;
     }
-    // @include breakpoint-mob.mobxm
-    // {
-    //    width: 90vw;
-    //    height:326px;
-    //    border:1px solid red;
-    // }
 }
-
-@mixin heart
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size:1.2rem;
-    margin:0;
-    padding:0;
-    width:2.9rem;
-    height:2.9rem;
-    position: relative;
-    left:280px;
-    bottom:125px;
-    
-    @include breakpoint-mob.mobxs
-    {
-        width:1.9rem;
-        height:1.9rem;
-        font-size:0.8rem;
-        position: relative;
-        left:220px;
-    }
-    @include breakpoint-mob.breakpoint(240px)
-        {
-            position: relative;
-            left:75%;
-           
-        }
-      
-}
-
-@mixin heart1 
-   {
-   color:black;
-   position:relative;
-   
-   font-size: 8vw;
-   transition:2s;
-   z-index:2;
-   }
-    
-
-@mixin heart2 {
-    
-    font-weight: bold; 
-    cursor: pointer;
-    color:transparent;
-    background-image:linear-gradient(variables.$primary-color,variables.$secondary-color,);
-    background-clip:text;
-    -webkit-background-clip:text;
-    transition:2s;
-    z-index:1;
-    @content;
-    
-    }
-    
-
-
-
-
 

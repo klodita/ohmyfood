@@ -5,48 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/style.css" type="text/css" />
-   
+    <!-- ajouter des balises pour le seo et référencement -->
     <title>Ohmyfood</title>
-
 </head>
 
 <body>
 
-    <header>
-
+    <header id="header_accueil">
         <h1>Ohmyfood</h1>
-
-        <div class="localisation">
-        <p class="belleville">
-            <i class="fa-solid fa-location-dot"></i>
-            Paris, Belleville
-        </p>
-        </div>
-
-
-        <div class="fond-colo">
-
-        <h2>Réservez le menu qui vous convient </h2>
-
-        <p>Découvrez des restaurants d'exception,
-            <br/>sélectionnés par nos soins.</p>
-
-        <button>Explorer nos restaurants</button>
-
-        </div>
-
     </header>
 
+
     <main>
+
+        <!-- cette section concerne la localisation 
+        (Paris,Belleville) et l'annonce d'accueille -->
+        
+        <section id="apropos"> 
+           
+          <div class="localisation">
+           
+            <p class="belleville">
+            <i class="fa-solid fa-location-dot"></i>
+             Paris, Belleville</p>
+            
+          </div>
+        
+        
+          <div class="fond-colo">
+        
+             <h2>Réservez le menu qui vous convient</h2>
+        
+             <p>Découvrez des restaurants d'exception,
+                <br/>sélectionnés par nos soins.</p>
+        
+             <button class="explorez">Explorer nos restaurants</button>
+        
+          </div>
+
+        </section>
+
+
+
+
         <section id="tuto">
         <h2>Fonctionnement</h2>
 
         <ol class="fonctionnement">
-            <li> Choisissez un restaurant</li>
-            <li>Composez votre menu</li>
-            <li>Dégustez au restaurant</li>
+
+         <li> 
+             <i class="fa-solid fa-mobile-screen-button"></i>
+             Choisissez un restaurant</li>
+
+         <li>
+             <i class="fa-solid fa-list"></i> 
+             Composez votre menu</li>
+
+         <li>
+             <i class="fa-solid fa-store"></i>
+             Dégustez au restaurant</li>
+
         </ol>
+
     </section>
+
+
 
     <section id="resto">
 
@@ -54,31 +77,32 @@
 
         <div class="restaurants">
 
-               <div  class="resto1">
+            <div class="resto1">
 
-               <a href="#">
-                   <img class="resto_photo" 
-                   src="./assets/images/la_palette_du_gout.jpg" 
-                   alt="la_palette_du_gout"/> 
+               <a href="pages\la-palette-du-gout.html">
+                 <img class="resto_photo" 
+                 src="./assets/images/la_palette_du_gout.jpg" 
+                 alt="la_palette_du_gout"/> 
                  
                  <div class="resto_fond">
                      <h3> La palette du goût</h3> 
                      <p class="lieu"> Ménilmontant</p>
-                 </div></a>
+                 </div>
+                </a>
                
-                 <div class="coeur fa-stack fa-2x" >
-                    <i class="far fa-heart chat fa-stack fa-2x"></i>
-                    </div>
-                
+                 <div class="coeur heart_resto fa-stack fa-2x" >
+                 <i class="far fa-heart fa-stack fa-2x"></i>
                 </div>
+                
+            </div>
                 
                      
   
             <div class="resto2">
                <a href="#"> 
-                   <img class="resto_photo" 
-                   src="./assets/images/la_note_enchante.jpg" 
-                   alt="la_note_enchante"/> 
+                 <img class="resto_photo" 
+                 src="./assets/images/la_note_enchante.jpg" 
+                 alt="la_note_enchante"/> 
                
                  <div class="resto_fond">
                     <h3> La note enchanté</h3> 
@@ -86,14 +110,14 @@
                  </div>
                </a>
 
-               <div class="coeur fa-stack fa-2x" >
-                <i class="far fa-heart chat fa-stack fa-2x"></i>
+               <div class="coeur heart_resto fa-stack fa-2x" >
+                <i class="far fa-heart fa-stack fa-2x"></i>
                 </div>
 
-                </div>
+            </div>
                
            
-               <div class="resto3" >
+            <div class="resto3" >
 
                 <a href="#">
                    <img class="resto_photo" 
@@ -106,18 +130,18 @@
                  </div>
                 </a>
 
-                <div class="coeur fa-stack fa-2x" >
-                    <i class="far fa-heart chat fa-stack fa-2x"></i>
-                    </div>
+                <div class="coeur heart_resto fa-stack fa-2x" >
+                  <i class="far fa-heart fa-stack fa-2x"></i>
+                </div>
                 
-               </div>
+            </div>
 
                
-               <div class="resto4" >
+            <div class="resto4" >
                <a href="#">
-                   <img class="resto_photo" 
-                   src="./assets/images/le_delice_des_sens.jpg" 
-                   alt="le_delice_des_sens"/> 
+                 <img class="resto_photo" 
+                 src="./assets/images/le_delice_des_sens.jpg" 
+                 alt="le_delice_des_sens"/> 
                
                  <div class="resto_fond">
                     <h3>Le délice des sens</h3> 
@@ -125,8 +149,8 @@
                  </div>
                 </a>
 
-                <div class="coeur fa-stack fa-2x" >
-                <i class="far fa-heart chat fa-stack fa-2x"></i>
+                <div class="coeur heart_resto fa-stack fa-2x" >
+                  <i class="far fa-heart fa-stack fa-2x"></i>
                 </div>
                
             </div>
@@ -137,6 +161,10 @@
     </section>
 
     </main>
+
+
+
+
     <footer>
 
     </footer>

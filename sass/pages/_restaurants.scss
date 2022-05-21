@@ -3,6 +3,7 @@
 @use "../utils/mixin-accueil";
 
 
+
 #resto 
 
 {
@@ -25,20 +26,18 @@
 }
 
 
-   .resto_photo {
-    @include mixin-accueil.taillecarte-resto;
-    
+.resto_photo {
+@include mixin-accueil.taillecarte-resto;    
 }
-   .resto_fond {
-    @include mixin-accueil.taillefond-resto;
-    
+
+.resto_fond {
+    @include mixin-accueil.taillefond-resto;    
 }
 
 
 h3, p{
     @include mixin-accueil.text-resto;
-    width:70%;
-    
+    width:70%;  
 }
 
 h3{
@@ -60,20 +59,6 @@ h3{
 .resto1, .resto2, .resto3, .resto4
 {
     @include mixin-accueil.divresto;
-  
-   
 }
 
-div .coeur{
-    @include mixin-accueil.heart;
 
-.fa-2x {
-
-    .fa-heart{
-        @include mixin-accueil.heart1;
-    }
-}
-.fa-heart:hover {
-@include mixin-accueil.heart2;
-}
-}

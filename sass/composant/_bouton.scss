@@ -1,28 +1,12 @@
-@use "../utils/variables";
-@use "../utils/breakpoint-mob";
+@use "../utils/mixin-bouton";
 
-@mixin bouton-rose {
-    width:60vw;
-    height:40%;
-    padding:15px;
-    color:white;
-    font-size:4.2vw;
-    font-weight:bold;
-    background-image: linear-gradient(to right bottom,variables.$secondary-color, 
-    variables.$primary-color);
-    border:none;
-    border-radius:30px;
-    box-shadow: 5px 5px 5px variables.$shadow-color;
-    
-    &:hover {
-        opacity:0.9;
-    }
-    @include breakpoint-mob.mobxs
-    {
-        width:70vw;
-        font-size:4.5vw;
-    }
-        
-    
-}
+button {
 
+    &.explorez{
+        align-self:center;
+        @include mixin-bouton.bouton-rose;
+        &:hover {
+            @include mixin-bouton.hover-bouton;
+        }
+        }
+    }

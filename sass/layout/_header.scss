@@ -1,0 +1,49 @@
+@use "../utils/variables";
+@use "../utils/mixin-header";
+
+
+#header_accueil
+
+{
+    @include mixin-header.header;
+  
+    h1{
+        @include mixin-header.headerh1-accueil;
+    }
+}
+
+#header_menu
+{   
+    
+    @include mixin-header.header{
+        height: 100px;
+        flex-direction: row;
+    }
+    
+    img {
+        width:40%;
+        display: flex;
+        flex-direction: row;
+        justify-content:baseline;
+        padding-top:20px;
+        margin-left:40px;
+        position:relative;
+        left:-50px;
+    }
+
+   
+a  
+{   width:20%;
+    display:flex;
+    padding-top:10%;
+    padding-bottom:5%;
+    margin:0;
+    .fa-arrow-left
+    {
+    width:40px;
+    font-size: 7vw;
+    position: relative;
+    right:40px;
+    }
+}
+}

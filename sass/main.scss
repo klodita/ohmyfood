@@ -1,7 +1,8 @@
 @use "./base/fondation";
-@use "./utils/variables";
-@use "./utils/mixin-accueil";
-@use "./pages/header-accueil";
+@use "./composant/bouton";
+@use "./composant/heart";
+@use "./layout/header";
+@use "./pages/accueil";
 @use "./pages/fonctionnement";
 @use "./pages/restaurants";
-@use "./utils/breakpoint-mob";
+@use "./layout/menu";

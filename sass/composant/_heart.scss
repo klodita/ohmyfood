@@ -1,0 +1,32 @@
+@use "../utils/mixin-heart";
+
+
+
+// travail générale sur les coeurs avec transition en hover
+
+div .coeur{
+    @include mixin-heart.heart;
+
+.fa-2x {
+
+    .fa-heart{
+        @include mixin-heart.heart1;
+    }
+}
+.fa-heart:hover {
+@include mixin-heart.heart2;
+}
+}
+
+// position du coeur concernant les cartes de restaurant
+.heart_resto 
+{
+    bottom:125px;
+}
+
+
+// position du coeur concernant les menus
+.heart_menu
+{
+    top:-35px;
+}

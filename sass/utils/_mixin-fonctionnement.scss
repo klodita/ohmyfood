@@ -1,0 +1,68 @@
+@use "../utils/variables";
+@use "../composant/box-shadow";
+@use "../utils/breakpoint-mob";
+
+
+
+@mixin mainh2-fonctionnement {
+    width:80%;
+    font-size:5vw;
+    font-weight: bolder;
+    text-align: initial;
+    padding-top:10%;
+    position: relative;
+    left:-5px;
+    @include breakpoint-mob.mobxs
+    {
+        width:80%;
+    }
+}
+
+@mixin li-counter {
+    content:counter(etapes);
+    counter-increment:etapes;
+    display: flex;
+    width:25px;
+    height:25px;
+    color:white;
+    align-items: center;
+    justify-content:center;
+    margin-right:0px;
+    border:1px solid none;
+    border-radius:20px ;
+    background-color:variables.$primary-color;
+    position: relative;
+    right:7%;
+    @content;
+}
+
+@mixin li-liste 
+{
+      
+    display: flex;
+    list-style-type:none;
+    font-size:4vw;
+    align-items: center;
+    font-weight:600;
+    width:84vw;
+    padding:20px;
+    padding-left:10px;
+    margin-bottom: 20px;
+    border:1px solid none;
+    background-color:variables.$fond-color;
+    border-radius: 20px;
+    @include box-shadow.shadow;
+    @content;
+}
+
+@mixin tuto-icon
+{
+    display:flex;
+            width:30px;
+            height:30px;
+            opacity: (0.5);
+            align-items: center;
+            margin-right:20px;
+            font-size:1.4rem;
+            @content;
+}

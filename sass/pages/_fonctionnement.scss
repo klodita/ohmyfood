@@ -1,15 +1,58 @@
 @use "../utils/mixin-accueil";
-
-#tuto h2
-{
-    @include mixin-accueil.mainh2-accueil;
-}
+@use "../utils/variables";
+@use "../utils/mixin-bouton";
+@use "../utils/mixin-fonctionnement";
 
 
-
-.fonctionnement
-{
+#tuto
+{  
+    width:100%;
+    margin-top:20px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
+    margin:0;
+    h2 {
+        @include mixin-fonctionnement.mainh2-fonctionnement;
+    }
+    
+    .fonctionnement
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top:20px;
+        padding-left:38px;
+        counter-reset:etapes;
+    }
+
+    li
+    {
+        display: flex;
+        justify-content: baseline;
+        &::before{
+            @include mixin-fonctionnement.li-counter;
+        }
+     @include mixin-fonctionnement.li-liste
+     {
+         &:hover{
+             background-color:variables.$hoverfonctio-color;
+             i {
+                 color:variables.$primary-color;
+                 opacity:(1);
+             }
+             @include mixin-bouton.hover-bouton;
+         }
+        
+     }
+        
+        i {
+          @include mixin-fonctionnement.tuto-icon;
+        }
+
+       
+    } 
+
+
+
 }

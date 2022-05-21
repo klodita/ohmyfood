@@ -1,0 +1,12 @@
+@use "../utils/variables";
+
+
+@mixin shadow {
+    box-shadow: 5px 5px 5px variables.$shadow-color;
+    @content;
+}
+@mixin ombre {
+    box-shadow: 5px 5px 5px variables.$shadow-dark-color;
+    @content;
+
+}
