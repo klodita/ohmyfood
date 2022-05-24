@@ -1,3 +1,8 @@
+@use "../utils/variables";
+@use "../utils/breakpoint-mob";
+@use "../composant/box-shadow";
+
+
 @mixin menuh1 
 {
     display: flex;
@@ -5,5 +10,134 @@
     font-size:7vw;
     padding-top: 35px;
     padding-left: 20px;
+    @content;
+    @include breakpoint-mob.mobxs
+    {
+        position: relative;
+        bottom:5px;
+    }
 }
 
+@mixin menuh2 {
+    font-family:'Roboto',sans-serif;
+    font-size:18px;
+    font-weight:300;
+    padding-left:20px;
+    margin-top:10px;
+    padding-bottom:10px;
+    opacity: (0.5);
+    @content;
+    @include breakpoint-mob.mobxs
+        {
+            font-size:14px;
+            margin-top:10px;
+            padding-bottom:20px;
+        }
+}
+
+@mixin lineh2 {
+    display:flex;
+    justify-items: baseline;
+    border-bottom:4px solid variables.$tertiary-color;
+    width:55px;
+    padding: 0;
+    margin-left:20px;
+    @content;
+}
+
+@mixin menuli {
+    width:94%;
+    height:75px;
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+    border:1px solid none;
+    margin:10px;
+    margin-bottom: 15px;
+    border-radius:15px;
+    background-color:white;
+    @content;
+    @include box-shadow.shadow;
+    @include breakpoint-mob.mobxs
+    {
+        width:93%;
+        margin-bottom: 20px;
+    }
+}
+
+@mixin menuh3 {
+    width:89%;
+    font-size:4.2vw;
+    padding: 0;
+    padding-bottom:5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @content;
+    @include breakpoint-mob.mobxs
+        {
+            font-size:4.1vw;
+        }
+}
+
+
+@mixin menu-p {
+    width:77%;
+    font-size:3.1vw;
+    padding: 0;
+    flex-direction:column;
+    justify-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    @content;
+    @include breakpoint-mob.mobxs
+      {
+        width:75%;
+        font-size: 3vw;
+      }
+}
+
+@mixin prix
+{
+    display:inline-flex;
+    width:9%;
+    height:50px;
+    font-weight: bold;
+    font-size: 3.1vw;
+    position: relative;
+    left:84%;
+    bottom:25px;
+    @content;
+    @include breakpoint-mob.mobxs
+        {
+            width:8%;
+            font-size: 3vw;
+        }
+}
+
+@mixin menu-icon
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:7rem;
+    height:4.7rem;
+    font-size:25px;
+    color:white;
+    padding: 20px;
+    position: relative;
+    left:40px;
+    bottom:44px;
+    background-color:variables.$tertiary-color;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    @content;
+    @include breakpoint-mob.mobxs
+    {
+        width: 8rem;
+        position: relative;
+        left:18px;
+        bottom:37px;
+    }
+}

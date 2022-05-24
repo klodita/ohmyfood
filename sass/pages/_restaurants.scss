@@ -37,13 +37,18 @@
 
 h3, p{
     @include mixin-accueil.text-resto;
-    width:70%;  
-}
+    width:70%; 
+    @include breakpoint-mob.breakpoint($break:280px)
+    {padding-left:12px;}
+    }
+
 
 h3{
     font-weight: bolder; 
     padding-top: 10px;
     padding-bottom:10px;
+    @include breakpoint-mob.breakpoint($break:280px)
+    {padding-bottom: 5px;}
     }
     
 .lieu

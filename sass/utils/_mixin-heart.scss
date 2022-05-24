@@ -16,13 +16,13 @@
     height:2rem;
     position: relative;
     left:84%;
+    @content;
 
     @include breakpoint-mob.mobxs
     {
         width:1.9rem;
         height:1.9rem;
-        font-size:0.8rem;
-       
+        font-size:0.7rem;
         
     }
    
