@@ -2,6 +2,7 @@
 @use "../utils/variables";
 @use "../utils/mixin-bouton";
 @use "../utils/mixin-fonctionnement";
+@use "../utils/breakpoint-mob";
 
 
 #tuto
@@ -32,6 +33,7 @@
         justify-content: baseline;
         &::before{
             @include mixin-fonctionnement.li-counter;
+      
         }
      @include mixin-fonctionnement.li-liste
      {
@@ -45,12 +47,9 @@
          }
         
      }
-        
         i {
           @include mixin-fonctionnement.tuto-icon;
         }
-
-       
     } 
 
 

@@ -48,6 +48,7 @@
      @include breakpoint-mob.mobxs;
 
         & h2{
+            font-family:'Roboto',sans-serif;
             @include mixin-accueil.texth2-accueil;
             }
 

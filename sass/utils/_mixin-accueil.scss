@@ -36,6 +36,7 @@
     height:245px;
     margin:0;
     padding: 10px;
+    padding-bottom:0;
     object-fit:cover;
     border-top-left-radius:25px;
     border-top-right-radius:25px;
@@ -44,6 +45,12 @@
         width:88vw;
         height:210px;
     }
+    @include breakpoint-mob.breakpoint($break:280px)
+    {
+        height:175px;
+        
+    }
+
 }
 
 
@@ -69,11 +76,19 @@
     border-bottom-left-radius:25px;
     border-bottom-right-radius:25px;
     box-shadow:5px 5px 5px variables.$shadow-color;
+   
     @include breakpoint-mob.mobxs
     {
         width:82vw;
         height:75px;
     } 
+    @include breakpoint-mob.breakpoint($break:280px)
+    {
+        width:90%;
+        height:60px;
+
+    }
+
 }
 
 
@@ -82,10 +97,16 @@
     height:320px;
     padding:0;
     margin-bottom:30px;
+
     @include breakpoint-mob.mobxs
     {
        width: 90vw;
        height:289px;
+    }
+    @include breakpoint-mob.breakpoint($break:280px)
+    {
+       margin-bottom:-30px;
+
     }
 }
 

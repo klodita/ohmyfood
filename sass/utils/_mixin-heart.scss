@@ -25,12 +25,13 @@
        
         
     }
-    @include breakpoint-mob.breakpoint(240px)
+   
+    @include breakpoint-mob.breakpoint(280px)
         {
             font-size:0.6rem;
             position: relative;
             left:80%;
-            bottom:130px;  
+            bottom:115px;  
         }
       
 }

@@ -69,14 +69,14 @@ flêche pour naviguer
 <i class="fa-solid fa-arrow-left"></i>
 
 check en vert
-<i class="fa-solid fa-circle-check »></i>
+<i class="fa-solid fa-circle-check"></i>
 
 
 
 Icone du Footer
 
 Ustensils (Proposer un restaurant)
-<i class="fa-solid fa-ustensiles »></i>
+<i class="fa-solid fa-utensils"></i>
 
 Main (Devenir partenaire)
 <i class="fa-solid fa-handshake-angle"></i>

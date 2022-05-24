@@ -15,6 +15,7 @@
     @include breakpoint-mob.mobxs
     {
         width:80%;
+        left:-8px;
     }
 }
 
@@ -33,6 +34,13 @@
     background-color:variables.$primary-color;
     position: relative;
     right:7%;
+
+    @include breakpoint-mob.breakpoint($break:280px)
+    {
+        position: relative;
+        right:10%;
+    }
+
     @content;
 }
 
@@ -42,9 +50,10 @@
     display: flex;
     list-style-type:none;
     font-size:4vw;
-    align-items: center;
+    align-items:center;
     font-weight:600;
-    width:84vw;
+    width:90%;
+    height:70px;
     padding:20px;
     padding-left:10px;
     margin-bottom: 20px;
@@ -52,17 +61,45 @@
     background-color:variables.$fond-color;
     border-radius: 20px;
     @include box-shadow.shadow;
+    
+     //ajout de média query pour arranger certains décalage visuel 
+       
+     @include breakpoint-mob.breakpoint($break:280px)
+     {
+      width:97%;
+      height:60px;
+      font-size:3.8vw;
+      position: relative;
+      right:15px;
+      }
+
+     @include breakpoint-mob.breakpoint($break:360px)
+     {
+      width:97%;
+      font-size:3.8vw;
+      position: relative;
+      right:15px;
+     }
     @content;
 }
+
+
+
 
 @mixin tuto-icon
 {
     display:flex;
-            width:30px;
-            height:30px;
-            opacity: (0.5);
-            align-items: center;
-            margin-right:20px;
-            font-size:1.4rem;
-            @content;
+    width:30px;
+    height:30px;
+    opacity: (0.5);
+    align-items: center;
+    margin-right:20px;
+    font-size:1.4rem;
+
+    @include breakpoint-mob.breakpoint($break:280px)
+    {
+    margin-right:2px;
+    }
+
+    @content;
 }
