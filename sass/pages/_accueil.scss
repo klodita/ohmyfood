@@ -14,7 +14,7 @@
     justify-content:baseline;
     margin:0;
     background-color: variables.$belleville-color;
-    @include breakpoint-mob.mobxs;
+    @include breakpoint-mob.mob320;
             
         & .belleville {
             width:100%;
@@ -36,7 +36,8 @@
        
     }
 
-    
+  
+    // concerne le message en page d'accueil pour présenter ohmyfood
  .fond-colo
  {
      width: 100%;
@@ -45,7 +46,7 @@
      padding-top:30px;
      padding-bottom:50px;
      background-color:variables.$fond-color;
-     @include breakpoint-mob.mobxs;
+     @include breakpoint-mob.mob320;
 
         & h2{
             font-family:'Roboto',sans-serif;

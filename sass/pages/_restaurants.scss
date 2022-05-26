@@ -1,11 +1,11 @@
 @use "../utils/breakpoint-mob";
 @use "../utils/variables";
 @use "../utils/mixin-accueil";
+@use "../utils/mixin-restaurant";
 
 
 
 #resto 
-
 {
     width:100%;
     margin-top:50px;
@@ -15,55 +15,92 @@
     } 
 }
 
-   .restaurants {
-    display: flex;
-    width:100%;
-    margin:0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding:5px;
+
+.restaurants 
+{
+@include mixin-restaurant.div-restaurant;
 }
 
 
-.resto_photo {
-@include mixin-accueil.taillecarte-resto;    
-}
-
-.resto_fond {
-    @include mixin-accueil.taillefond-resto;    
+.resto_photo 
+{
+@include mixin-restaurant.taillecarte-resto;    
 }
 
 
-h3, p{
-    @include mixin-accueil.text-resto;
-    width:70%; 
-    @include breakpoint-mob.breakpoint($break:280px)
-    {padding-left:12px;}
-    }
+
+.resto_fond
+{
+@include mixin-restaurant.taillefond-resto;    
+
+}
+
+h3, p
+{
+@include mixin-restaurant.text-resto; 
+}
 
 
-h3{
+
+h3
+{
     font-weight: bolder; 
     padding-top: 10px;
     padding-bottom:10px;
-    @include breakpoint-mob.breakpoint($break:280px)
+
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.mob280
     {padding-bottom: 5px;}
-    }
+}
     
+
+
 .lieu
 {
-  opacity:(0.80);  
-   
+opacity:(0.80); 
+
+  // Travail sur média query (voir la mixin breakpoint-mob)
+  @include breakpoint-mob.breakpoint-min($break-min:320px)
+  {
+      position: relative;
+      bottom:5px;
+  }
 }
+
+
 
 
 // positionnement de l'icone heart
 
-
 .resto1, .resto2, .resto3, .resto4
 {
-    @include mixin-accueil.divresto;
+@include mixin-restaurant.divresto;
 }
 
 
+
+
+// ************************************************************
+
+// ajout média query ultime pour les mobiles 411px,412px,414px
+@media screen and (min-width:409px) and (max-width:416px){
+
+
+    .resto_photo
+    {
+        height:266px;
+    }
+
+    .resto_fond 
+    {
+        width:89.5vw;
+       
+    }
+    .resto1, .resto2, .resto3, .resto4
+    {
+     margin-bottom:55px;
+    }
+    
+    }
+
+// ************************************************************

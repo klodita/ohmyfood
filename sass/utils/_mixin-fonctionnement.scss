@@ -12,12 +12,21 @@
     padding-top:10%;
     position: relative;
     left:-5px;
-    @include breakpoint-mob.mobxs
+    @content;
+
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.breakpoint-min($break-min:480px)
     {
-        width:80%;
-        left:-8px;
+    position: relative;
+    left:-15px;
+    }
+    @include breakpoint-mob.mob320
+    {
+    width:80%;
+    left:-8px;
     }
 }
+
 
 @mixin li-counter {
     content:counter(etapes);
@@ -28,25 +37,32 @@
     color:white;
     align-items: center;
     justify-content:center;
+    padding:10px;
     margin-right:0px;
     border:1px solid none;
     border-radius:20px ;
     background-color:variables.$primary-color;
     position: relative;
     right:7%;
-
-    @include breakpoint-mob.breakpoint($break:280px)
-    {
-        position: relative;
-        right:10%;
-    }
-
     @content;
+
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.breakpoint-min($break-min:480px)
+    {
+    padding:15px;
+    position: relative;
+    right:18px;
+    }
+    @include breakpoint-mob.mob280
+    {
+    position: relative;
+    right:10%;
+    }  
 }
 
+
 @mixin li-liste 
-{
-      
+{ 
     display: flex;
     list-style-type:none;
     font-size:4vw;
@@ -61,26 +77,35 @@
     background-color:variables.$fond-color;
     border-radius: 20px;
     @include box-shadow.shadow;
-    
-     //ajout de média query pour arranger certains décalage visuel 
-       
-     @include breakpoint-mob.breakpoint($break:280px)
-     {
-      width:97%;
-      height:60px;
-      font-size:3.8vw;
-      position: relative;
-      right:15px;
-      }
-
-     @include breakpoint-mob.breakpoint($break:360px)
-     {
-      width:97%;
-      font-size:3.8vw;
-      position: relative;
-      right:15px;
-     }
     @content;
+
+     
+    // Travail sur média query (voir la mixin breakpoint-mob) 
+    @include breakpoint-mob.mob280
+    {
+    width:97%;
+    height:60px;
+    font-size:3.8vw;
+    position: relative;
+    right:15px;
+    }
+
+    @include breakpoint-mob.mob360
+    {
+    width:97%;
+    font-size:3.8vw;
+    position: relative;
+    right:15px;
+    }  
+
+    @include breakpoint-mob.breakpoint-min($break-min:480px)
+    {
+    width:90%;
+    height:100px; 
+    font-size:4.2vw;   
+    position: relative;
+    left:10px;
+    }
 }
 
 
@@ -95,11 +120,19 @@
     align-items: center;
     margin-right:20px;
     font-size:1.4rem;
+    @content;
 
-    @include breakpoint-mob.breakpoint($break:280px)
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.breakpoint-min($break-min:480px)
+    {
+        font-size:1.7rem ;
+        margin-right:35px;
+        margin-left:20px;
+    }
+    @include breakpoint-mob.mob280
     {
     margin-right:2px;
     }
 
-    @content;
+    
 }

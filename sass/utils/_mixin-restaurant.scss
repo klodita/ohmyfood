@@ -1,0 +1,163 @@
+@use "../utils/breakpoint-mob";
+@use "../utils/variables";
+
+
+// concerne la div entière regroupant les cartes restaurants sur la page d'accueil
+@mixin div-restaurant
+{
+    display: flex;
+    width:100%;
+    margin:0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    @content;
+}
+
+
+
+//concerne la tailles des cartes de restaurants avec leurs fond.
+@mixin taillecarte-resto
+{
+    width:94vw;
+    height:245px;
+    margin:0;
+    padding: 10px;
+    padding-bottom:0;
+    object-fit:cover;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+
+   // Travail sur média query (voir la mixin breakpoint-mob)  
+    
+    @include breakpoint-mob.mob425
+    {
+        height:320px;
+    }
+    @include breakpoint-mob.mob767
+    {
+        height:430px;
+    } 
+    @include breakpoint-mob.mob360
+    {
+        height:240px;
+    }
+
+    @include breakpoint-mob.mob320
+    {
+        width:89vw;
+        height:210px;
+    }
+    @include breakpoint-mob.mob280
+    {
+        height:175px;
+    }
+
+}
+
+
+
+// concerne le texte (titre et localisation)
+
+@mixin text-resto {
+    width:70%;
+    font-size:5vw;
+    padding-left:25px;
+    z-index:1;
+    @content;
+    
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.mob767
+    {
+        font-size:4vw;
+    }
+    @include breakpoint-mob.mob280
+    {padding-left:12px;}
+    }
+
+
+
+// concerne le fod blanc des cartes restaurants dans la page d'accueil
+
+@mixin taillefond-resto {
+  
+    width:89vw;
+    height:75px;
+    margin:0;
+    margin-bottom:50px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    bottom:8px;
+    background-color: white;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+    box-shadow:5px 5px 5px variables.$shadow-color;
+
+
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    @include breakpoint-mob.mob425
+    {
+        width:92.5%;
+        height:95px;
+    }
+    @include breakpoint-mob.mob767
+    {
+        width:92.9%;
+        height:100px;
+    }
+   
+    @include breakpoint-mob.breakpoint-min($break-min:704px)
+    {
+        width:92.5%;
+        height:110px;
+    }
+    @include breakpoint-mob.mob320
+    {
+        width:83vw;
+        height:75px;
+    } 
+    @include breakpoint-mob.mob280
+    {
+        width:82vw;
+        height:58px;
+
+    }
+}
+
+
+// concerne le margin entre chaque carte de restaurant dans le menu
+
+@mixin divresto {
+    
+    height:320px;
+    padding:0;
+    margin-bottom:30px;
+    @content;
+
+    // Travail sur média query (voir la mixin breakpoint-mob)
+    
+    @include breakpoint-mob.mob425{
+        margin-bottom:125px;
+    }
+    @include breakpoint-mob.mob767
+    {
+        margin-bottom:250px;
+    }
+    @include breakpoint-mob.mob360
+    {
+        margin-bottom:20px;
+    }
+
+    @include breakpoint-mob.mob320
+    {
+       width: 90vw;
+       height:289px;
+    }
+    @include breakpoint-mob.mob280
+    {
+       margin-bottom:-50px;
+    }
+}
+

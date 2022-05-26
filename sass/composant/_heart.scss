@@ -5,18 +5,19 @@
 
 // travail générale sur les coeurs avec transition en hover
 
-div .coeur{
-    @include mixin-heart.heart;
-
-.fa-2x {
-
+div .coeur
+{
+ @include mixin-heart.heart;
+    .fa-2x
+    {
     .fa-heart{
-        @include mixin-heart.heart1;
+    @include mixin-heart.heart1;
     }
-}
-.fa-heart:hover {
-@include mixin-heart.heart2;
-}
+    }
+
+    .fa-heart:hover{
+    @include mixin-heart.heart2;
+    }
 }
 
 // position du coeur concernant les cartes de restaurant
@@ -28,8 +29,9 @@ div .coeur{
 
 // position du coeur concernant les menus
  
-    .heart_menu {
-    @include mixin-heart.heart
+.heart_menu 
+{
+@include mixin-heart.heart
    
     {   width:10px;
        &.coeur{
@@ -37,7 +39,23 @@ div .coeur{
         top:-35px;
         left:86%;
        }
-   }
-    
-   
+    }  
 }
+
+
+
+// **********************************************************
+// ajout média query pour ecran 600px à 667px position coeur
+
+
+@media screen and (min-width:569px) and (max-width:703px)
+{
+    // concerne les cartes de restaurant
+    div .coeur
+    {
+        position:relative;
+        top:-145px;
+    }
+}
+
+// ********************************************************

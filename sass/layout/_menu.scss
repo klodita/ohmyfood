@@ -3,6 +3,7 @@
 @use "../composant/heart";
 @use "../composant/bouton";
 @use "../utils/mixin-bouton";
+@use "../utils/breakpoint-mob";
 
 #main_menu
 {
@@ -43,67 +44,125 @@ h2 {
     @include mixin-menu.menuh2;
 }
 
- .line{
-   @include mixin-menu.lineh2;
+.line
+{
+@include mixin-menu.lineh2;
 }
 
-li{
+li
+{
     @include mixin-menu.menuli;
-
-
-div
-{   width:85%;
-    margin:10px;
-    margin-top:20px;
+   
+    div
+    {   
+        width:85%;
+        margin:10px;
+        margin-top:20px;
    
     h3{
         @include mixin-menu.menuh3;
-        
-    }
+        }
     p{
         @include mixin-menu.menu-p;
-   }
-}
-.prix{
-    @include mixin-menu.prix;
-}
- i{
+        }
+    }
+
+
+    .prix{
+        @include mixin-menu.prix;
+    }
+
+    i{
      display:none;
- }
+     }
 
+  &:hover 
+   {
+        .prix{
+        display: none;
+        }
 
-&:hover 
-{
-   
-    .menu_hover
-    {
+        .menu_hover
+        {    
         h3{
             width:62%;
         }
         p{
             width:62%;
         }
-    }
-    .prix {
-        @include mixin-menu.prix {
-            position: relative;
-            left:63%;
+        }
+   
+        .prix_hover
+        {
+        @include mixin-menu.prix-hover;
+        .prix2{
+           @include mixin-menu.prix2;
+        }      
+
+        i{
+        @include mixin-menu.menu-icon;
+        } 
+
+         // Travail sur média query pour le check en vert.
+        @media  screen and (min-width:313px) and (max-width:338px) 
+        {
+            width:100%;
+            height: 76px;
+            position:relative;
+            left:15px;
+            bottom:62px;
+            
+        }
+
+        @media  screen and (min-width:339px) and (max-width:355px) 
+        {
+            width: 100%;
+            height: 77px;
+            left:17px;
+            bottom:63px;
+        }
+
+        @media  screen and (min-width:356px) and (max-width:374px) 
+        {
+            width: 100%;
+            height: 78px;
+            left:18px;
+            bottom:64.5px;
+        }
+
+        @media  screen and (min-width:381px) and (max-width:402px) 
+        {
+            width: 100%;
+            height:84px;
+            left:20px;
+            bottom:68px;
+        }
+
+        @media  screen and (min-width:403px) and (max-width:428px) 
+        {
+            width: 100%;
+            height:96px;
+            left:23px;
+            bottom:71px;
+        }
         }
     }
-
-    i{
-        @include mixin-menu.menu-icon;
-    }
 }
-
 }
 
 
 
+
+ul{
+    margin-bottom:40px;
 }
+
+
+
+
 .btn{
     align-self: center;
-    margin-top:40px;
+    margin-top:10px;
     margin-bottom:0px;
     @include mixin-bouton.bouton-rose;
     &:hover{

@@ -1,31 +1,4 @@
 
-@mixin mobxs  {
-    @media screen and (max-width:374px) {
-    width:100%;
-    @content;
-    }
-    
-}
-
-
-@mixin mob16  {
-    @media screen and (min-width:425px) and (max-width:599px) {
-    width:100%;
-    background-color:orange;
-    @content;
-    }
-    
-}
-
-@mixin mob17  {
-    @media screen and (min-width:600px) and (max-width:767px) {
-    width:100%;
-    background-color:green;
-    @content;
-    }
-    
-}
-
 // cette mixin permet de corriger quelque rendu visuel sur des breakpoints
 
 @mixin breakpoint($break:0)
@@ -34,4 +7,58 @@
         @content;
     }
 }
+
+@mixin breakpoint-min($break-min:0)
+{
+    @media (min-width:$break-min) {
+        @content;
+    }
+}
+
+// création de map et mixin pour faire média query mobile
+
+$break1:(
+    "mob280":280px,
+    "mob320":320px,
+    "mob360":360px,
+    "mob425":425px,
+    "mob767":569px,
+    
+);
+
+@mixin mob280 {
+    @media screen and (max-width:map-get($break1,"mob280")) {
+        @content;
+    }
+}
+
+
+@mixin mob320 {
+    @media screen and (max-width:map-get($break1,"mob320")) {
+        @content;
+    }
+}
+
+
+@mixin mob360 {
+    @media screen and (max-width:map-get($break1,"mob360")) {
+        @content;
+    }
+}
+
+
+@mixin mob425 {
+    @media screen and (min-width:map-get($break1,"mob425")) {
+        
+        @content;
+    }
+}
+
+
+@mixin mob767 {
+    @media screen and (min-width:map-get($break1,"mob767")) {
+        @content;
+    }
+}
+
 
