@@ -15,7 +15,31 @@
     @content;
 }
 
-
+@mixin etiquette-nouveau
+{
+    width:28vw;
+    height:2em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Roboto', sans-serif;
+    font-weight:bold;
+    padding:6%;
+    font-size:5vw;
+    border:1px solid none;
+    color:darken(variables.$tertiary-color,40%);
+    background-color:variables.$tertiary-color;
+    border-radius:5px;
+    position:absolute;
+    top:25px;
+    left:60vw;
+    @content;
+    @include breakpoint-mob.mob320{
+        width: 26vw;
+        position:absolute;
+        left:55vw;
+    }
+}
 
 //concerne la tailles des cartes de restaurants avec leurs fond.
 @mixin taillecarte-resto

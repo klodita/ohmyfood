@@ -19,7 +19,17 @@
 .restaurants 
 {
 @include mixin-restaurant.div-restaurant;
+.new 
+{
+    position: relative;
 }
+
+.new::before{
+    content: "Nouveau";
+    @include mixin-restaurant.etiquette-nouveau;
+}
+}
+
 
 
 .resto_photo 
