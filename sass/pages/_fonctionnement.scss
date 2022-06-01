@@ -14,7 +14,7 @@
     align-items: center;
     margin:0;
     h2 {
-        @include mixin-fonctionnement.mainh2-fonctionnement;
+        @include mixin-fonctionnement.texth2-fonctionnement;
     }
     
     .fonctionnement

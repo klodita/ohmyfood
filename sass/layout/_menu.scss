@@ -146,7 +146,116 @@ li
         @include mixin-menu.menu-icon;
         animation: iconrotation 250ms linear;
         }
-   
+    // Travail sur média query pour le check en vert.
+    @media  screen and (min-width:313px) and (max-width:338px) 
+    {
+        width:100%;
+        height:78px;
+        position:relative;
+        left:15px;
+        bottom:61px;
+        
+    }
+
+    @media  screen and (min-width:339px) and (max-width:355px) 
+    {
+        width: 100%;
+        height: 77px;
+        position:relative;
+        left:17px;
+        bottom:63px;
+    }
+
+    @media  screen and (min-width:356px) and (max-width:374px) 
+    {
+        width: 100%;
+        height:80px;
+        position:relative;
+        left:18px;
+        bottom:64px;
+    }
+
+    @media  screen and (min-width:381px) and (max-width:402px) 
+    {
+        width: 100%;
+        height:84px;
+        position:relative;
+        left:20px;
+        bottom:68px;
+    }
+
+    @media  screen and (min-width:403px) and (max-width:445px) 
+    {
+        width: 100%;
+        height:80px;
+        position:relative;
+        left:25px;
+        bottom:71px;
+    }
+
+    @media  screen and (min-width:446px) and (max-width:481px) 
+    {
+        width: 100%;
+        height:82px;
+        position:relative;
+        left:25px;
+        bottom:74px; 
+    }
+    
+    @media  screen and (min-width:481px) and (max-width:499px) 
+    {
+        width: 100%;
+        height:90px;
+        position:relative;
+        left:26px;
+        bottom:76px; 
+    }
+
+    @media  screen and (min-width:500px) and (max-width:511px) 
+    {
+        width: 100%;
+        height:91px;
+        position:relative;
+        left:28px;
+        bottom:77px; 
+    }
+
+    @media  screen and (min-width:512px) and (max-width:520px) 
+    {
+        width: 100%;
+        height:93px;
+        position:relative;
+        left:29px;
+        bottom:80px; 
+    }
+
+    @media  screen and (min-width:521px) and (max-width:550px) 
+    {
+        width: 100%;
+        height:94px;
+        position:relative;
+        left:31px;
+        bottom:81px; 
+    }
+
+    @media  screen and (min-width:551px) and (max-width:568px) 
+    {
+        width: 100%;
+        height:95px;
+        position:relative;
+        left:32px;
+        bottom:83px; 
+    }
+
+    
+    @media  screen and (min-width:569px) and (max-width:600px)
+    {
+        width: 100%;
+        height:105px;
+        position:relative;
+        left:35px;
+        bottom:85px; 
+    }
         }
     }
 }
@@ -173,117 +282,3 @@ ul{
 }
 
 
-// *************************************************************
-.prix_hover
-{
-     // Travail sur média query pour le check en vert.
-     @media  screen and (min-width:313px) and (max-width:338px) 
-     {
-         width:100%;
-         height:78px;
-         position:relative;
-         left:15px;
-         bottom:61px;
-         
-     }
-
-     @media  screen and (min-width:339px) and (max-width:355px) 
-     {
-         width: 100%;
-         height: 77px;
-         position:relative;
-         left:17px;
-         bottom:63px;
-     }
-
-     @media  screen and (min-width:356px) and (max-width:374px) 
-     {
-         width: 100%;
-         height:80px;
-         position:relative;
-         left:18px;
-         bottom:64px;
-     }
-
-     @media  screen and (min-width:381px) and (max-width:402px) 
-     {
-         width: 100%;
-         height:84px;
-         position:relative;
-         left:20px;
-         bottom:68px;
-     }
-
-     @media  screen and (min-width:403px) and (max-width:445px) 
-     {
-         width: 100%;
-         height:80px;
-         position:relative;
-         left:25px;
-         bottom:71px;
-     }
-
-     @media  screen and (min-width:446px) and (max-width:481px) 
-     {
-         width: 100%;
-         height:82px;
-         position:relative;
-         left:25px;
-         bottom:74px; 
-     }
-     
-     @media  screen and (min-width:481px) and (max-width:499px) 
-     {
-         width: 100%;
-         height:90px;
-         position:relative;
-         left:26px;
-         bottom:76px; 
-     }
-
-     @media  screen and (min-width:500px) and (max-width:511px) 
-     {
-         width: 100%;
-         height:91px;
-         position:relative;
-         left:28px;
-         bottom:77px; 
-     }
-
-     @media  screen and (min-width:512px) and (max-width:520px) 
-     {
-         width: 100%;
-         height:93px;
-         position:relative;
-         left:29px;
-         bottom:80px; 
-     }
-
-     @media  screen and (min-width:521px) and (max-width:550px) 
-     {
-         width: 100%;
-         height:94px;
-         position:relative;
-         left:31px;
-         bottom:81px; 
-     }
-
-     @media  screen and (min-width:551px) and (max-width:568px) 
-     {
-         width: 100%;
-         height:95px;
-         position:relative;
-         left:32px;
-         bottom:83px; 
-     }
-
-     
-     @media  screen and (min-width:569px) and (max-width:600px)
-     {
-         width: 100%;
-         height:105px;
-         position:relative;
-         left:35px;
-         bottom:85px; 
-     }
-}

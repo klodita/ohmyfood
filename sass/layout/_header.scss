@@ -7,30 +7,35 @@
 {
     @include mixin-header.header;
   
-    h1{
-        @include mixin-header.headerh1-accueil;
-    }
+    .div_img {
+        @include mixin-header.div_img; 
+      
 }
+     
+    img{
+        width: 40vw;  
+        padding-top:10%;
+        padding-bottom:10%;
+    }
+
+}
+
+
+
+
 
 #header_menu
 {   
     
     @include mixin-header.header{
         height: 100px;
-        flex-direction: row;
-    }
-    
-    img {
-        width:40%;
         display: flex;
         flex-direction: row;
-        justify-content:baseline;
-        padding-top:20px;
-        margin-left:40px;
-        position:relative;
-        left:-50px;
+        align-content: center;
+        margin:0;
+        padding:0;
     }
-
+    
    
 a  
 {   width:20%;
@@ -38,12 +43,31 @@ a
     padding-top:10%;
     padding-bottom:5%;
     margin:0;
+    width: 17vw;
+    height:50px;
+    padding:10px;
+    position: relative;
+    left:10px;
+    top:20px;
+    
     .fa-arrow-left
     {
     width:40px;
     font-size: 7vw;
-    position: relative;
-    right:40px;
+    
     }
 }
+
+
+img {
+    display: flex;
+    justify-content: center;
+    width:50vw;
+    height:50px;
+    padding:10px;
+    position:relative;
+    left:40px;
+    top:15px;
+    }
+
 }

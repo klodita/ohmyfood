@@ -11,7 +11,7 @@
     margin-top:50px;
     background-color:variables.$fond-color;
     & h2 {
-        @include mixin-accueil.mainh2-accueil;
+        @include mixin-accueil.texth2-accueil;
     } 
 }
 

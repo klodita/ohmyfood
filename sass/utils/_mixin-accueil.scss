@@ -2,8 +2,9 @@
 @use "../utils/breakpoint-mob";
 
 
-@mixin mainh2-accueil {
+@mixin texth2-accueil {
     width:90%;
+    font-family: 'Roboto',sans-serif;
     font-size:5vw;
     font-weight: bolder;
     text-align: initial;
@@ -29,7 +30,7 @@
 
 //concerne le h2 de la page d'accueil.
 
-@mixin texth2-accueil 
+@mixin texth1-accueil 
 {   width:100%;
     font-size:5vw;
     font-weight:bolder;
