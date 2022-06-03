@@ -74,9 +74,10 @@
         border-radius:20px;
     }
 
-
-    
-   
+    @include breakpoint-mob.mob320
+    {
+        height:65px;
+    }
 }
 
 @mixin menuh3 {
@@ -116,26 +117,7 @@
     }
 }
 
-@mixin prix
-{
-    display:flex;
-    width:9%;
-    height:50px;
-    font-weight: bold;
-    font-size: 3.1vw;
-    position: relative;
-    left:74vw;
-    top:10px;
-    
-    @content;
 
-   // Travail sur média query (voir la mixin breakpoint-mob) 
-    @include breakpoint-mob.mob320
-    {
-    width:8%;
-    font-size: 3vw;
-    }
-}
 
 @mixin prix-hover-before {
     display: flex;
@@ -149,6 +131,7 @@
     margin-left:100px;
     position: relative;
     bottom: 67.5px;
+    
 }
 
 @mixin prix-hover
@@ -163,20 +146,67 @@
     padding:0;
     position: relative;
     left:20px;
-    
     @content;
+   
+    
 }
+
+
+
+@mixin prix
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:9%;
+    height:25px;
+    font-weight: bold;
+    font-size: 3.1vw;
+    padding:0;
+    position: relative;
+    right:120px;
+    top:10px;
+    @content;
+    
+   
+
+   // Travail sur média query (voir la mixin breakpoint-mob) 
+    @include breakpoint-mob.mob320
+    {
+    width:8%;
+    font-size: 3vw;
+    }
+}
+
 
 @mixin prix2
 {
-    display: flex;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:9%;
+    height:25px;
+    font-weight: bold;
+    font-size: 3.1vw;
+    padding:0;
     position: relative;
-    left:-110px;
-    bottom:75px;
+    right:110px;
+    top:-25%;
+    @content;
     
 
-    @content;
+   // Travail sur média query (voir la mixin breakpoint-mob) 
+    @include breakpoint-mob.mob320
+    {
+    width:8%;
+    font-size: 3vw;
+    position: relative;
+    right:110px;
+    top:-35%;
+    }
 }
+
+
 
 
 @mixin fond-icon
@@ -189,9 +219,16 @@
     left:89px;
     z-index:1;
     @content;  
-  
+
+    // Travail sur média query (voir la mixin breakpoint-mob) 
+    @include breakpoint-mob.mob320
+    {
+        height:75px;
+    }
 
 }
+  
+
 
 
 @mixin menu-icon
@@ -208,6 +245,12 @@
     bottom:30px;
     z-index:2;
     @content;
+
+    // Travail sur média query (voir la mixin breakpoint-mob) 
+    @include breakpoint-mob.mob320{
+    position:relative;
+    bottom:35px;
+    }
 }
 
 

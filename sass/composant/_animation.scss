@@ -1,0 +1,292 @@
+@use "../utils/variables";
+
+
+// animaton pour le bouton check en vert des pages menus
+
+@mixin animation-check
+{
+    @keyframes iconrotation{
+        0%{
+            transform: rotate(-270deg);
+            background-color: rotate(none);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+    animation: iconrotation 250ms linear;
+}
+
+
+// animation pour afficher les menus avec effet apparition
+
+@mixin ani1
+{ 
+    @keyframes animation-menu{
+        0% {
+        visibility:hidden;
+    }
+            
+        
+
+        100%{
+            
+          
+           visibility:visible;
+        }
+     }
+    animation: animation-menu 50ms ease;
+    animation-delay:250ms;
+    animation-fill-mode: forwards;
+   
+}
+
+
+
+
+
+
+@mixin animation-li1
+{ 
+    @keyframes animation-menu{
+        0% {opacity:(0);
+            transform: translatey(0);
+            
+        }
+
+        100%{
+            opacity:(1);
+            transform: translatey(5px);
+            
+        }
+     }
+    animation: animation-menu 250ms ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+   
+}
+@mixin animation-li2
+{ 
+    @keyframes animation-menu{
+        0% {opacity:(0);
+            transform: translateY(0);
+           
+        }
+
+        100%{
+            opacity:(1);
+            transform: translateY(-5px);
+
+        }
+     }
+    animation: animation-menu 500ms ease-in;
+    animation-delay: 2s;
+    
+    animation-fill-mode: forwards;
+}
+
+
+@mixin animation-li3
+{ 
+    @keyframes animation-menu{
+        0% {opacity:(0);
+            transform: translateY(0);
+           
+        }
+
+        100%{
+            opacity:(1);
+            transform: translateY(-5px);
+
+        }
+     }
+    animation: animation-menu 1000ms ease-in;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+// Animation concernant le Loading spinner
+
+@mixin loader-circle1
+{
+    @keyframes loader-circle1
+    {
+        0%{
+            border-style:solid double;
+        }
+
+        20%{
+           
+            border-style:double dashed;
+            
+        }
+
+        40%{
+            
+            border-style:dotted double;
+            
+        }
+
+        60%{
+            
+            border-style:solid double;
+            
+        }
+
+        80%{
+            
+           
+                border-style:double dashed;
+        
+        }
+
+        100%{
+            
+            border-style:dotted double;
+            
+        }
+
+
+    }
+    animation: loader-circle1 1s ease-in infinite forwards;
+    
+    
+}
+
+
+// animation concernant les icones dans le cercle rose
+
+@mixin loader-icon1
+{
+    @keyframes loader-icon1
+    {
+        0%{
+            content:"\f5ce";
+            font-size:100px;
+        }
+
+        20%{
+            content:"\f4e3";
+            font-size:130px;
+        }
+
+        40%{
+            content:"\f5ce";
+            font-size:100px;
+        }
+        60%{
+            content:"\f4e3";
+            font-size:130px;
+        }
+
+        
+
+        100%{
+            visibility: hidden;
+           
+            font-size:130px;
+        }
+
+    }
+    animation: loader-icon1 1s ease-in;
+    animation-duration:2s;
+    
+
+}
+
+
+
+
+
+
+// Animation cercle jaune et text ohmyfood
+
+
+@mixin marque{
+    @keyframes marque {
+     0%{ content:"";
+         visibility: hidden;
+
+         }
+        
+        100%{
+            
+            visibility: visible;
+            position: relative;
+            bottom:480px;
+            z-index:5;
+        }
+        
+    }
+    animation:marque 1s ease-in-out forwards;
+    animation-duration:3s;
+}
+
+@mixin loader-circle2
+{
+    @keyframes loader-circle2 {
+        0%{
+            visibility:hidden;
+        }
+        100%{
+            visibility: visible;
+            position: relative;
+            bottom:220px;
+        }
+        
+    }
+    animation: loader-circle2 1s ease-in-out forwards;
+    animation-duration:3s;
+    
+}
+
+
+
+
+@mixin loader-ohmyfood
+{
+    @keyframes loader-ohmyfood
+    {
+        0%{
+            content:"Oh";
+            font-family:variables.$titre-Police;
+            font-size:50px;
+            text-align: center;
+            position:relative;
+            bottom:45vw;
+        }
+
+        20%{
+            content:"...my";
+            font-family:variables.$titre-Police;
+            font-size:50px;
+        }
+
+        40%{
+            content:"food !";
+            font-family:variables.$titre-Police;
+            font-size:50px;
+        }
+
+        60%{
+            
+            font-family:variables.$titre-Police;
+            font-size:50px;
+           position: relative;
+ 
+        }
+
+
+        100%{
+            
+           visibility:hidden;
+ 
+        }
+    }
+    animation: loader-ohmyfood 1s ease-in ;
+    animation-duration:2s;
+
+}
