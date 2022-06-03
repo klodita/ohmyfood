@@ -43,7 +43,7 @@
 
 
 
-
+// Travail sur l'animation de la page menu concernant les listes
 
 
 @mixin animation-li1
@@ -109,6 +109,24 @@
 
 
 // Animation concernant le Loading spinner
+
+@mixin fin-loader
+{
+    @keyframes fin-loader{
+        0%{
+            visibility: visible;
+        }
+
+        100%{
+            visibility: hidden;
+        }
+    }
+    animation:fin-loader 3s forwards;
+    
+}
+
+
+
 
 @mixin loader-circle1
 {
@@ -187,12 +205,12 @@
         100%{
             visibility: hidden;
            
-            font-size:130px;
+            
         }
 
     }
     animation: loader-icon1 1s ease-in;
-    animation-duration:2s;
+    animation-duration:1.5s;
     
 
 }
@@ -212,17 +230,25 @@
 
          }
         
-        100%{
-            
+        90%{
+            content:"Ohmyfood";
             visibility: visible;
             position: relative;
             bottom:480px;
-            z-index:5;
+           
+        }
+
+        100%{
+            
+            visibility:hidden;
+            position: relative;
+            bottom:480px;
+           
         }
         
     }
     animation:marque 1s ease-in-out forwards;
-    animation-duration:3s;
+    animation-duration:2.8s;
 }
 
 @mixin loader-circle2
@@ -231,15 +257,21 @@
         0%{
             visibility:hidden;
         }
-        100%{
+        90%{
             visibility: visible;
+            position: relative;
+            bottom:220px;
+        }
+
+        100%{
+            visibility:hidden;
             position: relative;
             bottom:220px;
         }
         
     }
     animation: loader-circle2 1s ease-in-out forwards;
-    animation-duration:3s;
+    animation-duration:2.8s;
     
 }
 
@@ -287,6 +319,6 @@
         }
     }
     animation: loader-ohmyfood 1s ease-in ;
-    animation-duration:2s;
+    animation-duration:1.4s;
 
 }

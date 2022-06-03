@@ -8,13 +8,16 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 background-color:black;
-opacity: 0.8;
+opacity: 0.9;
 height: 100vh;
 position: fixed;
 inset:0;
 z-index:6;
-    
+@include animation.fin-loader; 
 }
+
+
+
 
 .loader-icon1::before {
 
@@ -77,16 +80,17 @@ z-index:1;
 }
 
 .marque::before{
-    content:"Ohmyfood";
+    content:"";
     width: 300px;
     font-family:variables.$titre-Police;
     text-align: center;
     color:white;   
-    font-size:60px;
-    left:12vw;
+    font-size:35px;
+    left:25vw;
     bottom:380px;
+     z-index:5;
     @include animation.marque;
-    z-index:5;
+   
     
 }
 
