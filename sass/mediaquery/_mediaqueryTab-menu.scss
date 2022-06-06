@@ -1,0 +1,103 @@
+@use "../layout/header";
+
+
+@media screen and (min-width:768px) {
+   
+        #header_menu{
+            height: 200px;
+            display: flex;
+            
+                a{
+                    width: 20%;
+                    height: 70px;
+                    
+
+                    .fa-arrow-left{
+                        width: 50px;
+                    }
+                }
+                img{
+                    width: 70vw;
+                    height:100px;
+                }
+        }
+
+     .menu h1{
+         width:70%;
+         font-size: 5vw;
+         padding-left: 80px;
+       } 
+
+   .heart_menu{
+            
+             &.coeur{
+                
+                height:0;
+                font-size:1.2rem;
+                position: relative;
+                top:-30px;
+             }
+         }
+   
+         
+  #main_menu{
+
+ div .menu-row{
+    width:95%;
+    margin:20px;
+    margin-top:60px;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: row;
+    flex-grow: 1;
+    position: relative;
+    left:10px;
+
+.menu-entrees,.menu-plats{
+    width:47%;
+    margin:10px;
+    
+   ul li{
+    width:90%;
+    height: 70px;
+    & h3, p{
+        font-size:1.8vw;
+    }
+    .prix{
+        font-size: 1.8vw;
+    }
+   }
+}
+}
+
+
+.menu-desserts{
+    width:47%;
+    margin:10px;
+    position: relative;
+    left:30px;
+    
+    ul li{
+        width:85%;
+        height: 70px;
+        & h3, p{
+            font-size:1.8vw;
+        }
+        .prix{
+            font-size: 1.8vw;
+        }
+       }
+     }
+
+  }  
+
+
+  .btn{
+      width:30%;
+      font-size:2.5vw;
+      position: relative;
+      left:180px;
+      bottom:196px;
+  }
+}

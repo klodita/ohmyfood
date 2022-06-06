@@ -23,7 +23,7 @@
 
 
 
-
+// concerne le header de la page menu des différents restaurateur
 
 #header_menu
 {   
@@ -40,12 +40,11 @@
    
 a  
 {   width:20%;
+    height:50px;
     display:flex;
     padding-top:10%;
     padding-bottom:5%;
     margin:0;
-    width: 17vw;
-    height:50px;
     padding:10px;
     position: relative;
     left:10px;

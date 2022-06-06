@@ -9,4 +9,5 @@
 @use "./layout/menu";
 @use "./layout/footer";
 @use "./utils/breakpoint-mob";
-@use "./utils/mediaquery-tab";
+@use "./mediaquery/mediaquerytab-accueil";
+@use "./mediaquery/mediaqueryTab-menu";

@@ -1,0 +1,7 @@
+
+@mixin breakpoint-mintab($break-min:0)
+{
+    @media (min-width:$break-min) {
+        @content;
+    }
+}

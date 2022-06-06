@@ -1,0 +1,216 @@
+@use "../utils/mixin-header";
+@use "../utils/variables";
+@use "../utils/mixin-fonctionnement";
+@use "../utils/breakpoint-tab";
+@use "../composant/box-shadow";
+
+
+@media screen and (min-width:768px) {
+   
+   
+    #header_accueil{
+        
+        display: flex;
+        @include mixin-header.header{
+            height: 160px;
+        }
+
+        .div_img{
+            width: 90%;
+            height:150px;
+            border-bottom:none;
+            box-shadow:none;
+            
+            img{
+                width:70vw;
+                padding:30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                object-fit: cover;
+            }
+        }
+    }
+
+  .row-tab {
+      width:100%;
+      display: flex;
+      flex-direction:row;
+      align-items: baseline;
+      justify-content: baseline;
+      flex-grow: 1;
+        
+    
+    }
+
+  #apropos
+  { 
+      width: 45%;
+      height: 40%;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-left:20px;
+      @include box-shadow.shadow;
+  }
+
+#apropos .localisation
+{ & .belleville{
+     font-size: 2vw;
+} 
+}
+
+.fond-colo{ 
+    & h1{
+        font-size: 3vw;
+    }
+    & p{
+        text-align:center;
+        font-size:2vw;
+    }
+
+    & button {
+        width: 80%;
+        font-size: 2vw;
+    }
+}
+
+
+  #tuto
+  {
+      width: 50%;
+
+      h2{
+          font-size: 4vw;
+          display: flex;
+          position: relative;
+          left:5vw;
+          bottom:10px; 
+      }
+
+      li {
+         height:67px;
+        font-size: 2vw; 
+        
+        & i{ @include mixin-fonctionnement.tuto-icon
+         {
+            width: 1%;
+            font-size:0.9rem ;
+            padding-right:5px;
+            position: relative;
+            left:-10px;
+        
+        
+         }
+      }
+      }
+
+     
+    
+  }
+    
+#resto{ 
+   width: 95%;
+   height: auto;
+   margin: 20px;
+   margin-top:60px;
+   margin-bottom:60px;
+   padding-bottom: 20px;
+   display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+   border-radius: 30px;
+   @include box-shadow.shadow;
+   & h2{
+       font-size: 4vw;
+       text-align: center;
+       position: relative;
+       bottom:30px;
+   }
+
+   img { 
+   width:95%;
+   height: 250px;
+   display: flex;
+   align-items: baseline;
+   justify-items: baseline;
+   object-fit: cover;
+   }
+
+   .new::before{ 
+       width:30%;
+       height: 1.8rem;
+       font-size:2.5vw;
+       position: absolute;
+       left:28vw;
+   }
+
+   .resto_fond{
+       width:90%;
+       height: 80px;
+       @include breakpoint-tab.breakpoint-mintab($break-min:868px){
+           width: 91%;
+           height:85px;
+       }
+       & h3, p{
+           font-size:2.5vw;
+       }
+   }
+
+   .resto-row1{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       align-items: flex-start;
+       flex-grow: 1;
+       margin:10px;
+   }
+
+   .resto-row2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin:10px;
+   padding-bottom: 30px;
+    
+    
+}
+
+.resto1, .resto2, .resto3, .resto4{
+   margin:0;
+   margin-bottom:15px;
+}
+
+}
+
+div .coeur{
+    position: relative; 
+    top:-130px;
+}
+
+footer {
+   width:100%;
+    .largeur_footer{ 
+        height: 270px;
+        padding-bottom:20px;
+        h2{
+            width: 70%;
+            font-size:30px;
+        }
+        
+        a {
+            &.icon_footer{
+                i{
+                    font-size:22px;
+                }
+                p{
+                    font-size: 22px; 
+                }
+            }
+        }
+    }
+    
+}
+
+}
