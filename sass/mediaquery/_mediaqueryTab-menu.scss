@@ -1,4 +1,87 @@
 @use "../layout/header";
+@use "../utils/breakpoint-tab";
+@use"../utils/mixin-menu";
+
+
+
+@mixin breakpointtab-menuli{
+    @include breakpoint-tab.breakpoint-mintab($break-min:822px)
+    {
+    height:8vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:834px)
+    {
+    height:8vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+    height:9vw;
+    }
+    @content;
+}
+
+
+
+@mixin breakpointtab-prixhover {
+    
+    @include breakpoint-tab.breakpoint-mintab($break-min:890px)
+    {
+      height:85px;
+      position: relative;
+      bottom:69px;
+    }
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:917px)
+    {
+      height:85px;
+      position: relative;
+      bottom:71px;
+    }
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:952px)
+    {
+      
+      height:95px;
+      position: relative;
+      bottom:74px;
+      left:30px;
+      
+    }
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+      height:85px;
+      position: relative;
+      bottom:75px;
+    }
+@content;
+}
+
+
+@mixin breakpointtab-fond-icon{
+    @include breakpoint-tab.breakpoint-mintab($break-min:829px)
+    {
+      height:75px;
+      position: relative;
+      bottom:5%;
+    }
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+        width:20%;
+      height:88px;
+      position: relative;
+      bottom:2%;
+      margin-left: 10px;
+      
+    }
+    @content;
+}
+
+
+
+
+
 
 
 @media screen and (min-width:768px) {
@@ -42,6 +125,24 @@
          
   #main_menu{
 
+    li{
+
+        &:hover{
+        .prix_hover{
+            @include mixin-menu.prix-hover{
+                @include breakpointtab-prixhover;
+
+            }
+    
+            &::after{
+            content:"";
+            @include mixin-menu.fond-icon;
+           @include breakpointtab-fond-icon;
+              }
+        }
+        }
+        }
+
  div .menu-row{
     width:95%;
     margin:20px;
@@ -61,6 +162,7 @@
    ul li{
     width:90%;
     height: 70px;
+    @include breakpointtab-menuli;
     & h3, p{
         font-size:1.8vw;
     }
@@ -68,6 +170,8 @@
         font-size: 1.8vw;
     }
    }
+
+   
 }
 }
 
@@ -80,17 +184,29 @@
     
     ul li{
         width:85%;
-        height: 70px;
+        height:9vw;
+    @include breakpointtab-menuli;
         & h3, p{
             font-size:1.8vw;
         }
         .prix{
             font-size: 1.8vw;
         }
-       }
+        .prix2{
+            position: relative;
+            bottom:5%;
+            
+        }
+        
+        }
+
      }
 
+     
   }  
+
+
+
 
 
   .btn{
@@ -101,3 +217,4 @@
       bottom:196px;
   }
 }
+
