@@ -4,6 +4,9 @@
 @use "../mediaquery/mediadesktop-menu";
 
 
+
+
+
 @mixin breakpointtab-menuli{
     @include breakpoint-tab.breakpoint-mintab($break-min:822px)
     {
@@ -15,24 +18,25 @@
     }
     @include breakpoint-tab.breakpoint-mintab($break-min:940px)
     {
-    width: 88%;
     height:8vw;
     }
+
+
+    // ici cela concerne le responsive desktop car impossible de changer 
+    // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
+    
     @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
         height: 7vw;
         padding-left:10px;
         margin-bottom:40px;
         border-radius: 30px;
- 
     }
+
     @include mediadesktop-menu.mediadesktop-min($break-min:2560px){
-       
-      
         padding-left:10px;
         padding-top: 10px;
         margin-bottom:40px;
         border-radius: 30px;
-       
     }
     
     @content;
@@ -55,7 +59,6 @@
       height:85px;
       position: relative;
       bottom:71px;
-      
     }
     
     @include breakpoint-tab.breakpoint-mintab($break-min:940px)
@@ -63,19 +66,14 @@
       height:115px;
       position: relative;
       bottom:-10px;
-      
     }
 
     @include breakpoint-tab.breakpoint-mintab($break-min:952px)
     {
-     
         height:116px;
         position: relative;
         bottom:-12px; 
     }
-
-    
-     
     
 @content;
 }
@@ -91,13 +89,15 @@
 
     @include breakpoint-tab.breakpoint-mintab($break-min:940px)
     {
-
       height:88px;
       position: relative;
       bottom:2%;
       margin-left: 10px;
-      
     }
+
+
+    // ici cela concerne le responsive desktop car impossible de changer 
+    // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
 
     @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
        
@@ -127,30 +127,25 @@
       bottom:84.5px;
       
     }
+
+
+    // ici cela concerne le responsive desktop car impossible de changer 
+    // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
+
     @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
-       
-      
         position: relative;
         top:-83.2px;
-       
     }
 
     @include mediadesktop-menu.mediadesktop-min($break-min:1460px){
-       
-      
         position: relative;
         top:-84.2px;
-       
-    }
-    @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
-       
-      
-        position: relative;
-        top:-87px;
-       
     }
 
-  
+    @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
+        position: relative;
+        top:-87px;
+    }
 
     @content;
 }
@@ -161,8 +156,12 @@
 @media screen and (min-width:768px)  {
    
         #header_menu{
-            height: 200px;
+            width: 100%;
+            height: 12vw;
             display: flex;
+            flex-direction: row;
+            align-items:baseline;
+            justify-content:baseline;
             
                 a{
                     width: 20%;
@@ -170,36 +169,92 @@
                     
 
                     .fa-arrow-left{
-                        width: 50px;
+                        width: 15vw;
+                        height: 10vw;
+                        font-size:8vw;
+                        display: flex;
+                        position: relative;
+                        bottom:1%;
                     }
                 }
                 img{
                     width: 70vw;
-                    height:100px;
+                    height:10vw;
+                    padding-bottom: 20px;
+                    display: flex;
+                    position: relative;
+                    top:4vw;
+                   
+
+                   
+                    @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+                        top:2.5vw;
+                    }
+                    
+                    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+                        top:2.4vw;
+                    }
+
+                    @include mediadesktop-menu.mediadesktop-min($break-min:1536px){
+                        top:2vw;
+                    }
                 }
         }
+    .imgresto
+{   
+    // width: 95vw;
+    height:40vw;
+    margin-top: 30px;
+    background-color: white;
+}
+
+#main_menu{
+    margin-bottom:-8vw;
+}
+
+     .menu{
+         position: relative;
+         bottom:8vw;
+         border-top-left-radius:8vw;
+         border-top-right-radius:8vw;
+
+         h2{
+             font-size:2.5vw;
+         }
+     }   
 
      .menu h1{
          width:70%;
          font-size: 5vw;
          padding-left: 80px;
+         margin-top: 4vw;
+         @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+            font-size: 6vw;
+        }
        } 
 
    .heart_menu{
             
              &.coeur{
-                
                 height:0;
-                font-size:1.2rem;
+                width: 0;
+                font-size:3vw;
                 position: relative;
-                top:-30px;
+                top:-4vw;
+                left:87vw;
+                @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+                    top:-4.8vw; 
+                }
+                @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
+                    left:85vw;
+                }
              }
          }
    
          
   #main_menu{
 
-    li{
+    li{ 
         
         &:hover{
         .prix_hover{
@@ -220,7 +275,7 @@
         }
 
  div .menu-row{
-    width:95%;
+    width:93vw;
     margin:20px;
     margin-top:60px;
     display: flex;
@@ -234,23 +289,21 @@
 .menu-entrees,.menu-plats{
     width:47%;
     margin:10px;
+    margin-right:1vw;
     
    ul li{
     width:90%;
-    height: 9vw;
+    height:9vw;
+  
     @include breakpointtab-menuli;
-    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
-    {
-    width: 83%;
-    height:8vw;
+    @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+       
+        width: 93%;
     }
-
     @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
         height: 7vw;
-        width:95%;
- 
+        width: 95%;
     }
-
 
 
     & h3, p{
@@ -283,15 +336,11 @@
         width:85%;
         height:9vw;
     @include breakpointtab-menuli;
-    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
-    {
-    width: 83%;
-    height:8vw;
-    }
-
+   
     @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
         height: 7vw;
         width: 90%;
+       
  
     }
     
@@ -321,14 +370,16 @@
 
 
 
-
-
   .btn{
       width:30%;
       font-size:2.5vw;
       position: relative;
       left:180px;
       bottom:196px;
+      margin-bottom:0vw;
   }
 }
 
+
+
+// *********************************************************

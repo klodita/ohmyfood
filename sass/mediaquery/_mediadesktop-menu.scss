@@ -8,3 +8,20 @@
 }
 
 
+@media screen and (min-width:1440px){
+    #main_menu{
+        .menu{
+            padding-left:2vw;
+            @include mediadesktop-min($break-min:1536px){
+                padding-left:2vw;
+            }
+            @include mediadesktop-min($break-min:1570px){
+                padding-left:2.5vw;
+            }
+            @include mediadesktop-min($break-min:1884px){
+                padding-left:4vw;
+            }
+        }
+        
+    }
+}

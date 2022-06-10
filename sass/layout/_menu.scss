@@ -5,19 +5,22 @@
 @use "../utils/mixin-bouton";
 @use "../composant/animation";
 @use "../utils/breakpoint-mob";
+@use "../mediaquery/mediadesktop-menu";
 
 
 #main_menu
 {
-    background-color: variables.$fond-color;
+    height:auto;
+    margin-bottom:-15vw;
 }
 
 .imgresto
 {
-    width: 100%;
-    height:300px;
+    width: 100vw;
+    height:85vw;
     margin:0;
     object-fit:cover;
+    
 }
 
 
@@ -32,6 +35,7 @@
     background-color: variables.$fond-color;
     border-top-left-radius:40px;
     border-top-right-radius:40px;
+   
     position:relative;
     bottom:50px;
     z-index: 1;
@@ -290,7 +294,7 @@ ul{
 .btn{
     align-self: center;
     margin-top:10px;
-    margin-bottom:0px;
+    margin-bottom:10vw;
     @include mixin-bouton.bouton-rose;
     &:hover{
         @include mixin-bouton.hover-bouton;

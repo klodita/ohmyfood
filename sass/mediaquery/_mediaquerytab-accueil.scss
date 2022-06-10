@@ -12,7 +12,9 @@
         
         display: flex;
         @include mixin-header.header{
-            height: 160px;
+            height:12vw;
+            margin-top:30px;
+            margin-bottom:80px;
         }
 
         .div_img{
@@ -23,10 +25,12 @@
             
             img{
                 width:70vw;
+               
                 padding:30px;
                 margin-top: 30px;
                 margin-bottom: 30px;
                 object-fit: cover;
+                
             }
         }
     }
