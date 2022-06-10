@@ -56,7 +56,6 @@ margin-bottom:20px;
 li
 {
     @include mixin-menu.menuli;
- 
     div
     {   
         width:85%;
@@ -95,6 +94,7 @@ li
      }      
      .fond-icon{
          @include mixin-menu.fond-icon;
+         
      }
      .fa-circle-check{
      @include mixin-menu.menu-icon;
@@ -242,6 +242,8 @@ li
         left:35px;
         bottom:85px; 
     }
+
+    
         }
     }
 }

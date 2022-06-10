@@ -1,7 +1,7 @@
 @use "../layout/header";
 @use "../utils/breakpoint-tab";
 @use"../utils/mixin-menu";
-
+@use "../mediaquery/mediadesktop-menu";
 
 
 @mixin breakpointtab-menuli{
@@ -15,14 +15,33 @@
     }
     @include breakpoint-tab.breakpoint-mintab($break-min:940px)
     {
-    height:9vw;
+    width: 88%;
+    height:8vw;
     }
+    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+        height: 7vw;
+        padding-left:10px;
+        margin-bottom:40px;
+        border-radius: 30px;
+ 
+    }
+    @include mediadesktop-menu.mediadesktop-min($break-min:2560px){
+       
+      
+        padding-left:10px;
+        padding-top: 10px;
+        margin-bottom:40px;
+        border-radius: 30px;
+       
+    }
+    
     @content;
 }
 
 
 
 @mixin breakpointtab-prixhover {
+    
     
     @include breakpoint-tab.breakpoint-mintab($break-min:890px)
     {
@@ -36,24 +55,28 @@
       height:85px;
       position: relative;
       bottom:71px;
+      
+    }
+    
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+      height:115px;
+      position: relative;
+      bottom:-10px;
+      
     }
 
     @include breakpoint-tab.breakpoint-mintab($break-min:952px)
     {
-      
-      height:95px;
-      position: relative;
-      bottom:74px;
-      left:30px;
-      
+     
+        height:116px;
+        position: relative;
+        bottom:-12px; 
     }
 
-    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
-    {
-      height:85px;
-      position: relative;
-      bottom:75px;
-    }
+    
+     
+    
 @content;
 }
 
@@ -68,23 +91,74 @@
 
     @include breakpoint-tab.breakpoint-mintab($break-min:940px)
     {
-        width:20%;
+
       height:88px;
       position: relative;
       bottom:2%;
       margin-left: 10px;
       
     }
+
+    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+       
+        height:135px;
+        position: relative;
+        bottom:20px;
+        margin-left: 10px;
+    }
+
+    @include mediadesktop-menu.mediadesktop-min($break-min:2560px){
+       
+        height:250px;
+        position: relative;
+        bottom:50px;
+        
+    }
+    @content;
+}
+
+
+
+@mixin breakpointtab-prixhover2{
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+      position: relative;
+      bottom:84.5px;
+      
+    }
+    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+       
+      
+        position: relative;
+        top:-83.2px;
+       
+    }
+
+    @include mediadesktop-menu.mediadesktop-min($break-min:1460px){
+       
+      
+        position: relative;
+        top:-84.2px;
+       
+    }
+    @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
+       
+      
+        position: relative;
+        top:-87px;
+       
+    }
+
+  
+
     @content;
 }
 
 
 
 
-
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px)  {
    
         #header_menu{
             height: 200px;
@@ -126,11 +200,13 @@
   #main_menu{
 
     li{
-
+        
         &:hover{
         .prix_hover{
+            bottom:74px;
+            
             @include mixin-menu.prix-hover{
-                @include breakpointtab-prixhover;
+                @include breakpointtab-prixhover2;
 
             }
     
@@ -161,13 +237,34 @@
     
    ul li{
     width:90%;
-    height: 70px;
+    height: 9vw;
     @include breakpointtab-menuli;
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+    width: 83%;
+    height:8vw;
+    }
+
+    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+        height: 7vw;
+        width:95%;
+ 
+    }
+
+
+
     & h3, p{
         font-size:1.8vw;
     }
     .prix{
         font-size: 1.8vw;
+        @include breakpointtab-prixhover;
+    }
+    .prix_hover{
+        
+        position: relative;
+        bottom:70px;
+        @include breakpointtab-prixhover2;
     }
    }
 
@@ -186,16 +283,33 @@
         width:85%;
         height:9vw;
     @include breakpointtab-menuli;
+    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    {
+    width: 83%;
+    height:8vw;
+    }
+
+    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+        height: 7vw;
+        width: 90%;
+ 
+    }
+    
+
+
         & h3, p{
             font-size:1.8vw;
         }
         .prix{
             font-size: 1.8vw;
+            @include breakpointtab-prixhover;
+          
         }
-        .prix2{
+        .prix_hover{
+           
             position: relative;
-            bottom:5%;
-            
+            bottom:70px;
+            @include breakpointtab-prixhover2;
         }
         
         }
