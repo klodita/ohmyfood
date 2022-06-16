@@ -297,7 +297,7 @@
     }
     @include breakpoint-desk.mediadesktop-min($break-min:1152px){
        
-        width:8vw;
+        width:7vw;
         top:0px;
         left:8vw;
         
@@ -322,10 +322,19 @@
         
     }
 
+    @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+       
+        width:8.6vw;
+        top:-20px;
+        
+        
+    }
+
     @include breakpoint-desk.mediadesktop-min($break-min:1920px){
        width:7vw;
-       top:-25px;
+       top:-26px;
        left:100px;
+       
         
     }
 
@@ -382,13 +391,20 @@
     }
 
     @include breakpoint-desk.mediadesktop-min($break-min:1680px){
-        font-size:2.5rem;
+        font-size:2.2rem;
         position: relative;
         top:-4.5vw;
-        left:-1vw;
+        left:-0.2vw;
          
      }
 
+     @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+        font-size:2.2rem;
+        position: relative;
+        top:-4.5vw;
+        left:-0.8vw;
+         
+     }
      @include breakpoint-desk.mediadesktop-min($break-min:2000px){
         font-size:3rem;
         position: relative;
