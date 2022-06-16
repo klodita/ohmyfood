@@ -160,6 +160,10 @@
    align-items: baseline;
    justify-items: baseline;
    object-fit: cover;
+   @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
    }
 
    .new::before{ 
@@ -173,10 +177,19 @@
    .resto_fond{
        width:90%;
        height: 80px;
-       @include breakpoint-tab.breakpoint-mintab($break-min:868px){
-           width: 91%;
-           height:85px;
-       }
+       @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        width:91%;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1072px){
+        width:92%;
+        height:8.5vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+        width:91%;
+        border-bottom-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+    }
+      
        & h3, p{
            font-size:2.5vw;
        }
@@ -205,14 +218,14 @@
 
 .resto1, .resto2, .resto3, .resto4{
    margin:0;
-   margin-bottom:15px;
+   margin-bottom:2.8vw;
 }
 
 }
 
 div .coeur{
     position: relative; 
-    top:-130px;
+    top:-15vw;
 }
 
 footer {

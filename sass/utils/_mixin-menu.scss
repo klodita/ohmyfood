@@ -284,34 +284,54 @@
     @content;  
    
 
-    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-        position: relative;
-        top:5px;
-    }
+    
     // Travail sur média query (voir la mixin breakpoint-mob) 
     @include breakpoint-mob.mob320
     {
         height:75px;
     }
-    
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        
+        position: relative;
+        top:5px;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+       
+        width:8vw;
+        top:0px;
+        left:8vw;
+        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+       width: 7vw;
+        top:-0.4vw;
+        left:8vw;
+        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+       width: 7vw;
+        top:-0.6vw;
+        left:8vw;
+        
+    }
+   
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
        
-
-        width:85px;
+        width:8vw;
         top:-25px;
         
     }
 
-    @include breakpoint-desk.mediadesktop-min($break-min:1880px){
-       width:110px;
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+       width:7vw;
        top:-25px;
        left:100px;
         
     }
 
     @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-        width:150px;
-        top:-120px;
+        width:7vw;
+        top:-110px;
         left:120px;
          
      }
@@ -337,29 +357,43 @@
     @content;
 
    
-
-    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
        
-        font-size:30px;
+        font-size:1.5rem;
         position: relative;
-        top:-90px;
+        top:-3.2vw;
+       left:1.5vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1400px){
        
+        font-size:1.8rem;
+        position: relative;
+        top:-3vw;
+       left:1.5vw;
     }
     
-    @include breakpoint-desk.mediadesktop-min($break-min:1880px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
        
-        font-size:38px;
+        font-size:2rem;
         position: relative;
-        top:-87px;
+        top:-5.8vw;
         left:0px;
        
     }
 
-    @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-        font-size:45px;
+    @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+        font-size:2.5rem;
         position: relative;
-        top:-200px;
-        left:0px;
+        top:-4.5vw;
+        left:-1vw;
+         
+     }
+
+     @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+        font-size:3rem;
+        position: relative;
+        top:-8.5vw;
+        left:-1vw;
          
      }
 

@@ -98,6 +98,7 @@
 
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
+  
 
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
        
@@ -256,7 +257,9 @@
   #main_menu{
 
     li{ 
-        
+        @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+        margin-bottom:2.5vw;
+        }
         &:hover{
         .prix_hover{
             bottom:74px;
@@ -301,6 +304,21 @@
        
         width: 93%;
     }
+    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+       
+        height:7.5vw;
+        width: 94%;
+    }
+     @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+       
+        height:6.5vw;
+        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+       
+        height:6.3vw;
+        
+    }
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         height: 7vw;
         width: 95%;
@@ -309,6 +327,7 @@
 
     & h3, p{
         font-size:1.8vw;
+        
     }
     .prix{
         font-size: 1.8vw;
@@ -337,7 +356,21 @@
         width:85%;
         height:9vw;
     @include breakpointtab-menuli;
-   
+    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+       
+        height:7.5vw;
+        width: 89%;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+       
+        height:6.5vw;
+        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+       
+        height:6.3vw;
+        
+    }
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         height: 7vw;
         width: 90%;

@@ -1,5 +1,6 @@
 @use "../utils/mixin-fonctionnement";
 @use "../utils/mixin-heart";
+@use "../utils/breakpoint-desk";
 
 
 // mediaquery pour les desktop à partir de 1024px
@@ -23,15 +24,44 @@
             @include mixin-fonctionnement.li-counter{
                 width: 2vw;
                 height: 2vw;
+                @include breakpoint-desk.mediadesk-min($break-mi:1152px){
+                    width: 3vw;
+                    height: 3vw;
+                }
+            }
+                
             }
       
         }
       }
     }
+#resto{
 
-   
+    .resto_fond{
+        height:9vw;
+        position: relative;
+        bottom:0vw;
+    }
 
+    .resto1, .resto2, .resto3, .resto4{
+        margin:0;
+        margin-bottom:4vw;
+
+        @include breakpoint-desk.mediadesktop-min($break-min:1072px){
+        margin-bottom:4vw;}
+
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+            margin-bottom:5.5vw;
+        }
+
+        
+
+    
+
+     }
 }
+
+
 
 
 // **********************************media query 1440px*****
@@ -80,7 +110,8 @@
 
         .resto1, .resto2, .resto3, .resto4{
             margin:0;
-            margin-bottom:85px;
+            margin-bottom:8vw;
+            
          }
         
     }
@@ -132,17 +163,34 @@
         img{
             width:93%;
             height:480px;
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                height:460px;
+            }
             
         }
         .resto_fond{
             height: 7.5vw;
             position: relative;
             bottom:0vw;
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                height:9vw;
+            }
         }
 
         .resto1, .resto2, .resto3, .resto4{
             margin:0;
             margin-bottom:425px;
+   
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+            margin-bottom:21vw;
+            }
+
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                margin-bottom:18vw;
+                   }
+
+        
+
          }
         
     }
