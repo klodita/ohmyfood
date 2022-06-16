@@ -1,0 +1,160 @@
+@use "../utils/mixin-fonctionnement";
+@use "../utils/mixin-heart";
+
+
+// mediaquery pour les desktop à partir de 1024px
+// cependant le breakpoint-desk a été ajouté directement
+// dans les fichiers heart.scss, mediadesktop-menu.scss
+// mixin-menu.scss, mixin-fonctionnement.scss et 
+// mediaquerytab-accueil.scss car il était impossible
+// de modifier les données dans ce fichier.
+
+@media screen and (min-width:1024px)
+{
+    #tuto{
+        
+        
+        position: relative;
+        top:0;   
+        
+      li{
+        height:7.6vw;
+        &::before{
+            @include mixin-fonctionnement.li-counter{
+                width: 2vw;
+                height: 2vw;
+            }
+      
+        }
+      }
+    }
+
+   
+
+}
+
+
+// **********************************media query 1440px*****
+
+@media screen and (min-width:1440px)
+{
+    #tuto{
+        
+        
+        position: relative;
+        top:0vw; 
+        left:2vw;  
+        li{
+            height:7.6vw;
+            &::before{
+                @include mixin-fonctionnement.li-counter{
+                    width: 3vw;
+                    height: 3vw;
+                }
+          
+            }
+          }
+       
+    }
+
+    #resto{
+       
+        position: relative;
+        left:1vw;
+        h2{
+            margin-top:-1%;
+            margin-bottom:1%;
+        }
+   
+
+        img{
+            width:94%;
+            height:280px;
+            
+        }
+        .resto_fond{
+            height: 8vw;
+            position: relative;
+            bottom:0vw;
+        }
+
+        .resto1, .resto2, .resto3, .resto4{
+            margin:0;
+            margin-bottom:85px;
+         }
+        
+    }
+
+}
+
+// **********************************media query pour desktop min 1441px*****
+
+@media screen and (min-width:1441px)
+{
+    .row-tab{
+        position: relative;
+        left:4vw;
+        margin-bottom: 5%;
+    }
+   
+    #tuto{
+        
+        
+        position: relative;
+        top:0vw; 
+        left:2vw;  
+        
+        li{
+            height:7.2vw;
+            &::before{
+                @include mixin-fonctionnement.li-counter{
+                    width: 2.8vw;
+                    height: 2.8vw;
+                    border-radius: 9vw;
+                    position: relative;
+                    left:-1.5vw;
+                }
+          
+            }
+            
+          }
+    }
+
+    #resto{
+        position: relative;
+        left:1.6vw;
+        h2{
+            margin-top:-2%;
+            margin-bottom:2%;
+        }
+   
+
+        img{
+            width:93%;
+            height:480px;
+            
+        }
+        .resto_fond{
+            height: 7.5vw;
+            position: relative;
+            bottom:0vw;
+        }
+
+        .resto1, .resto2, .resto3, .resto4{
+            margin:0;
+            margin-bottom:425px;
+         }
+        
+    }
+    
+    footer {
+        .largeur_footer{
+            padding-left: 2vw;
+            h2{
+                font-size:2vw;
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+            }
+        }
+    }
+}

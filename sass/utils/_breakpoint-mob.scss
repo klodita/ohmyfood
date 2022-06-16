@@ -1,5 +1,11 @@
 
 // cette mixin permet de corriger quelque rendu visuel sur des breakpoints
+// cependant le breakpoint-mob a été ajouté directement
+// dans les fichiers footer.scss, accueil.scss, restaurants.scss,
+// mixin-accueil.scss, mixin-fonctionnement.scss, mixin-footer.scss,
+// et mixin-heart.scss, mixin-menu.scss, mixin-restaurant.scss,
+// car il était impossible de modifier les données dans ce fichier.
+
 
 @mixin breakpoint($break:0)
 {

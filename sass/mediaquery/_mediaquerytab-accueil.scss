@@ -3,6 +3,14 @@
 @use "../utils/mixin-fonctionnement";
 @use "../utils/breakpoint-tab";
 @use "../composant/box-shadow";
+@use "../utils/breakpoint-desk";
+
+
+// mediaquery pour les tablettes à partir de 768px
+// cependant le breakpoint-tab a été ajouté directement
+// dans les fichiers mixin-fonctionnement.scss, 
+// mediaquerytab-menu.scss et mediaquerytab-accueil.scss
+// car il était impossible de modifier les données dans ce fichier.
 
 
 @media screen and (min-width:768px) {
@@ -36,14 +44,16 @@
     }
 
   .row-tab {
-      width:100%;
+      width:96%;
       display: flex;
+      margin:0;
+      padding:0;
       flex-direction:row;
       align-items: baseline;
       justify-content: baseline;
       flex-grow: 1;
-        
-    
+      position: relative;
+      left:2vw;
     }
 
   #apropos
@@ -79,29 +89,41 @@
 
 
   #tuto
-  {
-      width: 50%;
-
+  { 
+      width: 50vw;
+      display: flex;
+      margin:0;
+      padding: 0;
+      position: relative;
+      left:0.5vw;
+      top:0;
       h2{
           font-size: 4vw;
           display: flex;
           position: relative;
-          left:5vw;
+          left:5%;
           bottom:10px; 
       }
 
       li {
-         height:67px;
+        height:7vw;
         font-size: 2vw; 
+        border-radius:2vw;
+        &::before{
+            @include mixin-fonctionnement.li-counter{
+                width: 3vw;
+                height: 3vw;
+            }
+          
+      
+        }
         
         & i{ @include mixin-fonctionnement.tuto-icon
          {
             width: 1%;
-            font-size:0.9rem ;
             padding-right:5px;
             position: relative;
             left:-10px;
-        
         
          }
       }
@@ -198,6 +220,9 @@ footer {
     .largeur_footer{ 
         height: 270px;
         padding-bottom:20px;
+        @include breakpoint-desk.mediadesk-min($break-mi:1441px){
+            height:16vw;
+        }
         h2{
             width: 70%;
             font-size:30px;
@@ -207,9 +232,18 @@ footer {
             &.icon_footer{
                 i{
                     font-size:22px;
+                    @include breakpoint-desk.mediadesk-min($break-mi:1441px){
+                        font-size: 1.8vw;
+                        margin-right: 1vw;
+                    }
+
                 }
                 p{
                     font-size: 22px; 
+                    @include breakpoint-desk.mediadesk-min($break-mi:1441px){
+                        font-size: 1.8vw;
+                        
+                    }
                 }
             }
         }

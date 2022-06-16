@@ -1,7 +1,7 @@
 @use "../layout/header";
 @use "../utils/breakpoint-tab";
 @use"../utils/mixin-menu";
-@use "../mediaquery/mediadesktop-menu";
+@use "../utils/breakpoint-desk";
 
 
 
@@ -25,14 +25,14 @@
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
     
-    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         height: 7vw;
         padding-left:10px;
         margin-bottom:40px;
         border-radius: 30px;
     }
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:2560px){
+    @include breakpoint-desk.mediadesktop-min($break-min:2560px){
         padding-left:10px;
         padding-top: 10px;
         margin-bottom:40px;
@@ -99,7 +99,7 @@
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
        
         height:135px;
         position: relative;
@@ -107,7 +107,7 @@
         margin-left: 10px;
     }
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:2560px){
+    @include breakpoint-desk.mediadesktop-min($break-min:2560px){
        
         height:250px;
         position: relative;
@@ -132,17 +132,17 @@
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         position: relative;
         top:-83.2px;
     }
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:1460px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1460px){
         position: relative;
         top:-84.2px;
     }
 
-    @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1880px){
         position: relative;
         top:-87px;
     }
@@ -187,15 +187,15 @@
                    
 
                    
-                    @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+                    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
                         top:2.5vw;
                     }
                     
-                    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+                    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
                         top:2.4vw;
                     }
 
-                    @include mediadesktop-menu.mediadesktop-min($break-min:1536px){
+                    @include breakpoint-desk.mediadesktop-min($break-min:1536px){
                         top:2vw;
                     }
                 }
@@ -228,7 +228,7 @@
          font-size: 5vw;
          padding-left: 80px;
          margin-top: 4vw;
-         @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+         @include breakpoint-desk.mediadesktop-min($break-min:1024px){
             font-size: 6vw;
         }
        } 
@@ -242,10 +242,11 @@
                 position: relative;
                 top:-4vw;
                 left:87vw;
-                @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+                @include breakpoint-desk.mediadesktop-min($break-min:1024px){
                     top:-4.8vw; 
+                    left:86vw;
                 }
-                @include mediadesktop-menu.mediadesktop-min($break-min:1880px){
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
                     left:85vw;
                 }
              }
@@ -296,11 +297,11 @@
     height:9vw;
   
     @include breakpointtab-menuli;
-    @include mediadesktop-menu.mediadesktop-min($break-min:1024px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
        
         width: 93%;
     }
-    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         height: 7vw;
         width: 95%;
     }
@@ -337,7 +338,7 @@
         height:9vw;
     @include breakpointtab-menuli;
    
-    @include mediadesktop-menu.mediadesktop-min($break-min:1440px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         height: 7vw;
         width: 90%;
        
@@ -372,11 +373,31 @@
 
   .btn{
       width:30%;
+      height: 7vw;
       font-size:2.5vw;
       position: relative;
       left:180px;
       bottom:196px;
       margin-bottom:0vw;
+      
+      @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        height: 6vw;
+        position: relative;
+        left:21vw;
+        bottom:22vw;
+      }
+      @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+        height: 5vw;
+        position: relative;
+        bottom:20vw;
+      }
+      @include breakpoint-desk.mediadesktop-min($break-min:1441px){
+        width: 27%;
+        height: 5vw;
+        border-radius:3vw;
+        position: relative;
+        bottom:17vw;
+      }
   }
 }
 

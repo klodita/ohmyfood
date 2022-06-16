@@ -1,27 +1,55 @@
+@use "../utils/breakpoint-desk";
 
+@media screen and (min-width:1024px){
+    
+        .menu{
+            .desktop{
+                .line{
+                    width:7vw;
+                }
+            }
+        }
 
-@mixin mediadesktop-min($break-min:0)
-{
-    @media (min-width:$break-min) {
-        @content;
     }
-}
 
 
 @media screen and (min-width:1440px){
     #main_menu{
         .menu{
             padding-left:2vw;
-            @include mediadesktop-min($break-min:1536px){
+            @include breakpoint-desk.mediadesktop-min($break-min:1536px){
                 padding-left:2vw;
             }
-            @include mediadesktop-min($break-min:1570px){
+            @include breakpoint-desk.mediadesktop-min($break-min:1570px){
                 padding-left:2.5vw;
             }
-            @include mediadesktop-min($break-min:1884px){
+            @include breakpoint-desk.mediadesktop-min($break-min:1884px){
                 padding-left:4vw;
+            }
+
+            .desktop{
+                margin-top:8vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1441px){
+                    margin-top: 9vw;
+                }
+                ul{
+                    margin-top: 3vw;
+                }
+                .line{
+                    width:6vw;
+                }
+               
+            }
+            .fa-2x{
+                font-size: 5rem;
+                position: relative;
+                top:-2.5vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1441px){
+                    font-size:8rem;
+                }
             }
         }
         
     }
 }
+

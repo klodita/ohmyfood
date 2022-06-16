@@ -1,0 +1,14 @@
+@mixin mediadesktop-min($break-min:0)
+{
+    @media (min-width:$break-min) {
+        @content;
+    }
+}
+
+
+
+@mixin mediadesk-min($break-mi:0){
+    @media (min-width:$break-mi) {
+        @content;
+    }
+}
