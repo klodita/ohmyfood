@@ -1,6 +1,8 @@
 @use "../utils/mixin-fonctionnement";
 @use "../utils/mixin-heart";
 @use "../utils/breakpoint-desk";
+@use"../utils/breakpoint-mob";
+
 
 
 // mediaquery pour les desktop à partir de 1024px
@@ -38,21 +40,36 @@
 #resto{
 
     .resto_fond{
-        height:9vw;
+        height: 18vw;
         position: relative;
         bottom:0vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:768px){
+            height:10vw;}
     }
 
     .resto1, .resto2, .resto3, .resto4{
         margin:0;
-        margin-bottom:4vw;
+        margin-bottom:7.5vw;
+        
+        @include breakpoint-mob.mob320{
+            margin-bottom:2vw;
+        }
+        @include breakpoint-mob.mob425{
+            margin-bottom:25vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:768px){
+            margin-bottom:2vw;}
 
+            @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+                margin-bottom:5vw;}    
+    
         @include breakpoint-desk.mediadesktop-min($break-min:1072px){
         margin-bottom:4vw;}
 
         @include breakpoint-desk.mediadesktop-min($break-min:1152px){
             margin-bottom:5.5vw;
         }
+        
 
         
 
@@ -103,15 +120,15 @@
             
         }
         .resto_fond{
-            height: 8vw;
+            height:9vw;
             position: relative;
             bottom:0vw;
         }
 
         .resto1, .resto2, .resto3, .resto4{
             margin:0;
-            margin-bottom:8vw;
-            
+            margin-bottom:9vw;
+           
          }
         
     }

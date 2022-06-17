@@ -1,6 +1,6 @@
 @use "../utils/variables";
 @use "../utils/breakpoint-mob";
-
+@use "../utils/breakpoint-tab";
 
 
 @mixin heart
@@ -16,7 +16,7 @@
     width:2rem;
     height:2rem;
     position: relative;
-    left:84%;
+    left:88%;
     @content;
    
      // Travail sur média query (voir la mixin breakpoint-mob)
@@ -24,7 +24,7 @@
      {
      font-size:1rem;    
      position:relative;
-     top:-145px;
+     top:-28vw;
      } 
  
      @include breakpoint-mob.mob767
@@ -33,14 +33,15 @@
      top:-155px;
      font-size:1rem;
      }
- 
+    
      @include breakpoint-mob.mob320
      {
      width:1.9rem;
      height:1.9rem;
      font-size:0.7rem;
      position: relative;
-     bottom:129px; 
+     left:88%;
+     top:-33vw; 
      }
     
      @include breakpoint-mob.mob280

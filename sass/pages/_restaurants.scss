@@ -86,6 +86,10 @@ opacity:(0.80);
 .resto1, .resto2, .resto3, .resto4
 {
 @include mixin-restaurant.divresto;
+@include breakpoint-mob.breakpoint($break:320px){
+    
+    width:99%;
+  }
 }
 
 

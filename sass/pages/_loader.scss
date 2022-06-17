@@ -94,23 +94,23 @@ z-index:1;
     
 }
 
-.loader-icon2::after{
-content:"";
-width:170px;
-height:100px;
-padding:10px;
-font-family:variables.$titre-Police;
-font-size:50px;
-color:white;
-display: flex;
-text-align: center;
-position: relative;
-left:30vw;
-bottom:45vw;
-z-index:4;
-@include animation.loader-ohmyfood;
+// .loader-icon2::after{
+// content:"";
+// width:170px;
+// height:100px;
+// padding:10px;
+// font-family:variables.$titre-Police;
+// font-size:50px;
+// color:white;
+// display: flex;
+// text-align: center;
+// position: relative;
+// left:30vw;
+// bottom:45vw;
+// z-index:4;
+// @include animation.loader-ohmyfood;
 
-}
+// }
 
     
 

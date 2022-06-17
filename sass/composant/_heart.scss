@@ -9,53 +9,14 @@
 
 div .coeur
 {
+    
+    position: relative;
+    top:-30vw;
+    
  @include mixin-heart.heart;
     .fa-2x
-    {
-        @include breakpoint-desk.mediadesk-min($break-mi:1024px){
-            font-size: 3.2rem;
-            position: relative;
-            left:2vw;
-            top:-0.5vw;
-            
-        }
-        @include breakpoint-desk.mediadesk-min($break-mi:1152px){
-            
-        font-size: 2.8rem;
-        position: relative;
-        top:3vw;
-            
-        }
-        @include breakpoint-desk.mediadesk-min($break-mi:1360px){
-            font-size:2.9rem;
-            position: relative;
-            top:3.5vw;
-            
-        }
-        @include breakpoint-desk.mediadesk-min($break-mi:1440px){
-        font-size:3rem;
-        position: relative;
-        left:2vw;
-        top:5vw;
-    }
-    @include breakpoint-desk.mediadesk-min($break-mi:1441px){
-        font-size:4.5rem;
-        position: relative;
-        left:1vw;
-        bottom:2.5vw;
-    }
-    @include breakpoint-desk.mediadesk-min($break-mi:1920px){
-        font-size:4.5rem;
-        position: relative;
-        left:1vw;
-        bottom:3vw;
-    }
-    @include breakpoint-desk.mediadesk-min($break-mi:2559px){
-        font-size:6rem;
-        position: relative;
-        left:1vw;
-        top:6vw;
-    }
+    {  
+        
 
     .fa-heart{
     @include mixin-heart.heart1;
@@ -71,6 +32,8 @@ div .coeur
 .heart_resto 
 {
     bottom:125px;
+    
+    
 }
 
 
@@ -84,25 +47,25 @@ div .coeur
        &.coeur{
         position: relative;
         top:-35px;
-        left:86%;
+        left:88%;
+        @include breakpoint-mob.breakpoint($break:320px){
+    
+            position: relative;
+            left:84%;
+           }
        }
+       @include mixin-heart.heart{
+        
+        @include breakpoint-desk.mediadesk-min($break-mi:1024px){
+            font-size: 3rem;
+            position: relative;
+            left:2vw;
+            top:1.5vw;
+            
+        }
+       
+    }
     }  
 }
 
 
-
-// **********************************************************
-// ajout média query pour ecran 600px à 667px position coeur
-
-
-@media screen and (min-width:569px) and (max-width:703px)
-{
-    // concerne les cartes de restaurant
-    div .coeur
-    {
-        position:relative;
-        top:-145px;
-    }
-}
-
-// ********************************************************

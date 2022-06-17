@@ -234,7 +234,7 @@
             content:"Ohmyfood";
             visibility: visible;
             position: relative;
-            bottom:480px;
+            bottom:180px;
            
         }
 
@@ -242,7 +242,8 @@
             
             visibility:hidden;
             position: relative;
-            bottom:480px;
+            bottom:180px;
+            font-size:10vw;
            
         }
         
@@ -278,47 +279,47 @@
 
 
 
-@mixin loader-ohmyfood
-{
-    @keyframes loader-ohmyfood
-    {
-        0%{
-            content:"Oh";
-            font-family:variables.$titre-Police;
-            font-size:50px;
-            text-align: center;
-            position:relative;
-            bottom:45vw;
-        }
+// @mixin loader-ohmyfood
+// {
+//     @keyframes loader-ohmyfood
+//     {
+//         0%{
+//             content:"Oh";
+//             font-family:variables.$titre-Police;
+//             font-size:50px;
+//             text-align: center;
+//             position:relative;
+//             bottom:45vw;
+//         }
 
-        20%{
-            content:"...my";
-            font-family:variables.$titre-Police;
-            font-size:50px;
-        }
+//         20%{
+//             content:"...my";
+//             font-family:variables.$titre-Police;
+//             font-size:50px;
+//         }
 
-        40%{
-            content:"food !";
-            font-family:variables.$titre-Police;
-            font-size:50px;
-        }
+//         40%{
+//             content:"food !";
+//             font-family:variables.$titre-Police;
+//             font-size:50px;
+//         }
 
-        60%{
+//         60%{
             
-            font-family:variables.$titre-Police;
-            font-size:50px;
-           position: relative;
+//             font-family:variables.$titre-Police;
+//             font-size:50px;
+//            position: relative;
  
-        }
+//         }
 
 
-        100%{
+//         100%{
             
-           visibility:hidden;
+//            visibility:hidden;
  
-        }
-    }
-    animation: loader-ohmyfood 1s ease-in ;
-    animation-duration:1.4s;
+//         }
+//     }
+//     animation: loader-ohmyfood 1s ease-in ;
+//     animation-duration:1.4s;
 
-}
+// }
