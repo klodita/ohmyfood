@@ -61,7 +61,7 @@
         }
      }
     animation: animation-menu 200ms ease-in;
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
    
 }
@@ -80,13 +80,32 @@
         }
      }
     animation: animation-menu 250ms ease-in;
-    animation-delay: 0.9s;
+    animation-delay: 0.5s;
     
     animation-fill-mode: forwards;
 }
 
 
 @mixin animation-li3
+{ 
+    @keyframes animation-menu{
+        0% {opacity:(0);
+            transform: translateY(0);
+           
+        }
+
+        100%{
+            opacity:(1);
+            transform: translateY(-5px);
+
+        }
+     }
+    animation: animation-menu 500ms ease-in;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@mixin animation-li4
 { 
     @keyframes animation-menu{
         0% {opacity:(0);
