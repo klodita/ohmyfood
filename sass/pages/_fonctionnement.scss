@@ -30,7 +30,6 @@
     li
     {
         display: flex;
-        justify-content:baseline;
         &::before{
             @include mixin-fonctionnement.li-counter;
       
