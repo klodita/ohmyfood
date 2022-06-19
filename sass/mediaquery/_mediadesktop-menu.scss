@@ -1,4 +1,5 @@
 @use "../utils/breakpoint-desk";
+@use "../utils/mixin-menu";
 
 @media screen and (min-width:1024px){
     
@@ -8,7 +9,9 @@
                     width:7vw;
                 }
             }
+       
         }
+        
 
     }
 

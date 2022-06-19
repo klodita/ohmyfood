@@ -6,6 +6,7 @@
 @use "../composant/animation";
 @use "../utils/breakpoint-mob";
 @use "../mediaquery/mediadesktop-menu";
+@use "../utils/breakpoint-desk";
 
 
 #main_menu
@@ -80,6 +81,7 @@ li
 
     .prix{
         @include mixin-menu.prix;
+    
     }
 
     .fa-circle-check{
@@ -95,6 +97,7 @@ li
      
      .prix2{
         @include mixin-menu.prix;
+        
      }      
      .fond-icon{
          @include mixin-menu.fond-icon;
@@ -109,7 +112,8 @@ li
    {
         .prix{
         
-        @include mixin-menu.prix2;}
+        @include mixin-menu.prix2;
+        }
 
         .menu_hover
         {    
@@ -246,14 +250,13 @@ li
         left:35px;
         bottom:85px; 
     }
-
+    
     
         }
     }
 }
 }
 
-  
 
 
 .li1 {
@@ -291,7 +294,8 @@ li
 
 
 ul{
-    margin-bottom:40px;
+    margin-bottom:4vw;
+    
 }
 
 

@@ -46,7 +46,7 @@
 
 @mixin breakpointtab-prixhover {
     
-    
+  
     @include breakpoint-tab.breakpoint-mintab($break-min:890px)
     {
       height:85px;
@@ -75,6 +75,11 @@
         bottom:-12px; 
     }
     
+      @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        height:5vw;
+    }
+   
+    
 @content;
 }
 
@@ -98,21 +103,52 @@
 
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
-  
-
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        height: 95px;
+        top:-3vw;
+        
+        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+        height:10vw;
+        top:-2.8vw;
+        
+    }
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
        
-        height:135px;
-        position: relative;
-        bottom:20px;
+        // height:135px;
+        // position: relative;
+        // bottom:20px;
+        width:10vw;
+        height:13vw;
+        top:4vw;
+        left:9vw;
+        margin-left: 10px;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+       
+        // height:135px;
+        // position: relative;
+        // bottom:20px;
+        height:14vw;
+        top:4vw;
+        margin-left: 10px;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+       
+        height:14vw;
+        left:8vw;
+        top:4vw;
         margin-left: 10px;
     }
 
     @include breakpoint-desk.mediadesktop-min($break-min:2560px){
        
-        height:250px;
-        position: relative;
-        bottom:50px;
+        
+        height:14vw;
+        top:4vw;
+        // position: relative;
+        // bottom:50px;
         
     }
     @content;
@@ -122,31 +158,44 @@
 
 @mixin breakpointtab-prixhover2{
 
-    @include breakpoint-tab.breakpoint-mintab($break-min:940px)
-    {
-      position: relative;
-      bottom:84.5px;
+    // @include breakpoint-tab.breakpoint-mintab($break-min:940px)
+    // {
+    //   position: relative;
+    //   bottom:84.5px;
       
-    }
+    // }
 
 
     // ici cela concerne le responsive desktop car impossible de changer 
     // certaines propriétés depuis la feuille depuis le fichier _mediadesktop-menu.scss
-
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        position: relative;
+        top:-5vw;
+        
+    }
     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
         position: relative;
-        top:-83.2px;
+        top:-15vw;
     }
 
-    @include breakpoint-desk.mediadesktop-min($break-min:1460px){
+    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
         position: relative;
-        top:-84.2px;
+        top:-15vw;
     }
 
-    @include breakpoint-desk.mediadesktop-min($break-min:1880px){
+@include breakpoint-desk.mediadesktop-min($break-min:1680px){
         position: relative;
-        top:-87px;
+        top:-16vw;
     }
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+        position: relative;
+        top:-16vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+        position: relative;
+        top:-15.8vw;
+    }
+
 
     @content;
 }
@@ -232,6 +281,7 @@
             font-size: 6vw;
         }
        } 
+       
 
    .heart_menu{
             
@@ -261,7 +311,7 @@
         }
         &:hover{
         .prix_hover{
-            bottom:74px;
+            // bottom:74px;
             
             @include mixin-menu.prix-hover{
                 @include breakpointtab-prixhover2;
@@ -334,7 +384,7 @@
     .prix_hover{
         
         position: relative;
-        bottom:70px;
+        // bottom:70px;
         @include breakpointtab-prixhover2;
     }
    }
@@ -389,7 +439,7 @@
         .prix_hover{
            
             position: relative;
-            bottom:70px;
+            // bottom:70px;
             @include breakpointtab-prixhover2;
         }
         
