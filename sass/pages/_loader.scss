@@ -1,22 +1,22 @@
 @use "../composant/animation";
 @use "../utils/variables";
-
+@use "../utils/breakpoint-anim";
+@use "../utils/breakpoint-tab";
+@use "../utils/breakpoint-desk";
 
 .loader{
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color:black;
-opacity: 0.9;
-height: 100vh;
-position: fixed;
-inset:0;
-z-index:6;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:variables.$footer-color;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    inset:0;
+    z-index:6;
 @include animation.fin-loader; 
 }
-
-
 
 
 .loader-icon1::before {
@@ -26,37 +26,97 @@ display: flex;
 align-self: center;
 justify-self: center;
 position: relative;
-top:55vw;
-left:10%;
-width:300px;
-height:300px;
+top:35vw;
+left:9vw;
+width:80vw;
+height:80vw;
 border:8px solid variables.$secondary-color;
-border-radius:150px;
-@include animation.loader-circle1;
+border-radius:55vw;
 z-index:1;
+@include breakpoint-anim.breakanim-1($break-max:320px){
+    left:10.5vw; 
+    top:34vw;
+}
+@include breakpoint-anim.break-anim($break-min:425px){
+    width:78vw;
+    height:78vw;
+    left:10.5vw; 
+    top:34vw;
+}
+@include breakpoint-anim.break-anim ($break-min:768px){
+        
+    width:72vw;
+    height:72vw;
+    left:14vw;
+    top:28.5vw;
 }
 
-.loader-icon1::after{
-    font: var(--fa-font-solid);
-    content:"";
-    display: flex;
-    text-align: center;
-    width:120px;
-    height:150px;
-    padding:20px;
-    color:white;
-    font-size:100px;
-    position: relative;
-    bottom:5vw;
-    left:34vw;
-    @include animation.loader-icon1;
-    z-index:2;
+@include breakpoint-anim.break-anim ($break-min:1024px){
+        
+    width:60vw;
+    height:60vw;
+    left:21.2vw;
+    top:30.5vw;
+}
+
+@include breakpoint-anim.break-anim ($break-min:1152px){
+        
+    width:40vw;
+    height:40vw;
+    left:29vw;
+    top:20vw;
+}
+
+@include breakpoint-anim.break-anim ($break-min:1440px){
+        
+    width:40vw;
+    height:40vw;
+    left:29vw;
+    top:20vw;
+}
+@include breakpoint-anim.break-anim ($break-min:1600px){
+        
+    width:35vw;
+    height:35vw;
+    left:29.5vw;
+    top:18.5vw;
+
+}
+@include breakpoint-anim.break-anim ($break-min:1920px){
+    
+    width:32vw;
+    height:32vw;
+    left:29.5vw;
+    left:31.5vw;
+    top:16vw;
+    }
+
+@include animation.loader-circle1;
 
 }
 
-
-
-
+// .loader-icon1::after{
+//     font: var(--fa-font-solid);
+//     content:"";
+//     display: flex;
+//     text-align: center;
+//     padding:20px;
+//     font-size:10px;
+//     color:white;
+//     position: relative;
+//     bottom:5vw;
+//     left:34vw;
+//     z-index:2;
+//     @include animation.loader-icon1;
+//     @include breakpoint-anim.break-anim2($break-max:320px)
+//     {
+        
+        
+//         font-size:10px;
+//         color:red;
+//         border:1px solid blue;
+//     }
+// }
 
 
 
@@ -67,50 +127,150 @@ z-index:1;
     align-self: center;
     justify-self: center;
     position: relative;
-    left:17vw;
     bottom:0;
-    width: 250px;
-    height: 250px;
+    top:-5vw;
+    left:16.5%;
+    width:65vw;
+    height:65vw;
     border:15px solid yellow;
-    border-radius:150px;
+    border-radius:55vw;
     border-style: groove;
     z-index:3;
     @include animation.loader-circle2;
+    @include breakpoint-anim.breakanim-1($break-max:320px){
+        width:63vw;
+        height:63vw;
+        left:19.5vw;
+        bottom:-70vw;
+        top:4vw;
+    }
+    @include breakpoint-anim.break-anim($break-min:425px){
+        
+        left:17.5vw;
+        
+    }
+    @include breakpoint-anim.break-anim ($break-min:768px){
+        
+        width:60vw;
+        height:60vw;
+        left:20vw;
+    }
+    @include breakpoint-anim.break-anim ($break-min:1024px){
+        
+        width:52vw;
+        height:52vw;
+        left:25vw;
+        bottom:-2vw;
+        @include animation.break-circle2;
+        
+    }
+    
+    @include breakpoint-anim.break-anim ($break-min:1152px){
+        width:34vw;
+        height:34vw;
+        left:32vw;
+        top:-1vw;
+        @include animation.break-circle2;
+     
+       
+    }
+
+    @include breakpoint-anim.break-anim ($break-min:1440px){
+        width:34vw;
+        height:34vw;
+        left:32vw;
+        top:-1vw;
+        @include animation.break-circle2;
+     
+       
+    }
+
+    @include breakpoint-anim.break-anim ($break-min:1600px){
+        width:30vw;
+        height:30vw;
+        left:32vw;
+        top:-5vw;
+        @include animation.break-circle2;
+    }
+
+    @include breakpoint-anim.break-anim ($break-min:1920px){
+        
+        width:28vw;
+        height:28vw;
+        left:33.5vw;
+        top:-3vw;
+        @include animation.break-circle3;
+        }
+       
     
 }
 
+.marque{
+    width: 100%;
+}
 .marque::before{
     content:"";
-    width: 300px;
+    width:35vw;
     font-family:variables.$titre-Police;
     text-align: center;
     color:white;   
-    font-size:35px;
-    left:25vw;
-    bottom:380px;
+    font-size:14vw;
+    left:10vw;
+    bottom:0;
+    top:-22vw;
      z-index:5;
-    @include animation.marque;
+    @include animation.marque; 
+    @include breakpoint-anim.break-anim ($break-min:768px){
+        left:10vw;
+        top:-30vw;
+        
+        @include animation.marque1; 
+    }
+    @include breakpoint-anim.break-anim ($break-min:1024px){
+        top:-22vw;
+        left:10vw;
+        @include animation.marque2;
+    }
+    @include breakpoint-anim.break-anim ($break-min:1152px){
+     
+        top:-32vw;
+        left:11.5vw;
+       @include animation.marque2;
+      
+        
+    }
+    @include breakpoint-anim.break-anim ($break-min:1440px){
+     
+        top:-17vw;
+        left:15.5vw;
+        font-size:12vw;
+       @include animation.marque2;
+      
+        
+    } 
+    @include breakpoint-anim.break-anim ($break-min:1600px){
+     
+        top:-11vw;
+        left:19.5vw;
+        font-size: 10vw;
+       @include animation.marque2;
+      
+        
+    } 
+
+    @include breakpoint-anim.break-anim ($break-min:1920px){
+     
+        top:-10vw;
+        left:22.5vw;
+        font-size:9vw;
+       @include animation.marque2;
+      
+        
+    } 
+     
    
-    
 }
 
-// .loader-icon2::after{
-// content:"";
-// width:170px;
-// height:100px;
-// padding:10px;
-// font-family:variables.$titre-Police;
-// font-size:50px;
-// color:white;
-// display: flex;
-// text-align: center;
-// position: relative;
-// left:30vw;
-// bottom:45vw;
-// z-index:4;
-// @include animation.loader-ohmyfood;
-
-// }
 
     
 

@@ -14,6 +14,13 @@
 
 @media screen and (min-width:1024px)
 {
+    #apropos
+    { 
+        position: relative;
+        top:1vw;
+        
+        
+    }
     #tuto{
         
         
@@ -85,6 +92,14 @@
 
 @media screen and (min-width:1440px)
 {
+
+    #apropos
+    { 
+        position: relative;
+        top:1.5vw;
+        
+        
+    }
     #tuto{
         
         
@@ -140,17 +155,23 @@
 @media screen and (min-width:1441px)
 {
     .row-tab{
+        width:90%; 
         position: relative;
-        left:4vw;
-        margin-bottom: 5%;
+        left:6vw;
+        
+    }
+
+    #apropos
+    { 
+        position: relative;
+        top:2vw;
     }
    
     #tuto{
         
-        
         position: relative;
         top:0vw; 
-        left:2vw;  
+        left:2vw; 
         
         li{
             height:7.2vw;

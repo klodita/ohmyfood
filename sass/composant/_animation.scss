@@ -1,5 +1,5 @@
 @use "../utils/variables";
-
+@use "../utils/breakpoint-anim";
 
 // animaton pour le bouton check en vert des pages menus
 
@@ -121,7 +121,8 @@
             visibility: hidden;
         }
     }
-    animation:fin-loader 3s forwards;
+    animation:fin-loader 3s forwards ;
+      // ajouter 3s forwards pour remettre le loader
     
 }
 
@@ -162,61 +163,46 @@
         }
 
         100%{
-            
             border-style:dotted double;
-            
         }
-
-
     }
     animation: loader-circle1 1s ease-in infinite forwards;
-    
-    
 }
 
 
 // animation concernant les icones dans le cercle rose
 
-@mixin loader-icon1
-{
-    @keyframes loader-icon1
-    {
-        0%{
-            content:"\f5ce";
-            font-size:100px;
-        }
+// @mixin loader-icon1
+// {
+//     @keyframes loader-icon1
+//     {
+//         0%{
+//             content:"\f5ce";
+//             font-size:100px;
+//         }
 
-        20%{
-            content:"\f4e3";
-            font-size:130px;
-        }
+//         20%{
+//             content:"\f4e3";
+//             font-size:130px;
+//         }
 
-        40%{
-            content:"\f5ce";
-            font-size:100px;
-        }
-        60%{
-            content:"\f4e3";
-            font-size:130px;
-        }
+//         40%{
+//             content:"\f5ce";
+//             font-size:100px;
+//         }
 
-        
+//         60%{
+//             content:"\f4e3";
+//             font-size:130px;
+//         }
 
-        100%{
-            visibility: hidden;
-           
-            
-        }
-
-    }
-    animation: loader-icon1 1s ease-in;
-    animation-duration:1.5s;
-    
-
-}
-
-
-
+//         100%{
+//             visibility: hidden;  
+//         }
+//     }
+//     animation: loader-icon1 1s ease-in;
+//     animation-duration:1.5s;
+// }
 
 
 
@@ -227,14 +213,14 @@
     @keyframes marque {
      0%{ content:"";
          visibility: hidden;
-
+         
          }
         
         90%{
             content:"Ohmyfood";
             visibility: visible;
             position: relative;
-            bottom:180px;
+            top:-25vw;
            
         }
 
@@ -242,8 +228,8 @@
             
             visibility:hidden;
             position: relative;
-            bottom:180px;
-            font-size:10vw;
+            top:-25vw;
+            
            
         }
         
@@ -252,74 +238,377 @@
     animation-duration:2.8s;
 }
 
-@mixin loader-circle2
-{
-    @keyframes loader-circle2 {
-        0%{
-            visibility:hidden;
-        }
+@mixin marque1{
+    @keyframes marque1 {
+     0%{ content:"";
+         visibility: hidden;
+        
+         }
+        
         90%{
+            content:"Ohmyfood";
             visibility: visible;
             position: relative;
-            bottom:220px;
         }
 
         100%{
+            
             visibility:hidden;
             position: relative;
-            bottom:220px;
         }
         
     }
-    animation: loader-circle2 1s ease-in-out forwards;
+    animation:marque1 1s ease-in-out forwards;
     animation-duration:2.8s;
+}
+
+
+@mixin marque2{
+    @keyframes marque2 {
+     0%{ content:"";
+         visibility: hidden;
+        top:-30vw;
+         }
+        
+        90%{
+            content:"Ohmyfood";
+            visibility: visible;
+            position: relative;
+            top:-25vw;
+           
+        }
+
+        100%{
+            
+            visibility:hidden;
+            position: relative;
+            top:-25vw;
+            // font-size:13vw;
+            // left:2.5vw;
+           
+        }
+        
+    }
+    animation:marque2 1s ease-in-out forwards;
+    animation-duration:2.8s;
+
+    @include breakpoint-anim.break-anim($break-min:1024px){
+        @keyframes marque2 {
+            0%{ content:"";
+                visibility: hidden;
+              top:-22vw;
+                }
+               
+               90%{
+                   content:"Ohmyfood";
+                   visibility: visible;
+                   position: relative;
+                   top:-24vw;
+                  
+               }
+       
+               100%{
+                   
+                   visibility:hidden;
+                   position: relative;
+                   top:-24vw;
+                   font-size:14vw;
+                  
+                  
+               }
+               
+           }
+           animation:marque2 1s ease-in-out forwards;
+           animation-duration:2.8s;
+    }
     
+    @include breakpoint-anim.break-anim($break-min:1152px){
+        @keyframes marque2 {
+            0%{ content:"";
+                visibility: hidden;
+              top:-10vw;
+                }
+               
+               90%{
+                   content:"Ohmyfood";
+                   visibility: visible;
+                   position: relative;
+                   top:-14vw;
+                  
+               }
+       
+               100%{
+                   
+                   visibility:hidden;
+                   position: relative;
+                   top:-14vw;
+                   font-size:14vw;
+                  
+                  
+               }
+               
+           }
+           animation:marque2 1s ease-in-out forwards;
+           animation-duration:2.8s;
+    }
+
+    @include breakpoint-anim.break-anim($break-min:1440px){
+        @keyframes marque2 {
+            0%{ content:"";
+                visibility: hidden;
+               top:-17vw;
+                }
+               
+               90%{
+                   content:"Ohmyfood";
+                   visibility: visible;
+                   position: relative;
+                   top:-16vw;
+                  
+               }
+       
+               100%{
+                   
+                   visibility:hidden;
+                   position: relative;
+                   top:-16vw;
+                   
+                  
+                  
+               }
+               
+           }
+           animation:marque2 1s ease-in-out forwards;
+           animation-duration:2.8s;
+    }
+
+    @include breakpoint-anim.break-anim($break-min:1600px){
+        @keyframes marque2 {
+            0%{ content:"";
+                visibility: hidden;
+               top:-11vw;
+                }
+               
+               90%{
+                   content:"Ohmyfood";
+                   visibility: visible;
+                   position: relative;
+                   top:-12vw;
+                  
+               }
+       
+               100%{
+                   
+                   visibility:hidden;
+                   position: relative;
+                   top:-12vw;
+                   
+                  
+                  
+               }
+               
+           }
+           animation:marque2 1s ease-in-out forwards;
+           animation-duration:2.8s;
+    }
+
+    @include breakpoint-anim.break-anim($break-min:1920px){
+        @keyframes marque2 {
+            0%{ content:"";
+                visibility: hidden;
+               top:-10vw;
+                }
+               
+               90%{
+                   content:"Ohmyfood";
+                   visibility: visible;
+                   position: relative;
+                   top:-12vw;
+                  
+               }
+       
+               100%{
+                   
+                   visibility:hidden;
+                   position: relative;
+                   top:-12vw;
+                   
+                  
+                  
+               }
+               
+           }
+           animation:marque2 1s ease-in-out forwards;
+           animation-duration:2.8s;
+    }
 }
 
 
 
 
-// @mixin loader-ohmyfood
-// {
-//     @keyframes loader-ohmyfood
-//     {
-//         0%{
-//             content:"Oh";
-//             font-family:variables.$titre-Police;
-//             font-size:50px;
-//             text-align: center;
-//             position:relative;
-//             bottom:45vw;
-//         }
-
-//         20%{
-//             content:"...my";
-//             font-family:variables.$titre-Police;
-//             font-size:50px;
-//         }
-
-//         40%{
-//             content:"food !";
-//             font-family:variables.$titre-Police;
-//             font-size:50px;
-//         }
-
-//         60%{
+@mixin loader-circle2
+{
+    @keyframes loader-circle2 {
+        0%{
+            visibility:hidden;
+            position: relative;
+            top:-5vw;
+           
+        }
+        90%{
+            visibility: visible;
+            position: relative;
+            top:-38vw;
             
-//             font-family:variables.$titre-Police;
-//             font-size:50px;
-//            position: relative;
- 
-//         }
+        }
 
-
-//         100%{
+        100%{
+            visibility:hidden;
+            position: relative;
+            top:-38vw;
             
-//            visibility:hidden;
- 
-//         }
-//     }
-//     animation: loader-ohmyfood 1s ease-in ;
-//     animation-duration:1.4s;
+        }
+        
+    }
+    animation: loader-circle2 1s ease-in-out forwards;
+    animation-duration:2.8s;
 
-// }
+}
+
+
+
+
+@mixin break-circle2
+{
+    @keyframes break-circle2 {
+        0%{
+            visibility:hidden;
+            position: relative;
+            top:-5vw;
+           
+        }
+        90%{
+            visibility: visible;
+            position: relative;
+            top:-25vw;
+            
+        }
+
+        100%{
+            visibility:hidden;
+            position: relative;
+            top:-25vw;
+            
+        }
+    }
+    
+    animation: break-circle2 1s ease-in-out forwards;
+    animation-duration:2.8s;
+    @include breakpoint-anim.break-anim($break-min:1152px){
+        @keyframes break-circle2 {
+          0%{
+              visibility:hidden;
+              position: relative;
+              top:-1vw;
+             
+          }
+          90%{
+              visibility: visible;
+              position: relative;
+              top:-17vw;
+              
+          }
+  
+          100%{
+              visibility:hidden;
+              position: relative;
+              top:-17vw;
+              
+          }
+      }
+      
+      animation: break-circle2 1s ease-in-out forwards;
+      animation-duration:2.8s;  
+      }
+    @include breakpoint-anim.break-anim($break-min:1440px){
+      @keyframes break-circle2 {
+        0%{
+            visibility:hidden;
+            position: relative;
+            top:-1vw;
+           
+        }
+        90%{
+            visibility: visible;
+            position: relative;
+            top:-17vw;
+            
+        }
+
+        100%{
+            visibility:hidden;
+            position: relative;
+            top:-17vw;
+            
+        }
+    }
+    
+    animation: break-circle2 1s ease-in-out forwards;
+    animation-duration:2.8s;  
+    }
+
+    @include breakpoint-anim.break-anim($break-min:1600px){
+        @keyframes break-circle2 {
+          0%{
+              visibility:hidden;
+              position: relative;
+              top:-5vw;
+             
+          }
+          90%{
+              visibility: visible;
+              position: relative;
+              top:-14vw;
+              
+          }
+  
+          100%{
+              visibility:hidden;
+              position: relative;
+              top:-14vw;
+              
+          }
+      }
+      
+      animation: break-circle2 1s ease-in-out forwards;
+      animation-duration:2.8s;  
+      }
+
+}
+
+@mixin break-circle3{
+        @keyframes break-circle3 {
+          0%{
+              visibility:hidden;
+              position: relative;
+              top:-3vw;
+             
+          }
+          90%{
+              visibility: visible;
+              position: relative;
+              top:-10vw;
+              
+          }
+  
+          100%{
+              visibility:hidden;
+              position: relative;
+              top:-10vw;
+              
+          }
+      }
+      
+      animation: break-circle2 1s ease-in-out forwards;
+      animation-duration:2.8s;  
+      }

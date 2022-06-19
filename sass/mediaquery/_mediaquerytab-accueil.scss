@@ -45,16 +45,19 @@
     }
 
   .row-tab {
-      width:96%;
+      width:96%; 
+      height:auto;
       display: flex;
       margin:0;
       padding:0;
+      margin-bottom:10vw;
       flex-direction:row;
       align-items: baseline;
       justify-content: baseline;
       flex-grow: 1;
       position: relative;
       left:2vw;
+      top:5vw;
     }
 
   #apropos
@@ -65,6 +68,7 @@
       overflow: hidden;
       margin-left:20px;
       @include box-shadow.shadow;
+      
   }
 
 #apropos .localisation
@@ -74,8 +78,9 @@
 }
 
 .fond-colo{ 
+    
     & h1{
-        font-size: 3vw;
+        font-size:2.2vw;
     }
     & p{
         text-align:center;
@@ -91,7 +96,7 @@
 
   #tuto
   { 
-      width: 50vw;
+      width:55%;
       display: flex;
       margin:0;
       padding: 0;
