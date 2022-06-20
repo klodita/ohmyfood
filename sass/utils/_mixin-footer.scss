@@ -2,6 +2,7 @@
 @use "../utils/breakpoint-mob";
 
 
+
 @mixin largeur-footer
 {
     width:100%;
@@ -11,13 +12,14 @@
     padding-left:10px;
     background-color: variables.$footer-color;
     @content;
-
+  
     @include breakpoint-mob.breakpoint-min($break-min:445px)
     {   
         height:290px;
         padding-left:20px;
         padding-bottom:50px;
     }
+    
 }
 
 @mixin h2-footer

@@ -48,11 +48,33 @@ div .coeur
         position: relative;
         top:-35px;
         left:88%;
+     
+       
         @include breakpoint-mob.breakpoint($break:320px){
     
             position: relative;
             left:84%;
            }
+           @include breakpoint-mob.breakpoint-min($break-min:500px){
+            font-size: 1.2rem;
+            position:relative;
+            left:80vw;
+            top:-8vw;
+        }
+           @include breakpoint-mob.breakpoint-min($break-min:556px){
+            font-size: 1.4rem;
+            position:relative;
+            left:81vw;
+            top:-8vw;
+    
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:600px){
+            font-size: 1.4rem;
+            position:relative;
+            left:81vw;
+            top:-7vw;
+    
+        }
        }
        @include mixin-heart.heart{
         

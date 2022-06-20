@@ -20,6 +20,15 @@
     position: relative;
     bottom:5px;
     }
+    @include breakpoint-mob.breakpoint-min($break-min:500px){
+        font-size:5vw;
+        position:relative;
+        left:5vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:768px){
+        position:relative;
+        left:-1.8vw;
+    }
 }
 
 @mixin menuh2 {
@@ -38,6 +47,14 @@
     font-size:14px;
     margin-top:10px;
     padding-bottom:20px;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:500px){
+        position:relative;
+        left:5vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:500px){
+        position:relative;
+        left:0vw;
     }
 }
 
@@ -65,17 +82,17 @@
     overflow: hidden;
     @include box-shadow.shadow;
     @content;
-
+   
     // Travail sur média query (voir la mixin breakpoint-mob)
     @include breakpoint-desk.mediadesktop-min($break-min:1360px){
-        height:12vw;
-         
-         
-     }
+        height:12vw;  
+    }
+
     @include breakpoint-desk.mediadesktop-min($break-min:1280px){
        height: 15vw;
-        
-        
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        left:1vw;
     }
     @include breakpoint-mob.mob767
     {
@@ -83,11 +100,20 @@
         height:90px;
         border-radius:20px;
     }
-    @include breakpoint-mob.breakpoint-min($break-min:500px){
+
+     @include breakpoint-mob.breakpoint-min($break-min:500px){
         width:80vw;
         height:15vw;
+        display: flex;
+        position:relative;
+        left:6vw;
+     }
+     @include breakpoint-mob.breakpoint-min($break-min:768px){
         
-    }
+        display: flex;
+        position:relative;
+        left:0vw;
+     }
     @include breakpoint-mob.mob320
     {
         height:65px;
@@ -215,6 +241,7 @@
     position: relative;
     right:120px;
     top:2.5vw;
+    cursor: pointer;
     @content;
    
     @include breakpoint-mob.breakpoint-min($break-min:500px){
@@ -307,7 +334,13 @@
     right:110px;
     top:-5vw;
     
-
+    
+    @include breakpoint-mob.breakpoint-min($break-min:425px){
+        
+        position: relative;
+        top:-4vw;
+        
+    }
     @include breakpoint-mob.breakpoint-min($break-min:500px){
         
         position: relative;
@@ -431,6 +464,7 @@
     position:relative;
     top:0;
     left:89px;
+    cursor:pointer;
     z-index:1;
     @content;  
    
@@ -441,6 +475,7 @@
     {
         height:75px;
     }
+    
     @include breakpoint-mob.breakpoint-min($break-min:500px){
         width:18vw;
         height:25vw;
@@ -542,6 +577,7 @@
     position:relative;
     left:10px;
     bottom:30px;
+    cursor:pointer;
     z-index:2;
     @content;
 

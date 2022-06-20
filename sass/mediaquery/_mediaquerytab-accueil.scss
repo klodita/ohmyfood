@@ -287,6 +287,9 @@ footer {
         @include breakpoint-desk.mediadesk-min($break-mi:1441px){
             height:16vw;
         }
+        @include breakpoint-desk.mediadesk-min($break-mi:1600px){
+            height:19vw;
+        }
         h2{
             width: 70%;
             font-size:30px;
