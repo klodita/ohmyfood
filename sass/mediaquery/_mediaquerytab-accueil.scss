@@ -22,8 +22,8 @@
         display: flex;
         @include mixin-header.header{
             height:12vw;
-            margin-top:30px;
-            margin-bottom:80px;
+            padding-top:30px;
+           
         }
 
         .div_img{
@@ -36,9 +36,9 @@
                 width:70vw;
                
                 padding:30px;
-                margin-top: 30px;
-                margin-bottom: 30px;
-                object-fit: cover;
+                // margin-top: 30px;
+                // margin-bottom: 30px;
+                // object-fit: cover;
                 
             }
         }
