@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../utils/breakpoint-mob";
+@use "../utils/breakpoint-tab";
 
 
 
@@ -12,13 +13,25 @@
     padding-left:10px;
     background-color: variables.$footer-color;
     @content;
-  
+    @include breakpoint-mob.breakpoint-min($break-min:425px)
+    {   
+        height:290px;
+        padding-top:10vw;
+        padding-bottom:50px;
+    }
     @include breakpoint-mob.breakpoint-min($break-min:445px)
     {   
         height:290px;
+        padding-top:3vw;
         padding-left:20px;
         padding-bottom:50px;
     }
+    @include breakpoint-tab.breakpoint-mintab($break-min:768px){
+        padding-top:3vw;
+        padding-left:4vw;
+        
+        
+      }
     
 }
 

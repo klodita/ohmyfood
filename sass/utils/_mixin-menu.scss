@@ -52,10 +52,7 @@
         position:relative;
         left:5vw;
     }
-    @include breakpoint-mob.breakpoint-min($break-min:500px){
-        position:relative;
-        left:0vw;
-    }
+   
 }
 
 @mixin lineh2 {
