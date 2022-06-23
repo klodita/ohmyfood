@@ -8,11 +8,7 @@
 // travail générale sur les coeurs avec transition en hover
 
 div .coeur
-{
-    
-    position: relative;
-    top:-30vw;
-    
+{   
  @include mixin-heart.heart;
     .fa-2x
     {  
@@ -29,13 +25,12 @@ div .coeur
 }
 
 // position du coeur concernant les cartes de restaurant
-.heart_resto 
+div .coeur
 {
-    bottom:125px;
-    
-    
+    position:relative;
+    left:82vw;
+    bottom:34vw;
 }
-
 
 // position du coeur concernant les menus
  

@@ -1,7 +1,6 @@
 @use "../utils/variables";
 @use "../utils/mixin-accueil";
 @use "../composant/box-shadow";
-@use "../utils/breakpoint-mob";
 
 
 
@@ -13,15 +12,13 @@
     align-items: center;
     margin:0;
     background-color: variables.$belleville-color;
-    
-    @include breakpoint-mob.mob320;
             
         & .belleville {
             width:100%;
             display:block;
             flex-direction:row;
             text-align:center;
-            font-size:4vw;
+            font-size:12px;
             font-weight:bold;
             padding-top:5%;
             padding-bottom:5%;
@@ -46,7 +43,7 @@
      padding-top:30px;
      padding-bottom:50px;
      background-color:variables.$fond-color;
-     @include breakpoint-mob.mob320;
+
 
         & h1{
             font-family:'Roboto',sans-serif;
@@ -56,12 +53,15 @@
         & p{
             
             width:100%;
-            font-size:4vw;
+            font-size:17px;
             text-align: center; 
             padding: 10px;
             padding-top: 5%;
             padding-bottom:5%;
             opacity:(0.75);
+            }
+            button{
+                font-size: 14px;
             }
 
 }

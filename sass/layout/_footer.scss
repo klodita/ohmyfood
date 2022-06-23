@@ -1,28 +1,17 @@
 @use "../utils/mixin-footer";
-@use "../utils/breakpoint-mob";
-@use "../utils/breakpoint-tab";
-@use "../utils/breakpoint-desk";
 
 
 footer
-{margin-top:0vw;
+{
+  margin-top:0vw;
+  
 .largeur_footer
 {
 @include mixin-footer.largeur-footer;
-@include breakpoint-desk.mediadesktop-min($break-min:1600px){
-  padding-bottom: 20vw;
-}
+
     h2
     {
     @include mixin-footer.h2-footer;
-    @include breakpoint-mob.breakpoint-min($break-min:445px)
-  {   
-   
-    padding-top:8vw;
-}
-@include breakpoint-tab.breakpoint-mintab($break-min:768px){
-  padding-top:0vw;
-}
     }
 a {
  @include mixin-footer.lien-footer;
@@ -44,51 +33,6 @@ a {
       padding-left:20px;
       } 
    }
-
- // Travail sur média query (voir la mixin breakpoint-mob)
- @include breakpoint-mob.mob280
-  {
-  width:90%;
-  font-size:15px;  
-  } 
-
-@include breakpoint-mob.breakpoint-min($break-min:445px)
-  {   
-    &.icon_footer
-      {
-        i
-        {
-        font-size: 28px;
-        padding-left:20px;
-        padding-right:25px
-        }
-            
-        p
-        {
-        font-size: 28px;
-        }
-     }
-}
-
-@include breakpoint-mob.breakpoint-min($break-min:445px)
-  {   
-    &.icon_footer
-      {
-        i
-        {
-        font-size: 20px;
-        padding-left:20px;
-        padding-right:25px
-        }
-            
-        p
-        {
-        font-size: 20px;
-        }
-     }
-}
-
-
 
 }
 }

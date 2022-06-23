@@ -34,11 +34,7 @@
     top:25px;
     left:60vw;
     @content;
-    @include breakpoint-mob.mob320{
-        width: 26vw;
-        position:absolute;
-        left:55vw;
-    }
+    
 }
 
 //concerne la tailles des cartes de restaurants avec leurs fond.
@@ -52,32 +48,7 @@
     object-fit:cover;
     border-top-left-radius:25px;
     border-top-right-radius:25px;
-
-   // Travail sur média query (voir la mixin breakpoint-mob)  
-    
-    @include breakpoint-mob.mob425
-    {
-        height:320px;
-    }
-    @include breakpoint-mob.mob767
-    {
-        height:430px;
-    } 
-    @include breakpoint-mob.mob360
-    {
-        height:240px;
-    }
-
-    @include breakpoint-mob.mob320
-    {
-        width:89vw;
-        height:210px;
-    }
-    @include breakpoint-mob.mob280
-    {
-        height:175px;
-    }
-
+    @content;
 }
 
 
@@ -86,18 +57,10 @@
 
 @mixin text-resto {
     width:70%;
-    font-size:5vw;
+    font-size:18px;
     padding-left:25px;
     z-index:1;
     @content;
-    
-    // Travail sur média query (voir la mixin breakpoint-mob)
-    @include breakpoint-mob.mob767
-    {
-        font-size:4vw;
-    }
-    @include breakpoint-mob.mob280
-    {padding-left:12px;}
     }
 
 
@@ -107,7 +70,7 @@
 @mixin taillefond-resto {
   
     width:89vw;
-    height:75px;
+    height:20vw;
     margin:0;
     margin-bottom:50px;
     display:flex;
@@ -118,36 +81,7 @@
     border-bottom-left-radius:25px;
     border-bottom-right-radius:25px;
     box-shadow:5px 5px 5px variables.$shadow-color;
-
-
-    // Travail sur média query (voir la mixin breakpoint-mob)
-    @include breakpoint-mob.mob425
-    {
-        width:92.5%;
-        height:105px;
-    }
-    @include breakpoint-mob.mob767
-    {
-        width:92.9%;
-        height:100px;
-    }
-   
-    @include breakpoint-mob.breakpoint-min($break-min:704px)
-    {
-        width:92.5%;
-        height:110px;
-    }
-    @include breakpoint-mob.mob320
-    {
-        width:83vw;
-        height:75px;
-    } 
-    @include breakpoint-mob.mob280
-    {
-        width:82vw;
-        height:58px;
-
-    }
+    @content;
 }
 
 
@@ -157,31 +91,6 @@
     height:320px;
     padding:0;
     margin-bottom:30px;
-    @content;
-
-    // Travail sur média query (voir la mixin breakpoint-mob)
-    
-    @include breakpoint-mob.mob425{
-        margin-bottom:125px;
-    }
-    @include breakpoint-mob.mob767
-    {
-        margin-bottom:250px;
-    }
-    @include breakpoint-mob.mob360
-    {
-        margin-bottom:20px;
-    }
-
-    @include breakpoint-mob.mob320
-    {
-       width: 90vw;
-       height:289px;
-    }
-    @include breakpoint-mob.mob280
-    {
-       margin-bottom:-50px;
-    }
-    
-}
+    @content;    
+} 
 

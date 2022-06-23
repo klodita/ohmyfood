@@ -1,13 +1,12 @@
 @use "../utils/variables";
 @use "../composant/box-shadow";
-@use "../utils/breakpoint-mob";
+
 
 @mixin bouton-rose {
     width:58vw;
     height:40%;
     padding:15px;
     color:white;
-    font-size:3.5vw;
     font-weight:bold;
     background-image: linear-gradient(to right bottom,variables.$secondary-color, 
     variables.$primary-color);

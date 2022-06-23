@@ -222,15 +222,15 @@
                     .fa-arrow-left{
                         width: 15vw;
                         height: 10vw;
-                        font-size:8vw;
+                        font-size:5rem;
                         display: flex;
                         position: relative;
-                        bottom:1%;
+                        bottom:4%;
                     }
                 }
                 img{
-                    width: 70vw;
-                    height:10vw;
+                    width:60vw;
+                    height:12vw;
                     padding-bottom: 20px;
                     display: flex;
                     position: relative;
@@ -270,19 +270,20 @@
          border-top-right-radius:8vw;
 
          h2{
-             font-size:2.5vw;
+             font-size:18px;
          }
      }   
 
      .menu h1{
          width:70%;
-         font-size: 5vw;
-         padding-left: 80px;
-         margin-top: 4vw;
-         @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-            font-size: 6vw;
-        }
+         font-size:37px;
+         padding-left:80px;
+         margin-top:0;
        } 
+
+       .menu .line{
+        left:0;
+       }
        
 
    .heart_menu{
@@ -308,9 +309,9 @@
   #main_menu{
 
     li{ 
-        @include breakpoint-desk.mediadesktop-min($break-min:1400px){
-        margin-bottom:2.5vw;
-        }
+        // @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+        // margin-bottom:2.5vw;
+        // }
         &:hover{
         .prix_hover{
             // bottom:74px;
@@ -332,7 +333,7 @@
  div .menu-row{
     width:93vw;
     margin:20px;
-    margin-top:60px;
+    margin-top:3vw;
     display: flex;
     align-items: baseline;
     flex-direction: row;

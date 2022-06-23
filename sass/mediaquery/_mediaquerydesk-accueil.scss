@@ -5,242 +5,460 @@
 
 
 
-// mediaquery pour les desktop à partir de 1024px
-// cependant le breakpoint-desk a été ajouté directement
-// dans les fichiers heart.scss, mediadesktop-menu.scss
-// mixin-menu.scss, mixin-fonctionnement.scss et 
-// mediaquerytab-accueil.scss car il était impossible
-// de modifier les données dans ce fichier.
-
 @media screen and (min-width:1024px)
 {
+
+    body{
+        width:100%;
+    }
+    #header_accueil{
+
+        .div_img{
+            img{
+                width:55vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    width:50vw;
+             }
+            }
+        }
+    }
+
+    .row-tab {
+        width:85%; 
+        position: relative;
+        left:9vw;
+        top:2vw;
+        margin-bottom:-2vw;
+            @include breakpoint-desk.mediadesktop-min($break-min:1139px){
+                width:90%;
+                
+         }
+        
+      }
+   
+
+
     #apropos
     { 
+        width:39%;
+        height: 40%;
         position: relative;
-        top:1vw;
-        
-        
+        top:-2vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+           width:38%;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            width:35%;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1375px){
+            width:34%;
+        }
+
+        .localisation .belleville{
+                font-size:16px;
+        }
     }
+
+
+    .fond-colo{
+        h1{
+            font-size: 18px;
+        }
+        p{
+            font-size: 17px;
+        }
+        button{
+            font-size: 16px;
+        }
+    }
+
+
+
     #tuto{
-        
-        
+        height:32vw;
         position: relative;
-        top:0;   
-        
+        top:-1.5vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1060px){
+            top:-2vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1100px){
+            top:-2vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            top:-2.5vw;
+            left:8.5vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+            top:-3.5vw;
+        }
+
+
+      h2{
+        font-size: 29px;
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+           font-size: 29px;
+       }
+      }  
+
       li{
-        height:7.6vw;
+        height:6.8vw;
+        width: 81%;
+        font-size:14px; 
+        border-radius:1vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+            position:relative;
+            top:-0.5vw;
+            height:5.8vw;
+        }
+
         &::before{
             @include mixin-fonctionnement.li-counter{
-                width: 2vw;
-                height: 2vw;
+                font-size:15px;
+                width: 2.5vw;
+                height: 2.5vw;
                 @include breakpoint-desk.mediadesk-min($break-mi:1152px){
-                    width: 3vw;
-                    height: 3vw;
+                    width: 2.5vw;
+                    height: 2.5vw;
                 }
             }
                 
             }
+        i{
+            font-size: 1.2rem;
+        }    
       
         }
       }
-    }
-#resto{
 
+
+      .lieu{
+        padding-top:1.5vw;
+    }
+
+
+#resto{
+    width: 85%;
+    position: relative;
+    left:7vw;
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+        top:-4vw;
+    }
+    h2{
+        font-size: 29px;
+        padding-top:6vw;
+        position: relative;
+        left:4.5vw;
+    }
+    img 
+    {
+        width:85%;
+        height:23vw;
+    }
+
+    
     .resto_fond{
-        height: 18vw;
+        width:80%;
+        height:6vw;
         position: relative;
         bottom:0vw;
-        @include breakpoint-desk.mediadesktop-min($break-min:768px){
-            height:10vw;}
+        @include breakpoint-desk.mediadesktop-min($break-min:1072px){
+           width: 81.5%;
+    }
+    & h3,p{
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            font-size: 19px;
+     }
+    }
     }
 
+    .new::before{ 
+        width:26%;
+        height:3vw;
+        position: absolute;
+        left:25vw;
+    }
+ 
+
+    .resto-row1{
+         margin-bottom:7vw;
+    
+    .resto1, .resto3{
+        position: relative;
+        left:2vw;
+       
+       }
+       .resto2, .resto4{
+        position: relative;
+        right:2vw;
+       }
     .resto1, .resto2, .resto3, .resto4{
-        margin:0;
-        margin-bottom:7.5vw;
-        
-        @include breakpoint-mob.mob320{
+      
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+        margin-bottom:-2vw;}
+
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            margin-bottom:0vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+            margin-bottom:1vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1400px){
             margin-bottom:2vw;
         }
-        @include breakpoint-mob.mob425{
-            margin-bottom:25vw;
-        }
-        @include breakpoint-desk.mediadesktop-min($break-min:768px){
-            margin-bottom:2vw;}
-
-            @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-                margin-bottom:5vw;}    
-    
-        @include breakpoint-desk.mediadesktop-min($break-min:1072px){
-        margin-bottom:4vw;}
-
-        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
-            margin-bottom:5.5vw;
-        }
-        
-
-        
-
-    
-
      }
 }
 
 
+   div .coeur{
+        position: relative; 
+        top:-10vw;  
+        left:34vw;  
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            font-size:0.9rem;
+            top:-9vw;
+            left:35vw;
+        }
+    }
+}
+
+footer{
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+        position: relative;
+        margin-top: -5vw;
+    }
+}
 
 
-// **********************************media query 1440px*****
+    }
+
+    
+
+// **********************************media query pour desktop min 1440px*****
 
 @media screen and (min-width:1440px)
 {
+    body{
+        width: 100%;
+    }
+    #header_accueil{
+
+        .div_img{
+            img{
+                width:40vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    width:38vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                    width:36vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    width:34vw;
+                }
+            }
+        }
+    }
+
+    .row-tab {
+        width:80%; 
+        left:13vw;
+        top:0vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+           left:14.5vw;
+           top:-1vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+            top:-2vw;
+        }
+      }
 
     #apropos
     { 
-        position: relative;
-        top:1.5vw;
-        
-        
-    }
-    #tuto{
-        
-        
-        position: relative;
-        top:0vw; 
-        left:2vw;  
-        li{
-            height:7.6vw;
-            &::before{
-                @include mixin-fonctionnement.li-counter{
-                    width: 3vw;
-                    height: 3vw;
-                }
-          
-            }
-          }
-       
-    }
-
-    #resto{
-       
-        position: relative;
-        left:1vw;
-        h2{
-            margin-top:-1%;
-            margin-bottom:1%;
-        }
-   
-
-        img{
-            width:94%;
-            height:280px;
-            
-        }
-        .resto_fond{
-            height:9vw;
-            position: relative;
-            bottom:0vw;
-        }
-
-        .resto1, .resto2, .resto3, .resto4{
-            margin:0;
-            margin-bottom:9vw;
-           
-         }
-        
-    }
-
-}
-
-// **********************************media query pour desktop min 1441px*****
-
-@media screen and (min-width:1441px)
-{
-    .row-tab{
-        width:90%; 
-        position: relative;
-        left:6vw;
-        
-    }
-
-    #apropos
-    { 
-        position: relative;
-        top:2vw;
-    }
-   
-    #tuto{
-        
-        position: relative;
-        top:0vw; 
-        left:2vw; 
-        
-        li{
-            height:7.2vw;
-            &::before{
-                @include mixin-fonctionnement.li-counter{
-                    width: 2.8vw;
-                    height: 2.8vw;
-                    border-radius: 9vw;
-                    position: relative;
-                    left:-1.5vw;
-                }
-          
-            }
-            
-          }
-    }
-
-    #resto{
-        position: relative;
-        left:1.6vw;
-        h2{
-            margin-top:-2%;
-            margin-bottom:2%;
-        }
-   
-
-        img{
-            width:93%;
-            height:480px;
-            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
-                height:460px;
-            }
-            
-        }
-        .resto_fond{
-            height: 7.5vw;
-            position: relative;
-            bottom:0vw;
-            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
-                height:9vw;
-            }
-        }
-
-        .resto1, .resto2, .resto3, .resto4{
-            margin:0;
-            margin-bottom:425px;
-   
-            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
-            margin-bottom:21vw;
-            }
-
+        .localisation .belleville{
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                margin-bottom:18vw;
-                   }
-
-        
-
-         }
-        
-    }
-    
-    footer {
-        .largeur_footer{
-            padding-left: 2vw;
-            h2{
-                font-size:2vw;
-                padding-top: 1vw;
-                padding-bottom: 1vw;
+                font-size:20px;
+            }
+        }
+        h1{
+            font-size: 19px;
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                font-size:22px;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                font-size:30px;
+            }
+        }
+        p{
+            font-size:19px;
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                font-size:22px;
+            }
+        }
+        button{
+            font-size:17px;
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                font-size:20px;
             }
         }
     }
+
+      #tuto{
+        position: relative;
+        top:-1.5vw; 
+        left:9vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+            top:-2vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+            top:-2vw;
+        }
+      h2{
+        font-size: 35px;
+        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+            font-size:40px;
+         }
+        
+        }
+        li{
+         
+            height:4.7vw;
+            font-size:20px;
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                width: 72%;
+                height: 4.7vw;
+                font-size: 21px;
+            }
+            // @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+            //     width: 72%;
+            //     // height:4.8vw;
+            //     font-size: 21px;
+            // }
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                // width: 72%;
+                height:4.8vw;
+                font-size: 25px;
+            }
+
+
+            &::before{
+                @include mixin-fonctionnement.li-counter{
+                height:1.9vw;
+                width:1.9vw;
+                font-size:17px;
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    height:1.7vw;
+                    width:1.7vw;
+                    font-size:17px;
+                }
+            }}
+
+            i{
+              font-size: 1.5rem;
+              padding-right:16px;
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    font-size:1.8rem;
+                    padding-right:19px;
+                    padding-left:10px;
+                    }
+                
+            }
+
+        }
+        }
+
+
+      #resto{
+                position: relative;
+                top:-8vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    top:-11vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    top:-12vw;
+                }
+               
+                h2{
+                    font-size: 35px;
+                    padding-top: 5vw;
+                    position: relative;
+                    left:4.5vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                       padding-top: 4vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        font-size:40px;
+                     }
+                }
+                .resto_photo{
+                    width:35vw;
+                    height:22vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        height:19vw;
+                    }
+                }
+
+                .new::before{ 
+                    width:26%;
+                    height:2vw;
+                    font-size: 23px;
+                    position: absolute;
+                    left:25vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                        font-size:27px;
+                     }
+                     @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        font-size:35px;
+                     }
+                }
+
+                .resto_fond{
+                    width:33.9vw;
+                    height:6vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                        width:34vw;
+                     }
+                     h3,p{
+                        font-size:22px;
+                        @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                            font-size:25px;
+                        }
+                        @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                            font-size:27px;
+                         }
+                         @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                            font-size:31px;
+                         }
+                     }
+                }
+
+                div .coeur {
+                    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                        font-size: 1rem;
+                        top:-8.4vw;
+                     }
+                     @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        font-size:1.4rem;
+                        top:-7.5vw;
+                     }
+                    }
+
+               .resto-row1{
+                .resto1, .resto2, .resto3, .resto4{
+      
+                    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    margin-bottom:4vw;}
+                }
+               }   
+                }
+
+
+                footer{
+                        // position: relative;
+                        margin-top: -10vw;
+                        @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                            margin-top: -12vw;
+                         }
+                }
+
 }
+
+

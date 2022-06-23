@@ -1,0 +1,329 @@
+@use "../utils/breakpoint-mob";
+@use "../utils/mixin-restaurant";
+@use "../utils/mixin-footer";
+@use "../utils/variables";
+
+
+
+
+@media screen and (max-width:320px){
+    body{
+        width: 100%;
+    }
+
+    .fond-colo{
+        button{
+            font-size: 12px;
+        }
+    }
+   #tuto{
+   
+    li{
+        font-size:12px;
+        position: relative;
+        right:3vw;
+        
+        @include breakpoint-mob.mob280
+        {
+        font-size: 10px;
+        width:95%;
+        height:19vw;
+        position: relative;
+        right:4vw;
+        }
+        i{
+            font-size:1rem;
+            padding-left:3vw;
+        }
+    }
+   }
+
+    div .coeur
+    {
+        width:1.9rem;
+        height:1.9rem;
+        font-size:0.7rem;
+        position:relative;
+        left:80vw; 
+        top:-36vw; 
+        @include breakpoint-mob.mob280
+     {
+     font-size:0.5rem;
+     position: relative;
+     left:80vw;
+     top:-37vw; 
+     }
+
+    }
+
+
+    .restaurants{
+        .resto_photo{
+            width:89vw;
+            height: 200px;
+        }
+        .resto_fond{
+            width:83vw;
+            height:20vw;
+
+            h3,p
+            {  
+                font-size: 16px;
+                padding-bottom:2vw;
+            }
+        }
+        .new::before{
+            content: "Nouveau";
+            @include mixin-restaurant.etiquette-nouveau{
+                position: relative;
+                width: 26vw;
+                position:absolute;
+                left:60vw;
+                
+            }
+        }
+    }
+
+   
+    
+
+    .resto1, .resto2, .resto3, .resto4
+    {
+        width:99%;
+        height:275px;
+    }
+
+footer{
+    .largeur_footer{
+        h2{
+            font-size: 22px;
+        }
+        a {
+            &.icon_footer{
+                i{
+                    @include breakpoint-mob.mob280
+                {
+               
+                font-size:15px;  
+                }
+                } 
+
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+ 
+    
+}
+
+// ****************************************************************
+
+
+
+
+
+// ****************************************************************
+
+@media screen and (min-width:425px) and (max-width:767px) {
+
+       body{
+        width: 100%;
+       }
+
+    #apropos {
+   
+    .localisation{
+       
+        .belleville{
+            font-size: 14px; 
+            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                font-size:18px;
+            }
+            
+        }
+    }}
+
+
+
+    .fond-colo{
+        h1 {
+            font-size: 20px;
+            
+            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                font-size:24px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:493px){
+                font-size:25px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:535px){
+                font-size:28px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:600px){
+                font-size:30px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:642px){
+                font-size:32px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:685px){
+                font-size:34px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:728px){
+                font-size:36px;
+            }
+        }
+        p{
+            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                font-size:24px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:568px){
+                font-size:28px;
+            }
+        }
+        button{
+            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                font-size:20px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:568px){
+                font-size:24px;
+            }
+        }
+    }
+
+#tuto{
+
+     
+    li{
+        &::before{
+            font-size:15px;
+            border-radius:25px;
+            @include breakpoint-mob.breakpoint-min($break-min:568px){
+                font-size:20px;
+            }
+        }
+        i{
+        font-size:1.7rem ;
+        margin-left:15px;
+        @include breakpoint-mob.breakpoint-min($break-min:568px){
+           
+            font-size:2rem;
+        }
+    }
+        @include breakpoint-mob.breakpoint-min($break-min:480px)
+    {
+        width:90%;
+        height:17vw; 
+        font-size:17px;   
+        position: relative;
+        left:10px;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:568px){
+        width:85%;
+        font-size:22px;
+        
+    }
+    }
+}
+
+div .coeur 
+{
+    font-size:0.8rem;    
+    position:relative;
+    top:-30vw;
+    left:82vw;
+    @include breakpoint-mob.breakpoint-min($break-min:480px){
+        font-size:1rem;  
+        top:-27vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:568px){
+        top:-26vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:600px){
+        top:-25vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:640px){
+        top:-23vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:667px){
+        top:-22vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:736px){
+        top:-21vw;
+    }
+
+
+}
+
+#resto
+{
+    h2{
+        position: relative;
+        left:10vw;
+    }
+    .resto_photo 
+    {
+        width:89vw;
+        height:60vw;
+    }
+    
+    
+    .resto_fond
+    {
+        width:85vw; 
+        height:18vw;
+        @include breakpoint-mob.breakpoint-min($break-min:580px){
+            width:86vw;
+            height:16vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:690px){
+            width:86.5vw;
+            height:15vw;
+        }
+    }
+
+    h3, p
+    {
+    font-size:19px;
+    }
+    
+    .resto1, .resto2, .resto3, .resto4
+       {
+       
+            height:75vw;
+       }
+        
+    }
+
+   
+    
+footer
+{
+  
+.largeur_footer
+{
+        height:55vw;
+        padding-top:6vw;
+        padding-left:3vw;
+        padding-bottom:6vw;
+        @include breakpoint-mob.breakpoint-min($break-min:480px){
+            height:47vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:560px){
+            height:42vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:660px){
+            height:38vw;
+        }
+    
+        h2{
+            @include breakpoint-mob.breakpoint-min($break-min:530px){
+            font-size:30px;
+            }
+   
+        }
+}
+}
+
+}

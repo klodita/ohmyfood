@@ -5,3 +5,10 @@
         @content;
     }
 }
+
+@mixin breakpoint-maxtab($break-max:0)
+{
+    @media (max-width:$break-max) {
+        @content;
+    }
+}
