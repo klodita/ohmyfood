@@ -1,12 +1,4 @@
 
-// cette mixin permet de corriger quelque rendu visuel sur des breakpoints
-// cependant le breakpoint-mob a été ajouté directement
-// dans les fichiers footer.scss, accueil.scss, restaurants.scss,
-// mixin-accueil.scss, mixin-fonctionnement.scss, mixin-footer.scss,
-// et mixin-heart.scss, mixin-menu.scss, mixin-restaurant.scss,
-// car il était impossible de modifier les données dans ce fichier.
-
-
 @mixin breakpoint($break:0)
 {
     @media (max-width:$break) {
@@ -26,8 +18,6 @@
 $break1:(
     "mob280":280px,
     "mob320":320px,
-    "mob360":360px,
-    "mob425":425px,
     "mob767":712px,
     
 );
@@ -41,21 +31,6 @@ $break1:(
 
 @mixin mob320 {
     @media screen and (max-width:map-get($break1,"mob320")) {
-        @content;
-    }
-}
-
-
-@mixin mob360 {
-    @media screen and (max-width:map-get($break1,"mob360")) {
-        @content;
-    }
-}
-
-
-@mixin mob425 {
-    @media screen and (min-width:map-get($break1,"mob425")) {
-        
         @content;
     }
 }

@@ -3,15 +3,6 @@
 @use "../utils/mixin-fonctionnement";
 @use "../utils/breakpoint-tab";
 @use "../composant/box-shadow";
-@use "../utils/breakpoint-desk";
-@use "../utils/breakpoint-mob";
-
-
-// mediaquery pour les tablettes à partir de 768px
-// cependant le breakpoint-tab a été ajouté directement
-// dans les fichiers mixin-fonctionnement.scss, 
-// mediaquerytab-menu.scss et mediaquerytab-accueil.scss
-// car il était impossible de modifier les données dans ce fichier.
 
 
 @media screen and (min-width:768px){
@@ -36,7 +27,7 @@
                 width:60vw;
                 padding:30px;
                 margin-top: 30px; 
-                @include breakpoint-mob.breakpoint-min($break-min:960px){
+                @include breakpoint-tab.breakpoint-mintab($break-min:960px){
                     width:55vw; 
                 }
             }
@@ -70,9 +61,6 @@
       left:4vw;
       bottom:2vw;
       @include box-shadow.shadow;
-    //   @include breakpoint-mob.breakpoint-min($break-min:960px){
-    //     margin
-    //   }
       
   }
 
@@ -86,7 +74,7 @@
     
     & h1{
         font-size:15px;
-        @include breakpoint-mob.breakpoint-min($break-min:960px){
+        @include breakpoint-tab.breakpoint-mintab($break-min:960px){
             font-size:18px;  
         }
     }
@@ -99,7 +87,7 @@
         width: 70%;
         font-size: 13px;
     }
-}
+    }
 
 
   #tuto
@@ -112,11 +100,11 @@
       position: relative;
       left:6vw;
       top:-0.5vw;
-      @include breakpoint-mob.breakpoint-min($break-min:864px){
+      @include breakpoint-tab.breakpoint-mintab($break-min:864px){
         left:8vw;
         top:-1.5vw;
       }
-      @include breakpoint-mob.breakpoint-min($break-min:900px){
+      @include breakpoint-tab.breakpoint-mintab($break-min:900px){
         top:-2.5vw;
         left:7vw;
        }
@@ -128,7 +116,7 @@
           left:5%;
           bottom:10px; 
           width:83%;
-          @include breakpoint-mob.breakpoint-min($break-min:864px){
+          @include breakpoint-tab.breakpoint-mintab($break-min:864px){
             font-size:29px;
           }
       }
@@ -140,10 +128,15 @@
         border-radius:2vw;
         position: relative;
         top:-2vw;
-        @include breakpoint-mob.breakpoint-min($break-min:960px){
+        @include breakpoint-tab.breakpoint-mintab($break-min:900px){
+            font-size: 14px;
+           }
+        @include breakpoint-tab.breakpoint-mintab($break-min:960px){
             width:79%;
             height:7vw;
            }
+
+
         &::before{
             @include mixin-fonctionnement.li-counter{
                 width: 3vw;
@@ -151,14 +144,12 @@
                 font-size: 11px;
                 position: relative;
                 right:9.5%;
-                @include breakpoint-mob.breakpoint-min($break-min:864px){
+                @include breakpoint-tab.breakpoint-mintab($break-min:864px){
                     width: 3vw;
                     height: 3vw;  
                 }
                 
             }
-          
-      
         }
         
         & i{ @include mixin-fonctionnement.tuto-icon
@@ -173,10 +164,9 @@
          }
       }
       }
-
-     
     
   }
+
     
 #resto{ 
    width: 90%;
@@ -199,7 +189,7 @@
        text-align: center;
        position: relative;
        bottom:30px;
-       @include breakpoint-mob.breakpoint-min($break-min:900px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:900px){
         font-size: 29px;  
     }
    }
@@ -224,12 +214,10 @@
    .resto_fond{
        width:85%;
        height:8vw;
-       @include breakpoint-mob.breakpoint-min($break-min:864px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:864px){
         width: 86%;
           
     }
-
-   
       
        & h3, p{
            font-size:17px;
@@ -247,16 +235,16 @@
        align-items: flex-start;
        flex-grow: 1;
         
-       @include breakpoint-mob.breakpoint-min($break-min:864px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:864px){
         margin-bottom:4vw;
        }
-       @include breakpoint-mob.breakpoint-min($break-min:900px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:900px){
         margin-bottom:6vw;
        }
-       @include breakpoint-mob.breakpoint-min($break-min:960px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:960px){
         margin-bottom:8vw;
        }
-       @include breakpoint-mob.breakpoint-min($break-min:1000px){
+       @include breakpoint-tab.breakpoint-mintab($break-min:1000px){
         margin-bottom:10vw;
        }
    }
@@ -276,24 +264,13 @@
     flex-direction: row;
     align-items: flex-start;
     flex-grow: 1;
-   padding-bottom: 30px;
+    padding-bottom: 30px;
     
     
 }
 
 .resto1, .resto2, .resto3, .resto4{
-      
     margin-bottom:-6vw;
-    // @include breakpoint-tab.breakpoint-mintab($break-min:864px){
-    //     margin-bottom:-7vw;
-    //    }
-    //    @include breakpoint-tab.breakpoint-mintab($break-min:900px){
-    //     margin-bottom:-4vw;
-    //    }
-    // //    @include breakpoint-tab.breakpoint-mintab($break-min:1023px){
-    // //     margin-bottom:-1vw;
-    // //    }   
-    
  }
 
 }
@@ -310,13 +287,7 @@ div .coeur{
 
     @include breakpoint-tab.breakpoint-mintab($break-min:960px){
         top:-13vw;
-       }
-    
-    //    @include breakpoint-tab.breakpoint-maxtab($break-max:1023px){
-    //     font-size: 0.7rem;
-    //    }
-  
-            
+       }    
 }
 
 footer {
@@ -334,10 +305,10 @@ footer {
         a {
             &.icon_footer{
                 i{
-                    font-size:22px;
+                    font-size:20px;
                 }
                 p{
-                    font-size: 22px; 
+                    font-size: 20px; 
                    
                 }
             }

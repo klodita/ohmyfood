@@ -1,8 +1,6 @@
 @use "../utils/breakpoint-mob";
 @use "../utils/mixin-restaurant";
 @use "../utils/mixin-footer";
-@use "../utils/variables";
-
 
 
 
@@ -70,6 +68,10 @@
             {  
                 font-size: 16px;
                 padding-bottom:2vw;
+                @include breakpoint-mob.mob280
+                {
+                    font-size: 15px;
+                }
             }
         }
         .new::before{
@@ -90,7 +92,11 @@
     .resto1, .resto2, .resto3, .resto4
     {
         width:99%;
-        height:275px;
+        margin-bottom:-11vw;
+        @include breakpoint-mob.mob280
+        {
+        margin-bottom:-19vw;
+        }
     }
 
 footer{
@@ -118,10 +124,6 @@ footer{
  
     
 }
-
-// ****************************************************************
-
-
 
 
 
