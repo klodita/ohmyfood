@@ -304,13 +304,13 @@ div .coeur{
     top:-15vw;
     left:37vw;
    
-    // @include breakpoint-tab.breakpoint-mintab($break-min:864px){
-    //     top:-13vw;
-    //    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:864px){
+        top:-14vw;
+       }
 
-    // @include breakpoint-tab.breakpoint-mintab($break-min:960px){
-    //     top:-11vw;
-    //    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:960px){
+        top:-13vw;
+       }
     
     //    @include breakpoint-tab.breakpoint-maxtab($break-max:1023px){
     //     font-size: 0.7rem;

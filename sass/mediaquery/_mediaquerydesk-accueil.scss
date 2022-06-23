@@ -33,7 +33,6 @@
                 width:90%;
                 
          }
-        
       }
    
 
@@ -131,7 +130,7 @@
       }
 
 
-      .lieu{
+    .lieu{
         padding-top:1.5vw;
     }
 
@@ -170,6 +169,8 @@
      }
     }
     }
+
+
 
     .new::before{ 
         width:26%;
@@ -349,6 +350,8 @@ footer{
         }
         
         }
+
+
         li{
          
             height:4.7vw;
@@ -359,7 +362,6 @@ footer{
                 font-size: 21px;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                // width: 72%;
                 height:4.8vw;
                 font-size: 25px;
             }
@@ -535,7 +537,6 @@ footer{
 
 
                 footer{
-                        // position: relative;
                         margin-top: -10vw;
                         @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                             margin-top: -12vw;
