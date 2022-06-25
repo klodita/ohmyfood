@@ -1,6 +1,5 @@
 @use "../utils/variables";
-@use "../utils/breakpoint-mob";
-@use "../utils/breakpoint-tab";
+
 
 
 @mixin heart
@@ -16,6 +15,7 @@
     width:2rem;
     height:2rem;
     position: relative;
+    top:-34.5vw;
     left:88%;
     @content;  
 }

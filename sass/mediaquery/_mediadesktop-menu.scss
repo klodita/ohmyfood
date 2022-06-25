@@ -1,25 +1,90 @@
 @use "../utils/breakpoint-desk";
 @use "../utils/mixin-menu";
+@use "../utils/mixin-heart";
 
 @media screen and (min-width:1024px){
     
-        .menu{
-            .desktop{
+    #header_menu{
+      
+            img{
+                width: 55vw;
+               
+                // @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+                //     top:2.5vw;
+                // }
+                
+                // @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                //     top:2.4vw;
+                // }
+
+                // @include breakpoint-desk.mediadesktop-min($break-min:1536px){
+                //     top:2vw;
+                // }
+            }
+    }
+
+    .menu{
+
+        .titre{
+            font-size:44px;
+        }
+          .desktop{
+        
                 .line{
-                    width:7vw;
+                    width:4vw;
                 }
             }
-       
+          div.heart_menu{
+             &.coeur{
+               font-size:1.4rem;
+                top:-2.8vw; 
+                left:86vw;
+                }
+            }
         }
+
+
         
+        
+        
+
+
+
+
 
     }
 
 
 @media screen and (min-width:1440px){
+
+    body{
+        width: 100%;
+    }
+
+    #header_menu{
+      
+        div.logo_menu{
+            width: 40vw;
+        }
+}
+
     #main_menu{
         .menu{
+           
             padding-left:2vw;
+            
+            .titre{
+                font-size: 50px;
+                position: relative;
+                top:2vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                    font-size:81px;
+                    position: relative;
+                    top:5vw;
+                }
+            }
+
+
             @include breakpoint-desk.mediadesktop-min($break-min:1536px){
                 padding-left:2vw;
             }
@@ -44,11 +109,16 @@
                
             }
             .fa-2x{
-                font-size: 5rem;
+                font-size:4rem;
                 position: relative;
-                top:-2.5vw;
+                top:-0.5vw;
                 @include breakpoint-desk.mediadesktop-min($break-min:1441px){
                     font-size:8rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                    font-size:7rem;
+                    position: relative;
+                    top:1vw;
                 }
             }
         }

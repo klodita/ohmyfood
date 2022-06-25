@@ -1,6 +1,212 @@
-
-
+@use "../utils/breakpoint-mob";
+@use "../utils/mixin-menu";
 
 @media screen and (max-width:320px){
+    body{
+        width: 100%;
+    }
+    .menu{
+        padding: 5px;;
+        h1{
+            font-size: 21px;
+            position: relative;
+            bottom:5px;
+            @include breakpoint-mob.breakpoint-min($break-min:280px){
+                font-size:18px;
+            }
+        }
+        div.heart_menu{
+            &.coeur{
+            position: relative;
+            top:-11.5vw;
+            left:88%;
+        }
+        } 
+    
+        .line{
+            width: 12vw;
+            font-size: 14px;
+        }    
+
+        div.desktop{
+            position: relative;
+            top:-10vw;
+        }
+
+        li{
+           height:19vw;
+           @include breakpoint-mob.breakpoint($break:280px){
+            height: 22vw;
+           }
+           div{
+            
+            h3{
+                font-size: 11.4px;
+                @include breakpoint-mob.breakpoint($break:280px){
+                    font-size: 10px;
+                }
+            }
+            p{
+                font-size: 10px;
+                @include breakpoint-mob.breakpoint($break:280px){
+                    font-size: 8.9px;
+                }
+            }
+           }
+        .prix_hover{
+            .prix{
+                @include mixin-menu.prix{
+                font-size: 11px;
+                position: relative;
+                top:-5.8vw;
+                right:37vw;  
+                }  
+            }
+            }
+
+            &:hover{
+                .prix_hover{
+                    
+                    .prix2{
+                       
+                        font-size:11px;
+                        top:-23.2vw;
+                     } 
+                    
+                    
+                    .fa-circle-check{
+                    font-size:1rem;
+                    left:-18vw;
+                    top:-26vw;
+                    }
+                }
+               }
+               @include breakpoint-mob.breakpoint($break:280px){
+               
+                .prix_hover{
+                    .prix{
+                        @include mixin-menu.prix{
+                        font-size: 11px;
+                        position: relative;
+                        top:-8vw;
+                        right:40vw;
+                          
+                        }  
+                    }
+                    }
+                &:hover{
+                    .prix_hover{
+                        &.fond-icon{
+                            top:-12vw;
+                        }
+                        & .prix2{
+                           
+                            font-size:11px;
+                            top:-22.7vw;
+                            left:-54vw;
+                         } 
+                        
+                        
+                        .fa-circle-check{
+                        font-size:0.9rem;
+                        left:-20vw;
+                        top:-28vw;
+                        }
+                    }
+                   }
+               }
+   
+        }
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:425px) and (max-width:767px)
+{
+    body{
+        width: 100%;
+    }
+    
+    #main_menu{
+       .menu{
+        h1 {
+            display: flex;
+            width: 80%;
+            font-size: 7vw;
+            padding-top: 35px;
+            
+        }
+        div.heart_menu{
+            font-size: 1rem;
+            position: relative;
+            top:-8.5vw; 
+        }
+
+        .desktop{
+            position: relative;
+            top:0.8vw;
+        }
+        .line{
+            width: 11vw;
+            
+        }  
+
+        li{
+            height:19vw;
+            
+            div{
+             
+             h3{
+                 font-size: 17.5px;
+             }
+             p{
+                 font-size: 14.8px;
+             }
+             &.prix_hover{
+               & .prix{
+                    @include mixin-menu.prix{
+                    font-size: 18px;
+                    position: relative;
+                    top:-1.5vw;
+                    right:27.5vw;
+                      
+                    }  
+                }
+    
+                &:hover{
+                    &.prix_hover{
+                        & .prix2{
+                           
+                            font-size:18px;
+                            top:-22.5vw;
+                            left:-48vw;
+                         } 
+
+                        & .fa-circle-check{
+                        font-size:1.6rem;
+                        left:-16vw;
+                        top:-26vw;
+                        }
+                    }
+                   }
+             
+            }
+        }
+       
+    
+     }       
+      
+        
+    
+
+
+    }}}

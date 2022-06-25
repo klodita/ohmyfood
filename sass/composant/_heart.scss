@@ -1,7 +1,4 @@
 @use "../utils/mixin-heart";
-@use "../utils/breakpoint-mob";
-@use "../utils/breakpoint-desk";
-
 
 
 
@@ -12,8 +9,6 @@ div .coeur
  @include mixin-heart.heart;
     .fa-2x
     {  
-        
-
     .fa-heart{
     @include mixin-heart.heart1;
     }
@@ -22,67 +17,9 @@ div .coeur
     .fa-heart:hover{
     @include mixin-heart.heart2;
     }
+    
 }
 
-// position du coeur concernant les cartes de restaurant
-div .coeur
-{
-    position:relative;
-    left:82vw;
-    bottom:34vw;
-}
 
-// position du coeur concernant les menus
- 
-.heart_menu 
-{
-@include mixin-heart.heart
-   
-    {   width:10px;
-       &.coeur{
-        position: relative;
-        top:-35px;
-        left:88%;
-     
-       
-        @include breakpoint-mob.breakpoint($break:320px){
-    
-            position: relative;
-            left:84%;
-           }
-           @include breakpoint-mob.breakpoint-min($break-min:500px){
-            font-size: 1.2rem;
-            position:relative;
-            left:80vw;
-            top:-8vw;
-        }
-           @include breakpoint-mob.breakpoint-min($break-min:556px){
-            font-size: 1.4rem;
-            position:relative;
-            left:81vw;
-            top:-8vw;
-    
-        }
-        @include breakpoint-mob.breakpoint-min($break-min:600px){
-            font-size: 1.4rem;
-            position:relative;
-            left:81vw;
-            top:-7vw;
-    
-        }
-       }
-       @include mixin-heart.heart{
-        
-        @include breakpoint-desk.mediadesk-min($break-mi:1024px){
-            font-size: 3rem;
-            position: relative;
-            left:2vw;
-            top:1.5vw;
-            
-        }
-       
-    }
-    }  
-}
 
 

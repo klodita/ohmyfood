@@ -7,6 +7,9 @@
 
 @media screen and (min-width:768px){
    
+    body{
+        width: 100%;
+    }
    
     #header_accueil{
         
@@ -264,19 +267,10 @@
     flex-direction: row;
     align-items: flex-start;
     flex-grow: 1;
-    padding-bottom: 30px;
-    
-    
+    padding-bottom: 30px; 
 }
 
-.resto1, .resto2, .resto3, .resto4{
-    margin-bottom:-6vw;
- }
-
-}
-
-
-div .coeur{
+.heart_resto {
     position: relative; 
     top:-15vw;
     left:37vw;
@@ -289,6 +283,15 @@ div .coeur{
         top:-13vw;
        }    
 }
+
+.resto1, .resto2, .resto3, .resto4{
+    margin-bottom:-6vw;
+ }
+
+}
+
+
+
 
 footer {
    width:100%;

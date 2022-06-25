@@ -36,7 +36,7 @@
     }
    }
 
-    div .coeur
+    div.coeur
     {
         width:1.9rem;
         height:1.9rem;
@@ -229,34 +229,7 @@ footer{
     }
 }
 
-div .coeur 
-{
-    font-size:0.8rem;    
-    position:relative;
-    top:-30vw;
-    left:82vw;
-    @include breakpoint-mob.breakpoint-min($break-min:480px){
-        font-size:1rem;  
-        top:-27vw;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:568px){
-        top:-26vw;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:600px){
-        top:-25vw;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:640px){
-        top:-23vw;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:667px){
-        top:-22vw;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:736px){
-        top:-21vw;
-    }
 
-
-}
 
 #resto
 {
@@ -295,7 +268,36 @@ div .coeur
        
             height:75vw;
        }
-        
+       
+       
+       .heart_resto
+{
+    font-size:0.8rem;    
+    position:relative;
+    top:-30vw;
+    left:82vw;
+    @include breakpoint-mob.breakpoint-min($break-min:480px){
+        font-size:1rem;  
+        top:-27vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:568px){
+        top:-26vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:600px){
+        top:-25vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:640px){
+        top:-23vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:667px){
+        top:-22vw;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:736px){
+        top:-21vw;
+    }
+
+
+}
     }
 
    

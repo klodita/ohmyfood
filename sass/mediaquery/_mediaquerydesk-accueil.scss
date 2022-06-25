@@ -1,7 +1,7 @@
 @use "../utils/mixin-fonctionnement";
 @use "../utils/mixin-heart";
 @use "../utils/breakpoint-desk";
-@use"../utils/breakpoint-mob";
+
 
 
 
@@ -210,7 +210,7 @@
 }
 
 
-   div .coeur{
+   .heart_resto {
         position: relative; 
         top:-10vw;  
         left:34vw;  
@@ -502,7 +502,7 @@ footer{
                      }
                 }
 
-                div .coeur {
+                .heart_resto {
                     @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                         font-size: 1rem;
                         top:-8.4vw;
