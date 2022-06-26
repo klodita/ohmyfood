@@ -120,9 +120,13 @@
     width:95%;
     height:9vw;
   
-
-    & h3, p{
-        font-size:1.8vw;  
+    
+    h3{
+        font-size:14px;  
+    }
+    
+    p{
+        font-size:14px;  
     }
 
     .prix_hover{
@@ -130,6 +134,8 @@
         position: relative;
         left:14vw;
         top:-4.4vw; 
+        
+
     }
 
     &:hover{
@@ -138,12 +144,15 @@
             position: relative;
             top:-27.6vw;
             left:-23vw;
+           
+           
         }
         & .fond-icon{
             width:25vw;
             position:relative;
-            left:14vw;
+            left:15vw;
             // ne pas mettre de position:top car le prix hover remonte
+            
         }
         & .fa-circle-check{
             font-size:1.4rem;
@@ -168,35 +177,49 @@
     ul li{
         width:90%;
         height:9vw;
-
-    .prix_hover{
-        font-size:15px;
-        position: relative;
-        left:14vw;
-        top:-4.4vw; 
-    }
-    &:hover{
-        & .prix2{
+      
+        
+        h3{
+            font-size:14px;  
+        }
+        
+        p{
+            font-size:14px;  
+        }
+    
+        .prix_hover{
             font-size:15px;
             position: relative;
-            top:-27.6vw;
-            left:-23vw;
-        }
-        & .fond-icon{
-            width:25vw;
-            position:relative;
             left:14vw;
-            // ne pas mettre de position:top car le prix hover remonte
+            top:-4.4vw; 
+            
+    
         }
-        & .fa-circle-check{
-            font-size:1.4rem;
-            left:-8.5vw;
-            top:-30vw;
+    
+        &:hover{
+            & .prix2{
+                font-size:15px;
+                position: relative;
+                top:-27.6vw;
+                left:-23vw;
+               
+               
+            }
+            & .fond-icon{
+                width:25vw;
+                position:relative;
+                left:15vw;
+                // ne pas mettre de position:top car le prix hover remonte
+                
+            }
+            & .fa-circle-check{
+                font-size:1.4rem;
+                left:-8.5vw;
+                top:-30vw;
+            }
+            
         }
-        
-    }
-        
-        }
+       }
 
      }
 
