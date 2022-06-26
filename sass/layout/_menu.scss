@@ -48,6 +48,9 @@ div.heart_menu {
     @include mixin-heart.heart{
         top:-9.5vw;
     }
+    & .fa-2x{
+        font-size: 2rem;
+    }
 }
  
 h2 {
@@ -113,8 +116,6 @@ li
 
   &:hover 
    {
-       
-
         .menu_hover
         {    
         h3{
@@ -201,6 +202,7 @@ ul{
     align-self: center;
     margin-top:10px;
     margin-bottom:10vw;
+    font-size:18px;
     @include mixin-bouton.bouton-rose;
     &:hover{
         @include mixin-bouton.hover-bouton;

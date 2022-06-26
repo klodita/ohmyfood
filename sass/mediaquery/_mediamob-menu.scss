@@ -8,18 +8,24 @@
     .menu{
         padding: 5px;;
         h1{
-            font-size: 21px;
+            font-size:20px;
             position: relative;
             bottom:5px;
-            @include breakpoint-mob.breakpoint-min($break-min:280px){
-                font-size:18px;
-            }
+            
         }
         div.heart_menu{
             &.coeur{
             position: relative;
             top:-11.5vw;
             left:88%;
+            & .fa-2x{
+                font-size:1.4rem;
+                position:relative;
+                left:-3vw;
+                @include breakpoint-mob.breakpoint($break:280px){
+                    left:-1vw;
+                }
+            }
         }
         } 
     
@@ -117,6 +123,12 @@
                }
    
         }
+        .btn{
+            @include breakpoint-mob.breakpoint($break:280px){
+                  font-size:13px;
+            }
+          
+        }
     }
     
 }
@@ -124,7 +136,7 @@
 
 
 
-
+// **********************Meqia query 425px**********************************
 
 
 
@@ -137,7 +149,12 @@
     }
     
     #main_menu{
-       .menu{
+       .menu{ 
+        @include breakpoint-mob.breakpoint-min($break-min:480px){
+        display: flex;
+        align-self: center;
+        padding-left:3vw;
+       }
         h1 {
             display: flex;
             width: 80%;
@@ -149,27 +166,94 @@
             font-size: 1rem;
             position: relative;
             top:-8.5vw; 
+            & .fa-2x{
+                font-size:2.2rem;
+                @include breakpoint-mob.breakpoint-min($break-min:480px){
+                    font-size: 2.8rem;
+                    left:-1.5vw;
+                }
+                @include breakpoint-mob.breakpoint-min($break-min:660px){
+                    top:0.5vw;
+                    }
+            }
         }
 
         .desktop{
             position: relative;
             top:0.8vw;
         }
-        .line{
-            width: 11vw;
-            
+
+        h2{
+            &.line{
+            font-size: 20px;   
+            width: 12vw;
+            @include breakpoint-mob.breakpoint-min($break-min:550px){
+                font-size: 24px;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:640px){
+                width:9vw;
+            }
         }  
+            
+        }
+        
 
         li{
             height:19vw;
+            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                height: 17vw;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:520px){
+                height: 16vw;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:640px){
+                height: 14vw;
+            }
+            @include breakpoint-mob.breakpoint-min($break-min:700px){
+                height: 13.5vw;
+            }
             
             div{
              
              h3{
                  font-size: 17.5px;
+                 @include breakpoint-mob.breakpoint-min($break-min:520px){
+                    font-size: 20.5px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:568px){
+                    font-size: 20.4px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:640px){
+                    font-size: 22.5px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:700px){
+                    font-size: 23.5px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:712px){
+                    font-size: 24.8px;
+                 }
              }
              p{
                  font-size: 14.8px;
+                 @include breakpoint-mob.breakpoint-min($break-min:520px){
+                    font-size: 15.8px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:568px){
+                    font-size: 17.8px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:600px){
+                    font-size: 18.8px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:640px){
+                    font-size: 20px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:700px)
+                 {
+                    font-size: 21px;
+                 }
+                 @include breakpoint-mob.breakpoint-min($break-min:712px){
+                    font-size: 22px;
+                 }
              }
              &.prix_hover{
                & .prix{
@@ -178,23 +262,70 @@
                     position: relative;
                     top:-1.5vw;
                     right:27.5vw;
-                      
+                    @include breakpoint-mob.breakpoint-min($break-min:480px){
+                        top:-0.5vw;
+                        right:24.5vw;
+                    }
+                    @include breakpoint-mob.breakpoint-min($break-min:520px){
+                        top:0.5vw;
+                        right: 22.5vw;
+                    }
+                    @include breakpoint-mob.breakpoint-min($break-min:600px){
+                        right: 20.5vw;
+                    }
+                    @include breakpoint-mob.breakpoint-min($break-min:640px){
+                        right:19.5vw;
+                    }
+                    @include breakpoint-mob.breakpoint-min($break-min:700px){
+                        font-size: 24px;
+                        top:2.5vw;
+                        right:17.5vw;
+                    }
                     }  
                 }
     
                 &:hover{
                     &.prix_hover{
                         & .prix2{
-                           
                             font-size:18px;
                             top:-22.5vw;
                             left:-48vw;
+                            @include breakpoint-mob.breakpoint-min($break-min:480px){
+                                top:-22vw;
+                                left:-45vw;
+                            }
+                            @include breakpoint-mob.breakpoint-min($break-min:700px){
+                                font-size: 24px;
+                            }
                          } 
+
+                         &.fond-icon{
+                            @include breakpoint-mob.breakpoint-min($break-min:600px){
+                            position: relative;
+                            left:2.5vw;
+                            }
+                            @include breakpoint-mob.breakpoint-min($break-min:712px){
+                                left:5vw;
+                            }
+                           
+                         }
 
                         & .fa-circle-check{
                         font-size:1.6rem;
-                        left:-16vw;
+                        left:-15vw;
                         top:-26vw;
+                        @include breakpoint-mob.breakpoint-min($break-min:480px){
+                            left:-13vw;
+                            top:-24vw;
+                        }
+                        @include breakpoint-mob.breakpoint-min($break-min:520px){
+                            left:-13vw;
+                            top:-25.5vw;
+                        }
+                        @include breakpoint-mob.breakpoint-min($break-min:550px){
+                            left:-12vw;
+                            top:-25vw;
+                        }
                         }
                     }
                    }
@@ -205,8 +336,35 @@
     
      }       
       
+      .btn{
+        font-size: 21px;
+        width: 50%;
+        margin-top:6vw;
+        @include breakpoint-mob.breakpoint-min($break-min:550px){
+            font-size:25px;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:700px){
+            width:40%;
+        }
+      }  
+    }
+}
+
+footer{
+    .largeur_footer{
+        height:55vw;
+        padding-top: 10vw;
         
-    
+        @include breakpoint-mob.breakpoint-min($break-min:520px){
+        height:50vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:640px){
+        height:45vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:700px){
+            height:40vw;
+            }
+    }
+  }
 
-
-    }}}
+}
