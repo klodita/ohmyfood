@@ -706,8 +706,11 @@
 
   footer{
    .largeur_footer2{
+    display: flex;
+    flex-direction: column;
         height:33vw;
-        padding-left:2vw;
+      
+        
         @include breakpoint-tab.breakpoint-mintab($break-min:950px){
         height:30vw;
         padding-top:5vw;
@@ -732,6 +735,15 @@
         @include breakpoint-desk.mediadesktop-min($break-min:1920px){
             height:17vw;
             padding-top:5.5vw; 
+        }
+
+        h2, a, i, p{
+            position: relative;
+            left:-2vw;
+        }
+        h2{
+            position: relative;
+            left:-3vw;
         }
     }
 }
