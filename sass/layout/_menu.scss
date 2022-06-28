@@ -102,7 +102,6 @@ li
      .prix{
         // concerne la position du prix normal sur le menu
         @include mixin-menu.prix;
-        
      }  
 
      .fond-icon{
