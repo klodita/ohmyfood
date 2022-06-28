@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../utils/breakpoint-anim";
+@use "../utils/breakpoint-desk";
 
 // animaton pour le bouton check en vert des pages menus
 
@@ -10,11 +11,26 @@
             transform: rotate(-270deg);
             
         }
+
         100%{
             transform: rotate(0);
         }
     }
-    animation: iconrotation 250ms linear;
+    animation: iconrotation 200ms linear;
+   
+    @include breakpoint-desk.mediadesktop-min($break-min:768px){
+        @keyframes iconrotation{
+            0%{
+                transform: rotate(-270deg);
+                
+            }
+            
+            100%{
+                transform: rotate(0);
+            }
+        }
+        animation: iconrotation 350ms linear;
+    }
 }
 
 

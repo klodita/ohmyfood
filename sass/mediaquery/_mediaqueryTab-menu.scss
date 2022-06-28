@@ -37,7 +37,7 @@
                         @include breakpoint-desk.mediadesktop-min($break-min:1024px){
                             font-size: 4rem;
                             position: relative;
-                            top:24vw;
+                            top:19vw;
                             left: 8vw;
                             z-index: 3;
                         }
@@ -88,6 +88,7 @@
     background-color: white;
     object-fit:cover;
     @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        height: 25vw;
        margin-top:-15vw;
     }
 }
@@ -192,9 +193,14 @@
            @include breakpoint-desk.mediadesktop-min($break-min:1024px){
             font-size: 21px;
            }
-        //    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
-        //     font-size:24px;
-        //    }
+           @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+            font-size:26px;
+           }
+           @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+            font-size:33px;
+        }
+
+
            .line{
            width:6vw;
            left:0;
@@ -253,6 +259,9 @@
         height: 4.9vw;
         margin-bottom:1vw;
     }
+    @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+        height: 4.5vw;
+    }
  
     
     h3,p{
@@ -278,13 +287,23 @@
         @include breakpoint-desk.mediadesktop-min($break-min:1920px){
             font-size:21.5px;
         }
+        @include breakpoint-desk.mediadesktop-min($break-min:2070px){
+            font-size:23px;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+            font-size:25px;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+            font-size:28px;
+        }
+        
     }
 
     .prix_hover{
         font-size:15px;
         position: relative;
         left:14vw;
-        top:-4.4vw; 
+        top:-3.4vw; 
         @include breakpoint-tab.breakpoint-mintab($break-min:860px){
             font-size: 18px;
             left:16vw;
@@ -336,6 +355,16 @@
         @include breakpoint-desk.mediadesktop-min($break-min:1920px){
             left:23vw;
         }
+        @include breakpoint-desk.mediadesktop-min($break-min:2070px){
+            left:24vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+            left:24vw;
+            top:0.9vw;
+            .prix{
+                font-size:25px;
+               }
+        }
     }
 
     &:hover{
@@ -344,14 +373,16 @@
             font-size:15px;
             position: relative;
             top:-27.6vw;
-            left:-23vw;
-            @include breakpoint-tab.breakpoint-mintab($break-min:860px){
-                top:-28.5vw;
+            left:-26.5vw;
+            @include breakpoint-tab.breakpoint-mintab($break-min:800px){
+               top:-27.5vw;
+                left:-24vw;
             }
+        
             @include breakpoint-desk.mediadesktop-min($break-min:1024px){
                 font-size:11.5px;
                 top:-29.2vw;
-                left:-22vw;
+                left:-23vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1280px){
                 font-size:14.5px;
@@ -365,65 +396,86 @@
                 font-size:20.5px;
                 top:-30.5vw; 
             }
+            @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+               
+                top:-31.5vw;
+                font-size:25px;
+            }
             
         }
 
         & .fond-icon{
             width:25vw;
             position:relative;
-            left:15vw;
+            left:16vw;
             // ne pas mettre de position:top car le prix hover remonte
-            @include breakpoint-tab.breakpoint-mintab($break-min:860px){
+            @include breakpoint-tab.breakpoint-mintab($break-min:800px){
                 left:17vw;
             }
             @include breakpoint-tab.breakpoint-mintab($break-min:950px){
-                left:18vw;
+                left:19vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-               left:9vw;
+               left:10vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1280px){
-                left:11.5vw;
+                left:12.5vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1600px){
-                left: 12vw;
+                left: 14vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                left: 15vw;
+                left: 15.5vw;
             }
+            @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+                left: 16.5vw;
+            }
+            
             
             
         }
 
         & .fa-circle-check{
-            font-size:1.4rem;
-            left:-8.5vw;
+            font-size:1.2rem;
+            left:-10vw;
             top:-30vw;
-            @include breakpoint-tab.breakpoint-mintab($break-min:950px){
-                left:-10vw;
-                top:-29.5vw;
+           
+            @include breakpoint-tab.breakpoint-mintab($break-min:800px){
+              
+                top:-29vw;
             }
             
             @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-                font-size: 1.3rem;
-                top:-30vw;
-                left:-11.5vw;
+                font-size: 1.2rem;
+                top:-30.5vw;
+                left:-12.5vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1280px){
                 font-size: 1.3rem;
                 top:-31vw;
-                left:-12vw;
+                left:-13vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1440px){
-                font-size:1.8rem;
+                font-size:1.7rem;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                 font-size: 1.7rem;
+                left: -13.5vw;
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                left:-13.2vw;
+                left:-14vw;
                 top:-31.5vw;
             }
+            @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+                left:-14.2vw;
+                top:-31.5vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+               
+                top:-32.5vw;
+                font-size:1.9rem;
+            }
+
             
         }
         
@@ -451,7 +503,7 @@
         left:0vw;
     }
     ul li{
-        width:95%;
+        width:90%;
         height:9.5vw;
         margin-bottom:2vw;
         @include breakpoint-tab.breakpoint-mintab($break-min:950px){
@@ -467,6 +519,9 @@
         @include breakpoint-desk.mediadesktop-min($break-min:1920px){
             height: 4.9vw;
             margin-bottom:1vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+            height: 4.5vw;
         }
        
         h3,p{
@@ -491,6 +546,15 @@
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
                 font-size:21.5px;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2070px){
+                font-size:23px;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+                font-size:25px;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                font-size:28px;
             }
             
         }
@@ -551,6 +615,16 @@
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
                 left:23vw;
             }
+            @include breakpoint-desk.mediadesktop-min($break-min:2070px){
+                left:24vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                left:24vw;
+                top:0.9vw;
+                .prix{
+                    font-size:25px;
+                   }
+            }
 
 
 
@@ -568,26 +642,33 @@
                 font-size:15px;
                 position: relative;
                 top:-27.6vw;
-                left:-23vw;
-                @include breakpoint-tab.breakpoint-mintab($break-min:860px){
-                    top:-28.5vw;
+                left:-26.5vw;
+                @include breakpoint-tab.breakpoint-mintab($break-min:800px){
+                   top:-27.5vw;
+                    left:-24vw;
                 }
+            
                 @include breakpoint-desk.mediadesktop-min($break-min:1024px){
                     font-size:11.5px;
                     top:-29.2vw;
-                    left:-22vw;
+                    left:-23vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1280px){
-                    font-size:16.5px;
+                    font-size:14.5px;
                     top:-30vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1440px){
                     font-size:17.5px;
-                    top:-30vw;
+                    top:-30vw; 
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                     font-size:20.5px;
                     top:-30.5vw; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+               
+                    top:-31.5vw;
+                    font-size:25px;
                 }
                 
                 
@@ -596,58 +677,77 @@
             & .fond-icon{
                 width:25vw;
                 position:relative;
-                left:15vw;
+                left:16vw;
                 // ne pas mettre de position:top car le prix hover remonte
-                @include breakpoint-tab.breakpoint-mintab($break-min:860px){
+                @include breakpoint-tab.breakpoint-mintab($break-min:800px){
                     left:17vw;
                 }
                 @include breakpoint-tab.breakpoint-mintab($break-min:950px){
-                    left:18vw;
+                    left:19vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-                    left:9vw;
+                   left:10vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1280px){
-                    left:11.5vw;
+                    left:12.5vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1600px){
-                    left: 12vw;
+                    left: 14vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                    left: 15vw;
+                    left: 15.5vw;
                 }
+                @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+                    left: 16.5vw;
+                }
+                
+                
+                
             }
     
             & .fa-circle-check{
-                font-size:1.4rem;
-                left:-8.5vw;
+                font-size:1.2rem;
+                left:-10vw;
                 top:-30vw;
-                @include breakpoint-tab.breakpoint-mintab($break-min:950px){
-                    left:-10vw;
-                    top:-29.5vw;
+               
+                @include breakpoint-tab.breakpoint-mintab($break-min:800px){
+                  
+                    top:-29vw;
                 }
                 
                 @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-                    font-size: 1.3rem;
-                    top:-30vw;
-                    left:-11.5vw;
+                    font-size: 1.2rem;
+                    top:-30.5vw;
+                    left:-12.5vw;
                 }
-
                 @include breakpoint-desk.mediadesktop-min($break-min:1280px){
                     font-size: 1.3rem;
                     top:-31vw;
-                    left:-12vw;
+                    left:-13vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1440px){
-                    font-size:1.8rem;
+                    font-size:1.7rem;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                     font-size: 1.7rem;
+                    left: -13.5vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                    left:-13.2vw;
+                    left:-14vw;
                     top:-31.5vw;
                 }
+                @include breakpoint-desk.mediadesktop-min($break-min:2214px){
+                    left:-14.2vw;
+                    top:-31.5vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+               
+                    top:-32.5vw;
+                    font-size:1.9rem;
+                }
+                
+    
+                
             }
             
         }
@@ -701,6 +801,15 @@
         font-size:32px;
         
     }
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+        width: 20%;
+        height:4vw;
+        font-size:37px;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+        width:18%;
+        font-size:46px;
+    }
   }
 
 
@@ -736,10 +845,22 @@
             height:17vw;
             padding-top:5.5vw; 
         }
+        @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+            height:45vw;
+          
+            position: relative;
+            top:4vw;
+        }
 
         h2, a, i, p{
             position: relative;
             left:-2vw;
+            
+            @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                position: relative;
+                left:-2vw;
+            }
+
         }
         h2{
             position: relative;
