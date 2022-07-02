@@ -7,6 +7,67 @@
 
 
 @media screen and (min-width:1024px){
+
+    #header_menu{
+        height:13vw;
+        margin:0;
+        padding: 0;
+
+           & a{
+                padding-bottom:0;
+                
+                & .fa-arrow-left{
+                        font-size: 4rem;
+                        position: relative;
+                        top:35vw;
+                        left: 8vw;
+                        z-index: 3;
+                    
+                    // @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    //     font-size:4rem;
+                    //     top: 32vw;
+                    //     left: 9vw;
+                    // }
+                    // @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    //     font-size:8rem;
+                    // }
+                }
+            
+              
+            }
+            & img{
+                width: 45vw;
+                height: 9vw;
+                left:11vw;
+                top:2.5vw;
+
+                // @include breakpoint-tab.breakpoint-mintab($break-min:1440px){
+                // width:40vw;
+                // height:10vw;
+                // top:3vw;
+                // left:12vw;
+                // }
+                // @include breakpoint-tab.breakpoint-mintab($break-min:1920px){
+                //     width: 47vw;
+                //     height: 11vw;
+                //     top: 3vw;
+                //     left: 10vw;
+                // }
+            }
+    }
+
+    .imgresto
+{   
+    width:100%;
+    height:30vw;
+    margin-top:0vw;
+    background-color: white;
+    object-fit:cover;
+   
+}
+
+
+
     .desktop{
         width:90%;
         display: flex;
@@ -15,6 +76,58 @@
         
        
     }
+
+// ****************** Pour retirer le logo du header ************************
+// activer cette partie du code et mettre en commentaire la partie ci-dessus (en haut)
+
+// #header_menu{
+//     height:13vw;
+//     margin:0;
+//     padding: 0;
+
+//         & img{
+//             width: 45vw;
+//             height: 9vw;
+//             left:11vw;
+//             top:2.5vw;
+
+//             @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+//                 display: none;
+//             }
+//         }
+
+//         & a{
+//             padding-bottom:0;
+         
+//          & .fa-arrow-left{
+//                  font-size: 4rem;
+//                  position: relative;
+//                  top:17vw;
+//                  left: 8vw;
+//                  z-index: 3;
+//          }
+//         }
+// }
+
+// .imgresto
+// {   
+// width:100%;
+// height:30vw;
+// margin-top:0vw;
+// background-color: white;
+// object-fit:cover;
+// @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+//    height: 25vw;
+//    margin-top:-15vw;
+// }
+// }
+
+// *****************************************************************
+
+
+
+
+
 }
 
 

@@ -1,6 +1,66 @@
 @use "../utils/variables";
 @use "../utils/breakpoint-anim";
 @use "../utils/breakpoint-desk";
+@use"../utils/breakpoint-mob";
+
+
+
+@mixin anim-prixhover {
+    @keyframes anim-prixhover{
+        0%{
+            position:relative;
+            left:30vw;
+        }
+        100%{
+            position: relative;
+            left:-3vw;
+        }
+    }
+    animation: anim-prixhover 150ms linear;
+
+    @include breakpoint-mob.breakpoint-min($break-min:425px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:30vw;
+            }
+            100%{
+                position: relative;
+                left:-2vw;
+            }
+        }
+        animation: anim-prixhover 150ms linear;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:465px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:30vw;
+            }
+            100%{
+                position: relative;
+                left:1vw;
+            }
+        }
+        animation: anim-prixhover 150ms linear;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:520px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:40vw;
+            }
+            100%{
+                position: relative;
+                left:15vw;
+            }
+        }
+        animation: anim-prixhover 150ms linear;
+    }
+}
+
+
+
 
 // animaton pour le bouton check en vert des pages menus
 

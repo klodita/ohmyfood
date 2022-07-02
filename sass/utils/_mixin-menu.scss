@@ -1,12 +1,13 @@
 @use "../utils/variables";
 @use "../composant/box-shadow";
+@use "../utils/breakpoint-mob";
 
 
 @mixin menuh1 
 {
     display: flex;
     width:80%;
-    font-size:26px;
+    font-size:1.6rem;
     padding-top: 35px;
     padding-left: 20px;
     @content;
@@ -14,7 +15,7 @@
 
 @mixin menuh2 {
     font-family:'Roboto',sans-serif;
-    font-size:18px;
+    font-size:1.2rem;
     font-weight:300;
     padding-left:20px;
     margin-top:10px;
@@ -34,8 +35,8 @@
 }
 
 @mixin menuli {
-    width:89vw;
-    height:19vw;
+    width:93%;
+    height:18vw;
     display:flex;
     flex-direction:column;
     align-self:center;
@@ -47,13 +48,17 @@
     background-color:white;
     overflow: hidden;
     @include box-shadow.shadow;
-    @content;   
+    @content; 
+    
+    @include breakpoint-mob.breakpoint-min($break-min:700px){
+        height:17vw;
+    }
 }
 
 @mixin menuh3 {
-    width:89%;
-    font-size:13.5px;
-    padding: 0;
+    width:94%;
+    font-size:1.1rem;
+    padding: 0.2vw;
     padding-bottom:5px;
     overflow: hidden;
     white-space: nowrap;
@@ -63,9 +68,9 @@
 
 
 @mixin menu-p {
-    width:77%;
-    font-size:11.5px;
-    padding:0vw;
+    width:96%;
+    font-size:1rem;
+    padding:0.2vw;
     flex-direction:column;
     justify-items: center;
     overflow: hidden;
@@ -102,11 +107,11 @@
     width:10%;
     height:25px;
     font-weight: bold;
-    font-size:15px;
+    font-size:0.9rem;
     padding:0;
     position: relative;
     right:30vw;
-    top:-3vw;
+    top:8.6vw;
     cursor: pointer;
     z-index: 2;
     @content;
@@ -121,28 +126,38 @@
     width:10%;
     height:25px;
     font-weight: bold;
-    font-size:15px;
+    font-size:0.9rem;
     padding:0;
     position: relative;
-    top:-22.2vw;
-    right:52vw;
+    top:-16.8vw;
+    right:43.5vw;
     cursor: pointer;
     @content;
+
+    @include breakpoint-mob.breakpoint-min($break-min:425px){
+        top:-17.3vw;
+    }
+
 }
 
 
 
 
 @mixin fond-icon
-{   width:19vw;
+{   width:30vw;
     height:30vw;
     background-color:variables.$tertiary-color;
     position:relative;
-    top:-10vw;
-    left:4vw;
+    top:-8vw;
+    left:48vw;
     cursor:pointer;
     z-index:1;
-    @content;      
+    @content; 
+
+    @include breakpoint-mob.breakpoint-min($break-min:630px){
+        left:49.5vw;
+    }
+
 }
   
 
@@ -153,13 +168,11 @@
     display:flex;
     text-align: center;
     padding:23px;
-    width:75px;
-    height:76px;
-    font-size:1.2rem;
-    color:white;
+    font-size:1.1rem;
+    color:red;
     position:relative;
-    left:-17vw;
-    top:-25vw;
+    left:4vw;
+    top:-21vw;
     cursor:pointer;
     z-index:2;
     @content;
