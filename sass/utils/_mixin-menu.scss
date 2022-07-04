@@ -1,6 +1,8 @@
 @use "../utils/variables";
 @use "../composant/box-shadow";
 @use "../utils/breakpoint-mob";
+@use "../utils/breakpoint-tab";
+@use "../utils/breakpoint-desk";
 
 
 @mixin menuh1 
@@ -115,6 +117,55 @@
     cursor: pointer;
     z-index: 2;
     @content;
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:768px){
+        font-size: 1.1rem;
+        top: 10.3vw;
+        right: 15vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:842px){
+        top: 10.3vw;
+        right: 13.5vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:864px){
+        font-size: 1.2rem;
+        right:14.5vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:957px){
+        font-size: 1.3rem;
+        top:10.5vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        font-size: 1.1rem;
+        top:10.4vw;
+        right: 12.9vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1253px){
+        font-size: 1.3rem;
+        top:11vw;
+        right: 11.9vw;
+    }
+
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+        font-size: 1.6rem;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+        font-size: 1.8rem;
+        top:10.8vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1780px){
+        font-size: 2rem;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+        font-size: 2.1rem;
+        top: 11vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2296px){
+        font-size:2.9rem;
+        top: 11.4vw;
+        right:11.5vw;
+    }
+
 }
 
 
@@ -137,6 +188,71 @@
     @include breakpoint-mob.breakpoint-min($break-min:425px){
         top:-17.3vw;
     }
+    @include breakpoint-tab.breakpoint-mintab($break-min:768px){
+        font-size:1.1rem;
+        top:-17.3vw;
+        right:21vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:864px){
+        font-size: 1.2rem;
+        top:-17.5vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:957px){
+        font-size: 1.3rem;
+    }
+
+    // Desktop
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+        font-size: 1.1rem;
+        top:-17.9vw;
+        right:17vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1253px){
+        font-size: 1.3rem;
+        top:-17.6vw;
+        right: 16.5vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+        font-size:1.6rem;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+        font-size: 1.8rem;
+        top:-17.8vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+        top:-18vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1780px){
+        font-size: 2rem;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+        font-size: 2.1rem;
+        top:-17.8vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1953px){
+        top:-17.9vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+        top:-18vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2111px){
+        right: 16vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2180px){
+        top:-18.1vw;
+        right: 16vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2296px){
+        font-size:2.9rem;
+        top:-17.6vw;
+        right: 16.2vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+        right:15.9vw;
+    }
+   
+
+  
 
 }
 
@@ -157,6 +273,21 @@
     @include breakpoint-mob.breakpoint-min($break-min:630px){
         left:49.5vw;
     }
+    @include breakpoint-tab.breakpoint-mintab($break-min:768px){
+        left:22vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+       left:13.5vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+        left:14vw;
+    }
+    @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+        left:14.5vw;
+    }
+
+
+
 
 }
   

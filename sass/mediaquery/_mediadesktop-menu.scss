@@ -8,335 +8,656 @@
 
 @media screen and (min-width:1024px){
 
-    #header_menu{
-        height:13vw;
-        margin:0;
-        padding: 0;
+    html{
+        font-size:78%;
+    }
+    body{
+        width: 100%;
+    }
+//     #header_menu{
+//         height:13vw;
+//         margin:0;
+//         padding: 0;
 
-           & a{
-                padding-bottom:0;
+//            & a{
+//                 width:10%;
+//                 height:6vw;
+//                 top: 36.6vw;
+//                 left: 12vw;
+              
                 
-                & .fa-arrow-left{
-                        font-size: 4rem;
-                        position: relative;
-                        top:35vw;
-                        left: 8vw;
-                        z-index: 3;
+//                 & .fa-arrow-left{
+//                     width:4vw;
+//                     font-size: 2.8rem;
+//                     position: relative;
+//                     left: 1vw;
+//                     z-index: 3;
+
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+//                         font-size:3.4rem;
+//                         top:0.5vw;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+//                         font-size: 3.4rem;
+//                         top:0vw;
                     
-                    // @include breakpoint-desk.mediadesktop-min($break-min:1152px){
-                    //     font-size:4rem;
-                    //     top: 32vw;
-                    //     left: 9vw;
-                    // }
-                    // @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                    //     font-size:8rem;
-                    // }
-                }
+                       
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+//                         font-size: 3.8rem;
+//                         top:-0.4vw;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+//                          top:-0.2vw;
+//                     }
+                   
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+//                         font-size:4rem;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+//                         top:-0.8vw;
+//                    }
+
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+//                         font-size:4.2rem;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+//                         font-size:4.8rem;
+//                         top:-1.5vw;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+//                         font-size:5rem;
+//                     } 
+//                     @include breakpoint-desk.mediadesktop-min($break-min:2190px){
+//                         font-size:5.3rem;
+//                     }
+//                     @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+//                         font-size:5.8rem;
+//                     }
+
+//                 }
             
               
-            }
-            & img{
-                width: 45vw;
-                height: 9vw;
-                left:11vw;
-                top:2.5vw;
+//             }
+//             & img{
+//                 width: 33vw;
+//                 height: 5vw;
+//                 left: 25vw;
+//                 top: 3.5vw
+//             }
+//     }
 
-                // @include breakpoint-tab.breakpoint-mintab($break-min:1440px){
-                // width:40vw;
-                // height:10vw;
-                // top:3vw;
-                // left:12vw;
-                // }
-                // @include breakpoint-tab.breakpoint-mintab($break-min:1920px){
-                //     width: 47vw;
-                //     height: 11vw;
-                //     top: 3vw;
-                //     left: 10vw;
-                // }
-            }
-    }
+//     .imgresto
+// {   
+//     width:100%;
+//     height:30vw;
+//     margin-top:-2vw;
+//     background-color: white;
+//     object-fit:cover;
+// }
 
-    .imgresto
-{   
-    width:100%;
-    height:30vw;
-    margin-top:0vw;
-    background-color: white;
-    object-fit:cover;
    
-}
-
-
-
-    .desktop{
-        width:90%;
-        display: flex;
-        flex-direction: row;
-        margin:0;
-        
-       
-    }
+   
 
 // ****************** Pour retirer le logo du header ************************
 // activer cette partie du code et mettre en commentaire la partie ci-dessus (en haut)
 
-// #header_menu{
-//     height:13vw;
-//     margin:0;
-//     padding: 0;
+#header_menu{
+    height:13vw;
+    margin:0;
+    padding: 0;
 
-//         & img{
-//             width: 45vw;
-//             height: 9vw;
-//             left:11vw;
-//             top:2.5vw;
+        & img{
+            width: 45vw;
+            height: 9vw;
+            left:11vw;
+            top:2.5vw;
 
-//             @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-//                 display: none;
-//             }
-//         }
+            @include breakpoint-desk.mediadesktop-min($break-min:1024px){
+                display: none;
+            }
+        }
 
-//         & a{
-//             padding-bottom:0;
+        & a{
+            width:10%;
+            height:6vw;
+            top:19.5vw;
+            left: 12vw;
          
-//          & .fa-arrow-left{
-//                  font-size: 4rem;
-//                  position: relative;
-//                  top:17vw;
-//                  left: 8vw;
-//                  z-index: 3;
-//          }
-//         }
-// }
+         & .fa-arrow-left{
+            width:4vw;
+            font-size: 2.8rem;
+            position: relative;
+            left: 1vw;
+            z-index: 3;
 
-// .imgresto
-// {   
-// width:100%;
-// height:30vw;
-// margin-top:0vw;
-// background-color: white;
-// object-fit:cover;
-// @include breakpoint-desk.mediadesktop-min($break-min:1024px){
-//    height: 25vw;
-//    margin-top:-15vw;
-// }
-// }
+            @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+               font-size:3.4rem;
+               top:0.6vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+               font-size: 3.4rem;
+               top:0.3vw;  
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+               font-size: 3.8rem;
+               top:-0.3vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+               top:0vw;
+            }
+
+            @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+            font-size:4rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+            top:-0.4vw;
+            }
+
+            @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+            font-size:4.2rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+            font-size:4.8rem;
+            top:-0.5vw;
+            } 
+            @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+            font-size:5rem;
+            } 
+            @include breakpoint-desk.mediadesktop-min($break-min:2190px){
+            font-size:5.3rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+            font-size:5.8rem;
+            }
+         }
+        }
+}
+
+.imgresto
+{   
+width:100%;
+height:30vw;
+margin-top:0vw;
+background-color: white;
+object-fit:cover;
+@include breakpoint-desk.mediadesktop-min($break-min:1024px){
+   height: 25vw;
+   margin-top:-15vw;
+}
+}
 
 // *****************************************************************
 
 
+#main_menu{
+
+    .menu{
+        padding-top: 2vw;
+        padding-left:-1vw;
+        h1{
+            position: relative;
+            font-size:2.8rem;
+            left:25vw;
+
+            @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                font-size: 3.4rem;
+                left: 23vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                left: 24vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+                left: 26vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+                font-size: 3.8rem;
+                left: 25vw; 
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                font-size:4rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                font-size:4.2rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                font-size:4.8rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                font-size:5rem;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+                left:26vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2190px){
+                font-size:5.3rem;
+                left:26vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+                font-size:5.8rem;
+                left:25vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                font-size:5.8rem;
+                left:27vw;
+            }
+            
+        }
+
+
+        div.heart_menu{
+           
+            & .fa-2x{
+                font-size:2.8rem;
+                top:1vw;
+
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    font-size:3.4rem;
+                    
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                    font-size: 3.4rem;
+                    top:1.15vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+                    font-size: 3.8rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                    font-size:4rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    top:1.3vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                    font-size:4.2rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    font-size:4.8rem;
+                    top:1.6vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                    font-size:5rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2190px){
+                    font-size:5.3rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+                    font-size:5.8rem;
+                    top:1.2vw;
+                }
+            }
+          }
+
+        & .desktop{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin:0;
+        
+            div.menu-row{
+                position: relative;
+                top:1vw;
+            }
+            .menu-plats{
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    left:-1.3vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                    left:-1vw;
+                }
+            }
+        }
+
+        div h2{
+            margin-bottom:2vw;
+            
+        }
+
+        h2{
+            font-size: 1.5rem;
+
+            &.line{
+                width:17%;
+               
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    width:14%;
+                }
+                
+                @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                    width:16%;
+                    font-size: 1.9rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                    font-size:2rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+                    font-size:2.2rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    font-size:2.5rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                    width:15%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+                    width:13%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2190px){
+                    font-size: 2.8rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+                    font-size:3.3rem;
+                }
+
+                }
+               
+                
+        }
+
+        div.menu-row{
+            width:66.66%;
+            margin:0;
+            .menu-entrees, .menu-plats{
+                ul li{
+                    width:96%;
+                    height:6vw;
+                    margin-bottom:1vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                        height:5.5vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                        border-radius:20px;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        height:5.4vw;
+                        border-radius:25px; 
+                    } 
+                    @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                        border-radius:30px; 
+                    } 
+                    @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                        border-radius:35px; 
+                    } 
+                }
+            }
+
+            .menu-plats{
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                position: relative;
+                left:-0.8vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                position: relative;
+                left:-0.6vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2200px){
+                position: relative;
+                left:-0.5vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+                    position: relative;
+                    left:-0.4vw;
+                    }
+                
+            }
+
+
+        }
+        .menu-desserts{
+            width:33.33%;
+            margin:0;
+            left:-1vw;
+            top:1vw;
+
+            ul li{
+                width:91%;
+                height:6vw;
+                margin-bottom:1vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    height:5.5vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                    border-radius:20px;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    height:5.4vw;
+                    border-radius:25px; 
+                } 
+                @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                    border-radius:30px; 
+                } 
+                @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                    border-radius:35px; 
+                } 
+            }
+        }
+
+
+        .menu_hover{
+
+            h3,p{
+                font-size:1.1rem;
+                top:1vw;
+                @include breakpoint-desk.mediadesktop-min($break-min:1253px){
+                    font-size:1.3rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                    font-size:1.4rem;
+                    top:0.7vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+                    font-size:1.5rem;
+                    top:0.8vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                    font-size:1.6rem;
+                    top:0.9vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1580px){
+                    top:1vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                    font-size:1.8rem;
+                    top:0.6vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1780px){
+                    font-size: 2rem; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                    font-size:2.1rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2096px){
+                    font-size:2.3rem;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2296px){
+                    font-size:2.9rem;
+                }
+            }
+            
+        }
+
+
+        li{
+          
+            .prix_hover{
+                @include breakpoint-desk.mediadesktop-min($break-min:1050px){
+                    left:8%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                    left:10%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                    left:12%; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+                    left:14%; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                    left:15%; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1580px){
+                    left:17%; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:1780px){
+                    left:20%; 
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+                    left:21%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2296px){
+                    left:22%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+                    left:21%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2390px){
+                    top:-11.6vw;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2400px){
+                    top:-11.5vw;
+                    left:22%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                    top:-11.7vw;
+                    left:23%;
+                }
+                @include breakpoint-desk.mediadesktop-min($break-min:2590px){
+                    top:-11.9vw;
+                    left:23%;
+                }
+               
+               
+                
+
+
+
+                .fa-circle-check{
+                    font-size: 1.2rem;
+                    top:-19vw;
+                    left:-4.3vw;
+                    @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                        left:-4.5vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                        font-size: 1.3rem;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+                        font-size: 1.5rem;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                        font-size: 1.8rem;
+                        left:-4vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                        font-size:2rem;
+                        left:-4vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                        font-size:2.2rem;
+                        left:-4vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+                        font-size:2.4rem;
+                        left:-4vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:2296px){
+                        font-size:2.8rem;
+                        left:-3.7vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:2300px){
+                        font-size:2.9rem;
+                        left:-3.2vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:2400px){
+                        left:-3.5vw;
+                    }
+                    @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                        font-size:3rem;
+                        left:-3.6vw;
+                        top:-18.7vw;
+                    }
+
+
+                }
+            }
+        }
+     }
+
+
+
+
+     .btn{
+        width:20%;
+        height:5vw;
+        font-size: 1.6rem;
+        left:0;
+        bottom:0;
+        margin-bottom:5vw;
+        padding-top:1vw;
+
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            font-size: 1.8rem;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+            width: 15%;
+            height: 4vw;
+            font-size:1.9rem;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+            width: 14%;
+            font-size: 2.2rem;
+            padding-top:0.5vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+            height:3.5vw;
+            font-size: 2.5rem;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:2100px){
+            font-size: 2.8rem;
+        }
+    
+
+        }
+
+}
+
+
+   footer{
+    div{
+        &.largeur_footer2{
+            height:25vw;
+            padding-top:3.5vw; 
+            padding-left:2vw;
+            @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+                height: 22vw;
+                padding-top:2.5vw; 
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                height: 20vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1360px){
+                height:18vw;
+                padding-top:2vw; 
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+                height:19vw;
+                padding-top:3.5vw; 
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                height:20vw;
+                padding-top:6vw; 
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                height:17vw;
+                padding-top:5.5vw; 
+            }
+        }
+    }
+   }
 
 
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media screen and (min-width:1024px){
-//     body{
-//         width: 100%;
-//     }
-//     #header_menu{
-    
-//            a{
-//             div i{
-                 
-//                  &.fa-arrow-left{
-//                     width:20vw;
-//                     height:15vw;
-//                     font-size: 6rem;
-//                     display:flex;
-//                     top:1.5vw;
-                    
-                    
-//                  }
-//             }
-           
-//            }
-//            div img{
-//             width:50vw;
-//             height:11vw;
-           
-//            }
-//     }
-
-//     #main_menu{
-
- 
-//     div.menu{
-//         h1{
-            
-//             font-size:50px;
-//             @include breakpoint-desk.mediadesktop-min($break-min:1152px){
-//                 font-size: 52px;
-//             }
-//             // position: relative;
-//             // left: 4vw;
-//             .titre{
-//                 color:green;
-//             }
-//         }
-//           .desktop{
-        
-//                 .line{
-//                     width:4vw;
-//                 }
-//             }
-//           div.heart_menu{
-//              &.coeur{
-//                font-size:1.4rem;
-//                 top:-2.8vw; 
-//                 left:86vw;
-//                 }
-//             }
-
-//              .menu_hover{
-//     & h3{
-//         font-size: 18px;
-//     }
-//    & p{
-//         font-size: 18px;
-//     }
-// }
-//         }
-  
-
-
-   
-
-
-   
-
-
-// }
-
-
-
-   
-        
-//      footer{
-//        div.largeur_footer2{
-//             height:25vw;
-//             padding-top:3.5vw;
-//             border:1px solid red;
-//         }
-
-//      }   
-        
-
-
-
-
-
-//     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media screen and (min-width:1440px){
-
-//     body{
-//         width: 100%;
-//     }
-
-
-// // ::::::::::::::::::::::::::::::::::::::::::::suprimer ?
-// //     #header_menu{
-      
-        
-// // }
-
-// // ::::::::::::::::::::::::::::::::::::::::::::suprimer ?
-
-
-//     #main_menu{
-//         .menu{
-           
-//             .titre{
-//                 font-size: 50px;
-//                 position: relative;
-//                 top:2vw;
-//                 // @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-//                 //     font-size:81px;
-//                 //     position: relative;
-//                 //     top:5vw;
-//                 // }
-//             }
-
-
-//             @include breakpoint-desk.mediadesktop-min($break-min:1536px){
-//                 padding-left:2vw;
-//             }
-//             @include breakpoint-desk.mediadesktop-min($break-min:1570px){
-//                 padding-left:2.5vw;
-//             }
-//             @include breakpoint-desk.mediadesktop-min($break-min:1884px){
-//                 padding-left:4vw;
-//             }
-
-//             .desktop{
-//                 margin-top:8vw;
-//                 @include breakpoint-desk.mediadesktop-min($break-min:1441px){
-//                     margin-top: 9vw;
-//                 }
-//                 ul{
-//                     margin-top: 3vw;
-//                 }
-//                 .line{
-//                     width:6vw;
-//                 }
-               
-//             }
-//             .fa-2x{
-//                 font-size:4rem;
-//                 position: relative;
-//                 top:-0.5vw;
-//                 @include breakpoint-desk.mediadesktop-min($break-min:1441px){
-//                     font-size:8rem;
-//                 }
-//                 @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-//                     font-size:7rem;
-//                     position: relative;
-//                     top:1vw;
-//                 }
-//             }
-//         }
-        
-//     }
-// }
 

@@ -2,6 +2,7 @@
 @use "../utils/breakpoint-anim";
 @use "../utils/breakpoint-desk";
 @use"../utils/breakpoint-mob";
+@use "../utils/breakpoint-tab";
 
 
 
@@ -56,6 +57,49 @@
             }
         }
         animation: anim-prixhover 150ms linear;
+    }
+
+    @include breakpoint-tab.breakpoint-mintab($break-min:768px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:6vw;
+            }
+            100%{
+                position: relative;
+                left:2vw;
+            }
+        }
+        animation: anim-prixhover 100ms linear;
+    }
+
+    @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:15vw;
+            }
+            100%{
+                position: relative;
+                left:5vw;
+            }
+        }
+        animation: anim-prixhover 100ms linear;
+    }
+
+
+    @include breakpoint-desk.mediadesktop-min($break-min:1780px){
+        @keyframes anim-prixhover{
+            0%{
+                position:relative;
+                left:17vw;
+            }
+            100%{
+                position: relative;
+                left:7vw;
+            }
+        }
+        animation: anim-prixhover 100ms linear;
     }
 }
 

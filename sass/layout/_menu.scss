@@ -198,7 +198,6 @@ li
 
 ul{
     margin-bottom:4vw;
-    
 }
 
 
@@ -208,11 +207,13 @@ ul{
     align-self: center;
     margin-top:10px;
     margin-bottom:10vw;
-    font-size:18px;
+    font-size:1.4rem;
     @include mixin-bouton.bouton-rose;
     &:hover{
         @include mixin-bouton.hover-bouton;
     }
 }
+
+
 
 

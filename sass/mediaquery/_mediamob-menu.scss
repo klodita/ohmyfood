@@ -8,14 +8,26 @@
     body{
         width: 100%;
     }
+
+    #header_menu{
+        a{
+            .fa-arrow-left{
+               top:-3vw;
+               @include breakpoint-mob.breakpoint($break:280px){
+                top:-5vw;
+               }
+            }
+        }
+    }
+
     .menu{
         padding: 5px;;
         h1{
             font-size:20px;
             position: relative;
-            bottom:5px;
-            
+            bottom:5px; 
         }
+
         div.heart_menu{
             &.coeur{
             position: relative;
@@ -159,6 +171,24 @@
                   font-size:13px;
             }
           
+        }
+    }
+
+    footer{
+        .largeur_footer2{
+            h2{
+                font-size:1.5rem;
+            }
+           a {
+            &.icon_footer{
+                i{
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+           }
         }
     }
     
@@ -360,34 +390,38 @@
                
       
       .btn{
-        font-size: 21px;
+        font-size:1.5rem;
         width: 50%;
         margin-top:6vw;
-        @include breakpoint-mob.breakpoint-min($break-min:550px){
-            font-size:25px;
+        @include breakpoint-mob.breakpoint-min($break-min:600px){
+            font-size:1.6rem;
         }
         @include breakpoint-mob.breakpoint-min($break-min:700px){
             width:40%;
+            font-size:1.7rem;
         }
+        
       }  
     }
 }
-
 footer{
     .largeur_footer2{
-        height:55vw;
-        padding-top: 10vw;
-        
         @include breakpoint-mob.breakpoint-min($break-min:520px){
-        height:50vw;
+          height:48vw;
+          padding-top:8vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:568px){
+          padding-top:10vw;
         }
         @include breakpoint-mob.breakpoint-min($break-min:640px){
-        height:45vw;
+          padding-top:12vw;
         }
         @include breakpoint-mob.breakpoint-min($break-min:700px){
-            height:40vw;
-            }
+          height:40vw;
+        }
+ 
     }
+}
+
   }
 
-}

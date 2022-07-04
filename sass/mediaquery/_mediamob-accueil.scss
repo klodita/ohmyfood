@@ -323,7 +323,7 @@ footer
     
         h2{
             @include breakpoint-mob.breakpoint-min($break-min:530px){
-            font-size:30px;
+            font-size:1.8rem;
             }
    
         }
