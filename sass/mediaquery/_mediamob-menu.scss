@@ -275,6 +275,9 @@
                 top:2.6vw;
                 left:-0.5vw
             }
+            @include breakpoint-mob.breakpoint-min($break-min:700px){
+                left:0.5vw
+            }
             }
             
         }
@@ -324,9 +327,10 @@
                  @include breakpoint-mob.breakpoint-min($break-min:636px){
                     font-size:1.6rem;
                  }
+
                 }
                     
-
+                
 
                 &.prix_hover{
                   

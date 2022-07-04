@@ -101,8 +101,9 @@
 
 footer{
     .largeur_footer{
+        height:53vw;
         h2{
-            font-size: 22px;
+            font-size:1.4rem;
         }
         a {
             &.icon_footer{
@@ -110,12 +111,12 @@ footer{
                     @include breakpoint-mob.mob280
                 {
                
-                font-size:15px;  
+                font-size:1rem;  
                 }
                 } 
 
                 p{
-                    font-size: 15px;
+                    font-size:1rem;
                 }
             }
         }
@@ -198,6 +199,10 @@ footer{
 
      
     li{
+            font-size:18px;
+            position: relative;
+            left:5px;
+
         &::before{
             font-size:15px;
             border-radius:25px;
@@ -205,6 +210,7 @@ footer{
                 font-size:20px;
             }
         }
+
         i{
         font-size:1.7rem ;
         margin-left:15px;
@@ -212,20 +218,45 @@ footer{
            
             font-size:2rem;
         }
-    }
-        @include breakpoint-mob.breakpoint-min($break-min:480px)
-    {
-        width:90%;
-        height:17vw; 
-        font-size:17px;   
-        position: relative;
-        left:10px;
-    }
-    @include breakpoint-mob.breakpoint-min($break-min:568px){
-        width:85%;
-        font-size:22px;
-        
-    }
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:480px){
+            width:90%;
+            height:17vw; 
+            font-size:20px;   
+            left:16px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:520px){
+            font-size:23px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:550px){
+            font-size:25px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:568px){
+            width:85%;
+            font-size:26px;
+            left:25px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:600px){
+            left:30px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:640px){
+            font-size:28px;
+        }
+
+        @include breakpoint-mob.breakpoint-min($break-min:667px){
+            font-size:30px;
+            left:36px;
+        }
+        // @include breakpoint-mob.breakpoint-min($break-min:736px){
+        //     font-size: 20px;
+        // }
+
     }
 }
 
@@ -248,8 +279,11 @@ footer{
     {
         width:85vw; 
         height:18vw;
-        @include breakpoint-mob.breakpoint-min($break-min:580px){
+
+        @include breakpoint-mob.breakpoint-min($break-min:568px){
             width:86vw;
+        }
+        @include breakpoint-mob.breakpoint-min($break-min:580px){
             height:16vw;
         }
         @include breakpoint-mob.breakpoint-min($break-min:690px){
@@ -261,6 +295,18 @@ footer{
     h3, p
     {
     font-size:19px;
+    @include breakpoint-mob.breakpoint-min($break-min:480px){
+        font-size:21px;
+    }
+
+    @include breakpoint-mob.breakpoint-min($break-min:520px){
+        font-size:23px;
+    }
+
+    @include breakpoint-mob.breakpoint-min($break-min:667px){
+        font-size:25px;
+    }
+
     }
     
     .resto1, .resto2, .resto3, .resto4

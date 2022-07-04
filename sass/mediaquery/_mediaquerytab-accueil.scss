@@ -296,22 +296,31 @@
 footer {
    width:100%;
     .largeur_footer{ 
-        height: 270px;
+        height:29vw;
         padding-bottom:20px;
         padding-left:3vw;
+        @include breakpoint-tab.breakpoint-mintab($break-min:900px){
+            height:28vw;
+        }
+        @include breakpoint-tab.breakpoint-mintab($break-min:950px){
+            height:26vw;
+        }
+        @include breakpoint-tab.breakpoint-mintab($break-min:960px){
+            height:24vw;
+        }
        
         h2{
             width: 70%;
-            font-size:30px;
+            font-size:2.3rem;
         }
         
         a {
             &.icon_footer{
                 i{
-                    font-size:20px;
+                    font-size:1.5rem;
                 }
                 p{
-                    font-size: 20px; 
+                    font-size:1.5rem; 
                    
                 }
             }

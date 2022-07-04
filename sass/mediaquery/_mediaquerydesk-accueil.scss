@@ -230,8 +230,41 @@ footer{
         position: relative;
         margin-top: -5vw;
     }
-    .largeur_footer{                  
+    .largeur_footer{   
+        height: 23vw;               
         padding-left: 6vw;
+        @include breakpoint-desk.mediadesktop-min($break-min:1152px){
+            height:20vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+            height:18vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1440px){
+            height: 17vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+            height: 16vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1680px){
+            height: 15vw;
+        }
+        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+            height: 13vw;
+        }
+        
+        h2{
+            font-size: 2.5rem;
+        }
+        a{
+            &.icon_footer{
+                i{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+        }
     }
     }
 
@@ -549,7 +582,7 @@ footer{
                                 padding-left: 6vw;
                             
                             @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-                                height: 2vw;
+                                height:14vw;
                                 padding-top: 26px;
                                 padding-left:6vw;
                                 padding-bottom: 12vw;
@@ -557,21 +590,31 @@ footer{
                             }
                             
                             h2{
+                                @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                                    font-size:3rem;
+                                }
                                 @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-                                    font-size:45px;
+                                    font-size:4rem;
                                 }
                             }
                             a {
                                 &.icon_footer{
-                                    i{@include breakpoint-desk.mediadesktop-min($break-min:2560px){
-                                        font-size:30px;
-                                        padding-right: 35px;
-                                    }
+                                    i{
+                                        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                                        font-size:2rem;
+                                        }
+                                        @include breakpoint-desk.mediadesktop-min($break-min:2560px){
+                                        font-size:3rem;
+                                        padding-right:35px;
+                                        }
                                     
                                     }
                                     p{
+                                        @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                                            font-size:2rem;
+                                            }
                                         @include breakpoint-desk.mediadesktop-min($break-min:2560px){
-                                            font-size:30px; 
+                                            font-size:3rem; 
                                         }
                                         
                                        

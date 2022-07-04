@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../composant/box-shadow";
+@use "../utils/breakpoint-mob";
 
 
 
@@ -14,6 +15,15 @@
     position: relative;
     left:-5px;
     @content;
+    @include breakpoint-mob.breakpoint-min($break-min:480px){
+        font-size:26px;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:600px){
+        font-size:32px;
+    }
+    @include breakpoint-mob.breakpoint-min($break-min:640px){
+        font-size:34px;
+    }
 
 }
 

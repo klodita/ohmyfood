@@ -117,7 +117,22 @@
     cursor: pointer;
     z-index: 2;
     @content;
+    @include breakpoint-tab.breakpoint-mintab($break-min:475px){
+        right:27vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:480px){
+        right:30vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:520px){
+        right:29vw;
+    }
+    @include breakpoint-tab.breakpoint-mintab($break-min:667px){
+        right:28vw;
+    }
 
+ @include breakpoint-tab.breakpoint-mintab($break-min:700px){
+        right:27vw;
+    }
     @include breakpoint-tab.breakpoint-mintab($break-min:768px){
         font-size: 1.1rem;
         top: 10.3vw;
