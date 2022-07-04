@@ -294,6 +294,12 @@ object-fit:cover;
             flex-direction: row;
             align-items: center;
             margin:0;
+            position: relative;
+            left:-1vw;
+
+            @include breakpoint-desk.mediadesktop-min($break-min:1920px){
+                left:0vw;
+            }
         
             div.menu-row{
                 position: relative;
@@ -385,7 +391,7 @@ object-fit:cover;
             .menu-plats{
                 @include breakpoint-desk.mediadesktop-min($break-min:1600px){
                 position: relative;
-                left:-0.8vw;
+                left:-0.6vw;
                 }
                 @include breakpoint-desk.mediadesktop-min($break-min:2000px){
                 position: relative;
