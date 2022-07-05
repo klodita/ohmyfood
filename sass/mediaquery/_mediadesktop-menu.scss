@@ -413,6 +413,21 @@ object-fit:cover;
             margin:0;
             left:-1vw;
             top:2vw;
+            @include breakpoint-desk.mediadesktop-min($break-min:1280px){
+                top:1.8vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1400px){
+                top:1.7vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:1600px){
+                top:1.6vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2000px){
+                top:1.5vw;
+            }
+            @include breakpoint-desk.mediadesktop-min($break-min:2500px){
+                top:1.4vw;
+            }
 
             ul li{
                 width:91%;
