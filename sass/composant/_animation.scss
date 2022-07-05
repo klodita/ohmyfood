@@ -120,7 +120,7 @@
             transform: rotate(0);
         }
     }
-    animation: iconrotation 200ms linear;
+    animation: iconrotation 400ms linear;
    
     @include breakpoint-desk.mediadesktop-min($break-min:768px){
         @keyframes iconrotation{
