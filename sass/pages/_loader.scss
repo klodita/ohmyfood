@@ -95,29 +95,6 @@ z-index:1;
 
 }
 
-// .loader-icon1::after{
-//     font: var(--fa-font-solid);
-//     content:"";
-//     display: flex;
-//     text-align: center;
-//     padding:20px;
-//     font-size:10px;
-//     color:white;
-//     position: relative;
-//     bottom:5vw;
-//     left:34vw;
-//     z-index:2;
-//     @include animation.loader-icon1;
-//     @include breakpoint-anim.break-anim2($break-max:320px)
-//     {
-        
-        
-//         font-size:10px;
-//         color:red;
-//         border:1px solid blue;
-//     }
-// }
-
 
 
 .loader-icon2::before{

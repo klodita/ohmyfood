@@ -18,8 +18,6 @@
 $break1:(
     "mob280":280px,
     "mob320":320px,
-    "mob767":712px,
-    
 );
 
 @mixin mob280 {
@@ -36,10 +34,5 @@ $break1:(
 }
 
 
-@mixin mob767 {
-    @media screen and (min-width:map-get($break1,"mob767")) {
-        @content;
-    }
-}
 
 

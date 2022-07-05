@@ -101,7 +101,7 @@
 
 footer{
     .largeur_footer{
-        height:53vw;
+        height:54vw;
         h2{
             font-size:1.4rem;
         }
@@ -253,9 +253,6 @@ footer{
             font-size:30px;
             left:36px;
         }
-        // @include breakpoint-mob.breakpoint-min($break-min:736px){
-        //     font-size: 20px;
-        // }
 
     }
 }

@@ -1,7 +1,6 @@
 @use "../utils/breakpoint-desk";
 @use "../mediaquery/mediaqueryTab-menu";
-// @use "../utils/mixin-menu";
-// @use "../utils/mixin-heart";
+
 
 
 
@@ -655,7 +654,7 @@ object-fit:cover;
                 padding-top:6vw; 
             }
             @include breakpoint-desk.mediadesktop-min($break-min:1920px){
-                height:17vw;
+                height:18vw;
                 padding-top:5.5vw; 
             }
         }

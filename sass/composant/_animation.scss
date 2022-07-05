@@ -309,43 +309,9 @@
 }
 
 
-// animation concernant les icones dans le cercle rose
-
-// @mixin loader-icon1
-// {
-//     @keyframes loader-icon1
-//     {
-//         0%{
-//             content:"\f5ce";
-//             font-size:100px;
-//         }
-
-//         20%{
-//             content:"\f4e3";
-//             font-size:130px;
-//         }
-
-//         40%{
-//             content:"\f5ce";
-//             font-size:100px;
-//         }
-
-//         60%{
-//             content:"\f4e3";
-//             font-size:130px;
-//         }
-
-//         100%{
-//             visibility: hidden;  
-//         }
-//     }
-//     animation: loader-icon1 1s ease-in;
-//     animation-duration:1.5s;
-// }
 
 
-
-// Animation cercle jaune et text ohmyfood
+// Animation text ohmyfood
 
 
 @mixin marque{
