@@ -29,7 +29,6 @@
 {   
     
     @include mixin-header.header{
-        height: 100px;
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -56,7 +55,7 @@ a
     width:10vw;
     font-size: 7vw;
     position: relative;
-    top:-1.5vw;
+    top:-3.5vw;
     
     }
 }
@@ -66,7 +65,6 @@ img {
     display: flex;
     justify-content: center;
     width: 51vw;
-    height: 13vw;
     position: relative;
     left: 8vw;
     top: 2.5vw;
