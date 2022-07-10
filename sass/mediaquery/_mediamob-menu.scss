@@ -12,10 +12,7 @@
     #header_menu{
         a{
             .fa-arrow-left{
-               top:-4vw;
-               @include breakpoint-mob.breakpoint($break:280px){
-                top:-6vw;
-               }
+               top:0vw;
             }
         }
     }
@@ -218,15 +215,10 @@
         & a{
 
             .fa-arrow-left{
-              top:-2.5vw; 
-              @include breakpoint-mob.breakpoint-min($break-min:480px){
-                top:-1.5vw;
-              }
-              @include breakpoint-mob.breakpoint-min($break-min:520px){
-                top:-0.5vw;
-              }
-              @include breakpoint-mob.breakpoint-min($break-min:600px){
-                top:0.5vw;
+              top:0.5vw; 
+
+              @include breakpoint-mob.breakpoint-min($break-min:640px){
+                top:1.5vw;
               }
             }
             
